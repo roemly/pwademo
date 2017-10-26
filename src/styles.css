@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body{margin:0;background-color:#4766a7;}
+.cst-bg-color{
+    background-color:#4766a7;
+}
+.cst-title-form{
+    text-align: center;
+    display: block;
+    width:100%;
+}
+.cst-navigation-color{
+    color:white;
+}
+
+.cst-nav-toolbar{
+    width:100%;
+    position: fixed;
+    top:0;
+}
+.cst-nav-bottom{
+    display: block;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:50px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color:white;
+}
+.cst-btn-toolbar{
+    background-color: #7fa0d5;
+}
+.cst-display-content{padding-top:60px}
+.padding-double{padding-top:120px !important;}
+
+.button-row{
+    margin:0 auto;
+    text-align: center;
+    display: block;
+    padding-top:30px;
+}
+.align-center{
+    text-align:center;
+}
+.text-bold{
+    font-weight: bold;
+}
+/*NEWS*/
+
+.date-news-thumbnail span {
+    display: block;
+    font-size: 15pt;
+    line-height: 0.3;
+}
+.data-news-thumbnail {
+    width: calc(100% - 55px);
+    padding-left: 15px;
+    float: left;
+    padding-top: 7px;
+    color:#fff;
+}
+.date-news-thumbnail {
+    color: #00c5ae;
+    font-size: 27pt;
+	text-align:center;
+    text-transform: uppercase;
+    float: left;
+    width: 40px;
+	min-height:55px;
+    font-weight: bold;
+}
+.title-news-thumbnail {
+    color: #fea142;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+ul.list-news-thumbnail li:last-child {border:0}
+ul.list-news-thumbnail li {
+    border-bottom: 1px solid #00c5ae;
+    margin-bottom: 6px;
+    padding-bottom: 13px;
+}
+ul.list-news-thumbnail li:after {
+    content: "";
+    display: block;
+    clear: both;
+    position: relative;
+}
+ul.list-news-thumbnail {
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+}

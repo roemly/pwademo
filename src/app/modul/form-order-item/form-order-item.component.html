@@ -1,0 +1,37 @@
+<div class="cst-nav-toolbar">
+    <mat-toolbar class="cst-btn-toolbar">
+       <span><a class="cst-navigation-color" clickGoBack><mat-icon>keyboard_backspace</mat-icon></a></span>
+      <span class="cst-title-form">TAMBAH ITEM {{id_order}}</span>
+    </mat-toolbar>
+</div>
+<div class="cst-display-content">
+  
+  <form class="order-item-form">
+    <mat-form-field class="field-full-width">
+      <input matInput placeholder="Nama" value="">
+    </mat-form-field>
+    <mat-form-field class="field-full-width">
+      <input matInput placeholder="Qty" value="">
+    </mat-form-field>
+    <div class="cst-keyboard-virtual">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+        <li>00</li>
+        <li><mat-icon>backspace</mat-icon></li>
+
+      </ul>
+    </div>
+    <div  class="button-row">
+      <button mat-raised-button color="warn">OK</button>
+    </div>
+   </form>
+</div>

@@ -1,0 +1,24 @@
+.gambar-atas{
+    overflow-x: hidden;
+    height:250px;
+    display:block;
+}
+h1{
+    display: block;
+    background-color: #7fa0d5;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin:0;
+    font-size:14pt;
+    text-align: center;
+    color:white;
+}
+.login-form {
+    width: 100%;
+    padding-top:30px;
+}
+  
+.login-full-width {
+    width:calc(100% - 60px);
+    padding-left:30px;
+}
