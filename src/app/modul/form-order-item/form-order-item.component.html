@@ -5,33 +5,44 @@
     </mat-toolbar>
 </div>
 <div class="cst-display-content">
-  
+
   <form class="order-item-form">
     <mat-form-field class="field-full-width">
-      <input matInput placeholder="Nama" value="">
+      <input
+             placeholder="Name"
+             aria-label="Product"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto"
+             name="product">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="display">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            <p class="mat-title">{{option.label}} ~ {{option.sublabel}}</p>
+        </mat-option>
+      </mat-autocomplete>
     </mat-form-field>
     <mat-form-field class="field-full-width">
-      <input matInput placeholder="Qty" value="">
+      <input matInput placeholder="Qty" disabled [(ngModel)]="qty" name="qty">
     </mat-form-field>
     <div class="cst-keyboard-virtual">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>0</li>
-        <li>00</li>
-        <li><mat-icon>backspace</mat-icon></li>
+        <li (click)="NumberKeyboard('1')">1</li>
+        <li (click)="NumberKeyboard('2')">2</li>
+        <li (click)="NumberKeyboard('3')">3</li>
+        <li (click)="NumberKeyboard('4')">4</li>
+        <li (click)="NumberKeyboard('5')">5</li>
+        <li (click)="NumberKeyboard('6')">6</li>
+        <li (click)="NumberKeyboard('7')">7</li>
+        <li (click)="NumberKeyboard('8')">8</li>
+        <li (click)="NumberKeyboard('9')">9</li>
+        <li (click)="NumberKeyboard('0')">0</li>
+        <li (click)="NumberKeyboard('00')">00</li>
+        <li (click)="NumberKeyboard('delete')"><mat-icon>backspace</mat-icon></li>
 
       </ul>
     </div>
     <div  class="button-row">
-      <button mat-raised-button color="warn">OK</button>
+      <button mat-raised-button color="warn" (click)="addToCart()">OK</button>
     </div>
    </form>
 </div>

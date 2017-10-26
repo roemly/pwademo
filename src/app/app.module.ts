@@ -44,6 +44,11 @@ import { HistoryComponent } from './modul/history/history.component';
 import { SettingComponent } from './modul/setting/setting.component';
 import { LoginComponent } from './modul/login/login.component';
 import { ClickGoBack } from './directive/click-go-back';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ProductService} from './service/product.service';
+import {LoginService} from './service/login.service';
+import {CartService} from './service/cart.service';
+import {PostService} from './service/post.service';
 
 
 @NgModule({
@@ -59,6 +64,8 @@ import { ClickGoBack } from './directive/click-go-back';
   ],
 
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -123,7 +130,12 @@ import { ClickGoBack } from './directive/click-go-back';
       }
     ])
   ],
-  providers: [],
+  providers: [
+    ProductService,
+    LoginService,
+    CartService,
+    PostService
+  ],
   bootstrap: [AppComponent],
   exports: [
     MatAutocompleteModule,

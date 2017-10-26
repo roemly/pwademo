@@ -1,52 +1,22 @@
-<div class="cst-nav-toolbar">
+<div class="cst-nav-toolbar" style="z-index: 10000">
     <mat-toolbar class="cst-btn-toolbar">
        <span><a class="cst-navigation-color" clickGoBack ><mat-icon>keyboard_backspace</mat-icon></a></span>
       <span class="cst-title-form">ORDER {{id_order}}</span>
     </mat-toolbar>
-    <div  class="button-row">
-      <a  routerLink="/form-order-item/{{id_order}}"><button mat-raised-button color="warn">Tambah Item</button></a>
-    </div>
 </div>
-<div class="cst-display-content padding-double">
-  
-  <ul class="list-news-thumbnail">
-    <li>
-      <div class="date-news-thumbnail">20<span>SEP</span></div>
-      <div class="data-news-thumbnail">
-        <div class="title-news-thumbnail">
-          Lorem ipsum
-        </div>
-        <div class="summary-news-thumbnail">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="date-news-thumbnail">20<span>SEP</span></div>
-      <div class="data-news-thumbnail">
-        <div class="title-news-thumbnail">
-          Lorem ipsum
-        </div>
-        <div class="summary-news-thumbnail">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="date-news-thumbnail">20<span>SEP</span></div>
-      <div class="data-news-thumbnail">
-        <div class="title-news-thumbnail">
-          Lorem ipsum
-        </div>
-        <div class="summary-news-thumbnail">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-        </div>
-      </div>
-    </li>	
-  </ul>
-
-  
-</div>
-<div class="cst-nav-bottom cst-bg-color align-center">
-  Total <br/> <span class="font-bold" id="total-price"> Rp 100.000</span>
+<div class="cst-display-content">
+  <div  class="button-row">
+    <a  routerLink="/form-order-item/{{id_order}}"><button mat-raised-button color="warn">Tambah Item</button></a>
+  </div>
+    <mat-card *ngFor="let item of cart.getItems()">
+      <img mat-card-image [src]="product.getProductById(item.id).image" alt="no Image Available">
+        <mat-card-title>
+          {{product.getProductById(item.id).name}}
+        </mat-card-title>
+        <mat-card-content>
+          {{product.getProductById(item.id).description}}
+          <p>Qty : {{item.qty}}</p>
+          <p>Price : {{item.price}}</p>
+        </mat-card-content>
+    </mat-card>
 </div>
