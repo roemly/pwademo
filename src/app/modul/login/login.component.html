@@ -2,13 +2,13 @@
 <h1>PT ADYA MANDALA PERSADA</h1>
 <form class="login-form">
     <mat-form-field class="login-full-width">
-      <input matInput placeholder="Email" value="">
+      <input matInput placeholder="Email" [value]="email">
     </mat-form-field>
       <mat-form-field class="login-full-width">
-        <input matInput placeholder="Password" value="">
+        <input matInput placeholder="Password" [value]="pass">
     </mat-form-field>
     <div  class="button-row">
-        <button mat-raised-button color="warn">Login</button>
+        <button mat-raised-button color="warn" (click)="onClick()">Login</button>
     </div>
   </form>
   

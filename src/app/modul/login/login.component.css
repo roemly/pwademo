@@ -2,6 +2,7 @@
     overflow-x: hidden;
     height:250px;
     display:block;
+    width:100%;
 }
 h1{
     display: block;
