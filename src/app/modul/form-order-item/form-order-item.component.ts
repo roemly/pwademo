@@ -28,17 +28,14 @@ export class FormOrderItemComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id_order = +params['id']; // (+) converts string 'id' to a number
     });
-    console.log((this.id_order === 1) ? 'sika' : 'makita');
     this.products = product.getProductByCategory((this.id_order === 1) ? 'sika' : 'makita');
     this.options = this.products.map(product => {
-      console.log(product.id);
       return {
         label: product.name,
         sublabel: product.description,
         val: String(product.id)
       };
     });
-    console.log(this.options);
   }
 
   ngOnInit(): void {
@@ -55,7 +52,21 @@ export class FormOrderItemComponent implements OnInit {
       this.qty = parseInt(String(this.qty) + s, 10);
     }
   }
-
+  getTotal (): number{
+    if (this.myControl.value === null){
+      return 0;
+    }
+    let id:number;
+    if (!isNaN(parseFloat(this.myControl.value)) && isFinite(this.myControl.value)) {
+      id = parseInt(this.myControl.value);
+    } else if(typeof(this.myControl.value) === 'object'){
+      id = this.myControl.value.val;
+    } else{
+      id = null;
+    }
+    if(id === null || id === undefined) return 0;
+    return this.qty * this.products.find(item => item.id == id).price;
+  }
   filter(val: any): string[] {
     if (typeof (val) !== 'string'){
       val = val.label;
@@ -74,9 +85,6 @@ export class FormOrderItemComponent implements OnInit {
       value = parseInt(this.myControl.value.val);
     }
     this.cart.addProduct(this.products.find(item => {
-      console.log(item);
-      console.log(item.id === value);
-      console.log(value);
      return item.id === value;
     }), this.qty);
   }

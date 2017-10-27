@@ -24,23 +24,22 @@
     <mat-form-field class="field-full-width">
       <input matInput placeholder="Qty" disabled [(ngModel)]="qty" name="qty">
     </mat-form-field>
-    <div class="cst-keyboard-virtual">
-      <ul>
-        <li (click)="NumberKeyboard('1')">1</li>
-        <li (click)="NumberKeyboard('2')">2</li>
-        <li (click)="NumberKeyboard('3')">3</li>
-        <li (click)="NumberKeyboard('4')">4</li>
-        <li (click)="NumberKeyboard('5')">5</li>
-        <li (click)="NumberKeyboard('6')">6</li>
-        <li (click)="NumberKeyboard('7')">7</li>
-        <li (click)="NumberKeyboard('8')">8</li>
-        <li (click)="NumberKeyboard('9')">9</li>
-        <li (click)="NumberKeyboard('0')">0</li>
-        <li (click)="NumberKeyboard('00')">00</li>
-        <li (click)="NumberKeyboard('delete')"><mat-icon>backspace</mat-icon></li>
+      <div class="row cst-keyboard-virtual center-align">
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('1')">1</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('2')">2</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('3')">3</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('4')">4</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('5')">5</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('6')">6</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('7')">7</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('8')">8</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('9')">9</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('0')">0</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('00')">00</div>
+        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('delete')"><mat-icon>backspace</mat-icon></div>
 
-      </ul>
-    </div>
+      </div>
+    <div class="align-center">{{getTotal() | currency:'IDR':true}}</div>
     <div  class="button-row">
       <button mat-raised-button color="warn" (click)="addToCart()">OK</button>
     </div>

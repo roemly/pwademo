@@ -8,15 +8,20 @@
   <div  class="button-row">
     <a  routerLink="/form-order-item/{{id_order}}"><button mat-raised-button color="warn">Tambah Item</button></a>
   </div>
-    <mat-card *ngFor="let item of cart.getItems()">
-      <img mat-card-image [src]="product.getProductById(item.id).image" alt="no Image Available">
-        <mat-card-title>
-          {{product.getProductById(item.id).name}}
-        </mat-card-title>
-        <mat-card-content>
-          {{product.getProductById(item.id).description}}
-          <p>Qty : {{item.qty}}</p>
-          <p>Price : {{item.price}}</p>
-        </mat-card-content>
-    </mat-card>
+  <div class="container">
+    <div class="row">
+      <mat-card *ngFor="let item of cart.getItems()" class="col s6 layout-margin">
+        <img width="100" height="100" [src]="product.getProductById(item.id).image" alt="no Image Available">
+          <mat-card-title>
+            {{product.getProductById(item.id).name}}
+          </mat-card-title>
+          <mat-card-content>
+            <span class="truncate">{{product.getProductById(item.id).description}}</span>
+            <p>Qty : {{item.qty}}</p>
+            <p>Price : {{item.price}}</p>
+          </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="align-center">{{cart.getTotal() | currency:'IDR':true}}</div>
 </div>

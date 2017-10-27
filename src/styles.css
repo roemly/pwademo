@@ -31,7 +31,7 @@ body{margin:0;background-color:#4766a7;}
 .cst-btn-toolbar{
     background-color: #7fa0d5;
 }
-.cst-display-content{padding-top:60px}
+.cst-display-content{padding-top:60px;height: 100%}
 .padding-double{padding-top:120px !important;}
 
 .button-row{
@@ -91,4 +91,11 @@ ul.list-news-thumbnail {
     list-style: none;
     margin: 0;
     padding: 10px 20px;
+}
+.layout-padding{
+  padding:20px;
+}
+
+.layout-margin{
+  margin:20px;
 }
