@@ -5,40 +5,16 @@
     </mat-toolbar>
 </div>
 <div class="cst-display-content">
-    <ul class="list-news-thumbnail">
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>	
-    </ul>
+    <mat-tab-group>
+        <mat-tab label="Proses">
+            <mat-list>
+                <mat-list-item *ngFor="let order of orderDetail.getByStatus('PROSES')">
+                    {{order.created_at + " " + order.id + " " + order.total_price}}
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+        <mat-tab label="Terkirim">Terkirim</mat-tab>
+        <mat-tab label="Arsip">Arsip</mat-tab>
+    </mat-tab-group>
 </div>
 

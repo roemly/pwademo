@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {LoginService} from "../../service/login.service";
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,13 @@ export class LoginComponent {
   pass='';
 
   constructor(
-      private router:Router
+      private router:Router,
+      private users:LoginService
   ){}
 
   onClick (){
-      this.router.navigate(['dashboard']);
+
+      if (this.users.attempt(this.email, this.pass))
+        this.router.navigate(['dashboard']);
   }
 }

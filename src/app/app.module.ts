@@ -49,6 +49,7 @@ import {ProductService} from './service/product.service';
 import {LoginService} from './service/login.service';
 import {CartService} from './service/cart.service';
 import {PostService} from './service/post.service';
+import {OrderService} from "./service/order.service";
 
 
 @NgModule({
@@ -134,7 +135,8 @@ import {PostService} from './service/post.service';
     ProductService,
     LoginService,
     CartService,
-    PostService
+    PostService,
+    OrderService
   ],
   bootstrap: [AppComponent],
   exports: [
