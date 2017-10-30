@@ -33,7 +33,8 @@ export const ORDERS : Order[] = [
                 } as Product,
                 qty:1
             } as OrderDetail],
-        created_at : new Date("2017-02-24")
+        created_at : new Date("2017-02-24"),
+        total_price: 2600000
     } as Order,
     {
         id: 2,
@@ -64,7 +65,8 @@ export const ORDERS : Order[] = [
                 } as Product,
                 qty:2
             } as OrderDetail],
-        created_at : new Date("2017-02-24")
+        created_at : new Date("2017-02-24"),
+        total_price: 2550000
     } as Order,
     {
         id: 3,
@@ -83,6 +85,7 @@ export const ORDERS : Order[] = [
                 } as Product,
                 qty:12
             } as OrderDetail],
-        created_at : new Date("2017-02-24")
+        created_at : new Date("2017-02-24"),
+        total_price: 100000
     } as Order,
 ];

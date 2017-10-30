@@ -7,14 +7,52 @@
 <div class="cst-display-content">
     <mat-tab-group>
         <mat-tab label="Proses">
-            <mat-list>
-                <mat-list-item *ngFor="let order of orderDetail.getByStatus('PROSES')">
-                    {{order.created_at + " " + order.id + " " + order.total_price}}
-                </mat-list-item>
-            </mat-list>
+          <ul class="list-news-thumbnail">
+            <li *ngFor="let order of orderDetail.getByStatus('PROSES')">
+              <div class="date-news-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+              <div class="data-news-thumbnail">
+                <div class="title-news-thumbnail">
+                  Order ID : {{order.id}}
+                </div>
+                <div class="summary-news-thumbnail">
+                  Rp. {{order.total_price | number}}
+                </div>
+              </div>
+            </li>
+          </ul>
         </mat-tab>
-        <mat-tab label="Terkirim">Terkirim</mat-tab>
-        <mat-tab label="Arsip">Arsip</mat-tab>
+        <mat-tab label="Terkirim">
+            <ul class="list-news-thumbnail">
+              <li *ngFor="let order of orderDetail.getByStatus('TERKIRIM')">
+                <div class="date-news-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+                <div class="data-news-thumbnail">
+                  <div class="title-news-thumbnail">
+                    Order ID : {{order.id}}
+                  </div>
+                  <div class="summary-news-thumbnail">
+                    Rp. {{order.total_price | number}}
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+        </mat-tab>
+        <mat-tab label="Arsip">
+          <ul class="list-news-thumbnail">
+            <li *ngFor="let order of orderDetail.getByStatus('ARSIP')">
+              <div class="date-news-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+              <div class="data-news-thumbnail">
+                <div class="title-news-thumbnail">
+                  Order ID : {{order.id}}
+                </div>
+                <div class="summary-news-thumbnail">
+                  Rp. {{order.total_price | number}}
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </mat-tab>
     </mat-tab-group>
 </div>
 
