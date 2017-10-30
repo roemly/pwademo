@@ -7,6 +7,8 @@ import {ItemCart} from '../class/ItemCart';
 @Injectable()
 export class CartService implements OnInit {
   private _cart: Cart;
+  private _alamatTujuan: string = '';
+
   constructor(private login: LoginService) {
     this._cart = new Cart();
   }
@@ -23,6 +25,12 @@ export class CartService implements OnInit {
       result += i.qty * i.price;
     });
     return result;
+  }
+  getAlamatTujuan(): string {
+    return this._alamatTujuan;
+  }
+  setAlamatTujuan(tujuan: string = ''): void {
+    this._alamatTujuan = tujuan;
   }
 
   ngOnInit(): void {

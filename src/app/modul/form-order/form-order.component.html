@@ -18,10 +18,18 @@
           <mat-card-content>
             <span class="truncate">{{product.getProductById(item.id).description}}</span>
             <p>Qty : {{item.qty}}</p>
-            <p>Price : {{item.price}}</p>
+            <p>Price : {{item.price | number}}</p>
           </mat-card-content>
       </mat-card>
     </div>
   </div>
   <div class="align-center">{{cart.getTotal() | currency:'IDR':true}}</div>
+  <form class="alamat-form">
+    <mat-form-field class="alamat-full-width">
+      <input matInput placeholder="Alamat tujuan" [(ngModel)]="alamat_order" name="alamatOrder" (change)="onChangeAlamat()">
+    </mat-form-field>
+  </form>
+  <div  class="button-row">
+    <a  routerLink="/form-checkout"><button mat-raised-button color="warn">Checkout</button></a>
+  </div>
 </div>

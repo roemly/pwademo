@@ -6,6 +6,7 @@ export const USERS: User[] = [
         username : 'admin',
         email : 'admin@admin.com',
         token : 'admin',
+        alamat : 'alamat admin',
         avatar : ''
     } as User,
     {
@@ -13,6 +14,7 @@ export const USERS: User[] = [
         username : 'ricardo',
         email : 'ricardo@ricardo.com',
         token : 'ricardo',
+        alamat : 'alamat ricardo',
         avatar : ''
     } as User,
     {
@@ -20,6 +22,7 @@ export const USERS: User[] = [
         username : 'rizki',
         email : 'rizki@rizki.com',
         token : 'rizki',
+        alamat : 'alamat rizki',
         avatar : ''
     } as User
 ];

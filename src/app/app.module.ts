@@ -50,6 +50,7 @@ import {LoginService} from './service/login.service';
 import {CartService} from './service/cart.service';
 import {PostService} from './service/post.service';
 import {OrderService} from "./service/order.service";
+import { FormCheckoutComponent } from './modul/form-checkout/form-checkout.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import {OrderService} from "./service/order.service";
     HistoryComponent,
     SettingComponent,
     LoginComponent,
-    ClickGoBack
+    ClickGoBack,
+    FormCheckoutComponent
   ],
 
   imports: [
@@ -128,6 +130,10 @@ import {OrderService} from "./service/order.service";
       {
         path: 'form-order-item/:id',
         component: FormOrderItemComponent
+      },
+      {
+        path: 'form-checkout',
+        component: FormCheckoutComponent
       }
     ])
   ],

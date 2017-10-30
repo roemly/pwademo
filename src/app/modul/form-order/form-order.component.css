@@ -12,7 +12,12 @@ body {
   mat-toolbar-row {
     justify-content: space-between;
   }
-  
+
+  .alamat-full-width{
+    width:calc(100% - 60px);
+    padding-left:30px;
+  }
+
   .done {
     position: fixed;
     bottom: 20px;
