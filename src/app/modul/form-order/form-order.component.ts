@@ -11,7 +11,7 @@ import {LoginService} from "../../service/login.service";
 })
 export class FormOrderComponent implements OnInit {
   id_order: Number;
-  alamat_order: string = '';
+
 
   constructor(private route: ActivatedRoute,
               private cart: CartService,
@@ -22,9 +22,7 @@ export class FormOrderComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id_order = Number(params['id']); // (+) converts string 'id' to a number
     });
-    this.alamat_order = (this.cart.getAlamatTujuan() !== '') ? this.cart.getAlamatTujuan() : this.current_user.getUserCurrent().alamat;
+
   }
-  onChangeAlamat(): void {
-      this.cart.setAlamatTujuan(this.alamat_order);
-  }
+
 }

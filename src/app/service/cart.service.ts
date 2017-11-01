@@ -8,6 +8,8 @@ import {ItemCart} from '../class/ItemCart';
 export class CartService implements OnInit {
   private _cart: Cart;
   private _alamatTujuan: string = '';
+  private _isPajak: boolean = false;
+  private _isAgree: boolean = false
 
   constructor(private login: LoginService) {
     this._cart = new Cart();
@@ -31,6 +33,18 @@ export class CartService implements OnInit {
   }
   setAlamatTujuan(tujuan: string = ''): void {
     this._alamatTujuan = tujuan;
+  }
+  getPajak(): boolean {
+      return this._isPajak;
+  }
+  setPajak(isPajak: boolean = false): void {
+      this._isPajak = isPajak;
+  }
+  getAgree(): boolean {
+      return this._isAgree;
+  }
+  setAgree(isAgree: boolean = false): void {
+      this._isAgree = isAgree;
   }
 
   ngOnInit(): void {

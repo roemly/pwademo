@@ -24,12 +24,8 @@
     </div>
   </div>
   <div class="align-center">{{cart.getTotal() | currency:'IDR':true}}</div>
-  <form class="alamat-form">
-    <mat-form-field class="alamat-full-width">
-      <input matInput placeholder="Alamat tujuan" [(ngModel)]="alamat_order" name="alamatOrder" (change)="onChangeAlamat()">
-    </mat-form-field>
-  </form>
+
   <div  class="button-row">
-    <a  routerLink="/form-checkout"><button mat-raised-button color="warn">Checkout</button></a>
+    <a  routerLink="/form-address"><button mat-raised-button color="warn">Lanjut</button></a>
   </div>
 </div>

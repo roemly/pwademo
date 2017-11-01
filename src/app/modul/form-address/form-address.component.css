@@ -1,0 +1,4 @@
+.alamat-full-width, .pajak-full-width, .aggrement-full-width{
+    width:calc(100% - 60px);
+    padding-left:30px;
+}

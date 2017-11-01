@@ -1,0 +1,16 @@
+<mat-card class="cst-display-content">
+  <mat-card-content>
+    <section class="alamat-full-width">
+      <input matInput placeholder="Alamat tujuan" [(ngModel)]="alamat_order" name="alamatOrder" (change)="onChangeAlamat()">
+    </section>
+    <section class="pajak-full-width">
+      <mat-checkbox [(ngModel)]="isPajak" (change)="onClickPajak()">Pajak</mat-checkbox>
+    </section>
+    <section class="aggrement-full-width">
+      <mat-checkbox [(ngModel)]="isAgree" (change)="onClickAgree()">Saya setuju dll</mat-checkbox>
+    </section>
+  </mat-card-content>
+  <div  class="button-row">
+    <a  routerLink="/form-checkout"><button mat-raised-button color="warn">Checkout</button></a>
+  </div>
+</mat-card>
