@@ -1,44 +1,30 @@
 <div class="cst-nav-toolbar">
     <mat-toolbar class="cst-btn-toolbar">
        <span><a class="cst-navigation-color" clickGoBack><mat-icon>keyboard_backspace</mat-icon></a></span>
-      <span class="cst-title-form">Setting</span>
+      <span class="cst-title-form">PENGATURAN</span>
     </mat-toolbar>
 </div>
 <div class="cst-display-content">
-    <ul class="list-news-thumbnail">
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="date-news-thumbnail">20<span>SEP</span></div>
-            <div class="data-news-thumbnail">
-                <div class="title-news-thumbnail">
-                    Lorem ipsum
-                </div>
-                <div class="summary-news-thumbnail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor felis, ultrices sit amet dignissim nec.
-                </div>
-            </div>
-        </li>	
-    </ul>
+    <form class="pengaturan-form">
+        <mat-form-field class="pengaturan-full-width">
+            <input matInput placeholder="NAMA" [(ngModel)]="nama" name="nama">
+        </mat-form-field>
+        <mat-form-field class="pengaturan-full-width">
+            <textarea matInput placeholder="ALAMAT" [(ngModel)]="alamat" name="alamat">
+            </textarea>
+        </mat-form-field>
+        <mat-form-field class="pengaturan-full-width">
+            <input matInput placeholder="TELP" [(ngModel)]="telp" name="telp">
+        </mat-form-field>
+        <mat-form-field class="pengaturan-full-width">
+            <input matInput placeholder="EMAIL" [(ngModel)]="email" name="email">
+        </mat-form-field>
+        <div  class="button-row">
+            <button mat-raised-button color="warn" (click)="onClickChange()">UBAH PASSWORD</button>
+        </div>
+        <div  class="button-row">
+            <button mat-raised-button color="warn" (click)="onClickLogout()">LOGOUT</button>
+        </div>
+    </form>
 </div>
 

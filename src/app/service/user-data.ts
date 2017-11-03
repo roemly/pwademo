@@ -3,7 +3,8 @@ import {User} from '../class/User';
 export const USERS: User[] = [
     {
         id: 1,
-        username : 'admin',
+        name : 'admin',
+        telp : '12345',
         email : 'admin@admin.com',
         token : 'admin',
         alamat : 'alamat admin',
@@ -11,7 +12,8 @@ export const USERS: User[] = [
     } as User,
     {
         id: 2,
-        username : 'ricardo',
+        name : 'ricardo',
+        telp : '12345',
         email : 'ricardo@ricardo.com',
         token : 'ricardo',
         alamat : 'alamat ricardo',
@@ -19,7 +21,8 @@ export const USERS: User[] = [
     } as User,
     {
         id: 3,
-        username : 'rizki',
+        name : 'rizki',
+        telp : '12345',
         email : 'rizki@rizki.com',
         token : 'rizki',
         alamat : 'alamat rizki',

@@ -52,6 +52,8 @@ import {PostService} from './service/post.service';
 import {OrderService} from "./service/order.service";
 import { FormCheckoutComponent } from './modul/form-checkout/form-checkout.component';
 import { FormAddressComponent } from './modul/form-address/form-address.component';
+import { ChangepasswordComponent } from './modul/changepassword/changepassword.component';
+import { ChattingComponent } from './modul/chatting/chatting.component';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { FormAddressComponent } from './modul/form-address/form-address.componen
     LoginComponent,
     ClickGoBack,
     FormCheckoutComponent,
-    FormAddressComponent
+    FormAddressComponent,
+    ChangepasswordComponent,
+    ChattingComponent
   ],
 
   imports: [
@@ -140,6 +144,14 @@ import { FormAddressComponent } from './modul/form-address/form-address.componen
       {
         path: 'form-address',
         component: FormAddressComponent
+      },
+      {
+        path: 'changepassword',
+        component: ChangepasswordComponent
+      },
+      {
+        path: 'chatting',
+        component: ChattingComponent
       }
     ])
   ],

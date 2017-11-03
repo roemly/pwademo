@@ -24,6 +24,11 @@ export class LoginService {
     }
     return false;
   }
+
+  changePassword (new_password: string) {
+      this.user.token = new_password;
+      localStorage.user = JSON.stringify(this.user);
+  }
   getUserCurrent() : User {
     return this.user;
   }
@@ -33,5 +38,15 @@ export class LoginService {
 
   getUser():User[]{
     return USERS;
+  }
+  logout(): void {
+    localStorage.user = null;
+    this.user = null;
+  }
+  getUserData(): void {
+      console.log(this.user.name);
+      console.log(this.user.alamat);
+      console.log(this.user.email);
+      console.log(this.user.telp);
   }
 }

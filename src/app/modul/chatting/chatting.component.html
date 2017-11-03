@@ -1,0 +1,35 @@
+<div class="cst-nav-toolbar" style="z-index: 10000">
+  <mat-toolbar class="cst-btn-toolbar">
+    <span><a class="cst-navigation-color" clickGoBack><mat-icon>keyboard_backspace</mat-icon></a></span>
+    <span class="cst-title-form">CATATAN</span>
+  </mat-toolbar>
+</div>
+<div class="cst-display-content">
+  <ul class="list-chats-thumbnail">
+    <li >
+      <div class="date-chats-thumbnail">{{'29'}} <span>{{'09'}}</span><span>{{'10.10'}}</span></div>
+      <div class="data-chats-thumbnail">
+        <div class="content-chats-thumbnail">
+
+        </div>
+      </div>
+    </li>
+  </ul>
+  <mat-list>
+    <mat-list-item>
+      <mat-chip-list>
+        <mat-chip>{{'29'}}<span>{{'09'}}</span><span>{{'10.10'}}</span></mat-chip>
+        <mat-chip>{{'hello world'}}</mat-chip>
+      </mat-chip-list>
+    </mat-list-item>
+  </mat-list>
+  <form class="chatting-form">
+    <mat-form-field class="chatting-full-width">
+            <textarea matInput [(ngModel)]="chatting" name="chatting">
+            </textarea>
+    </mat-form-field>
+    <div  class="button-row">
+      <button mat-raised-button color="warn" (click)="onClickSend()">KIRIM</button>
+    </div>
+  </form>
+</div>
