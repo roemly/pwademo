@@ -1,0 +1,10 @@
+##Order Proses##
+url: http://ptamp.aindo.com/api-order.php
+format data: json
+    info:(member_id,kirim_ke,catatan,ck_faktur_pajak)
+    transaksi:
+        [0]=>{item:1,qty:2}
+        [1]=>{item:35,qty:20}
+
+
+Return Value Json {status:OK|FAILED}
