@@ -11,20 +11,6 @@ mat-grid-list img{
    margin-top:15px;
    margin-bottom:15px;
 }
-.gambar-atas img{
-	position:absolute;
-	height:100%;
-	width:auto;
-	left:-15%;
-	top:0;
-}
-.gambar-atas{
-    overflow-x: hidden;
-    width:100%;
-	position:relative;
-    height:250px;
-    display:block;
-}
 .first-home-menu {
     padding: 10px 10px 7px;
     background-color: #7fa0d5;
@@ -36,10 +22,4 @@ ul.list-news-thumbnail {
 }
 .title-news-thumbnail {
     font-size: 11pt;
-}
-@media (min-width:650px){
-	.gambar-atas img{position:relative;left:0;display:block;width:100%;}
-	.gambar-atas{
-		height:auto;
-	}
 }
