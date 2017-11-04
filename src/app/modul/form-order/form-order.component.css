@@ -24,4 +24,15 @@ body {
     right: 20px;
     color: white;
   }
-  
+.layout-margin {
+    margin: 0px !important;
+    max-width: 100% !important;
+    background: transparent;
+    border-bottom: 1px solid #00c5ae;
+    box-shadow: none !important;
+	color:#fff !important
+}
+.label-total-harga.align-center {
+    text-transform: uppercase;
+	color:#00c5ae
+}

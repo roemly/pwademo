@@ -17,6 +17,7 @@ body{margin:0;background-color:#4766a7;}
     width:100%;
     position: fixed;
     top:0;
+	z-index:10
 }
 .cst-nav-bottom{
     display: block;
@@ -38,7 +39,7 @@ body{margin:0;background-color:#4766a7;}
     margin:0 auto;
     text-align: center;
     display: block;
-    padding-top:30px;
+    padding-top:20px;
 }
 .align-center{
     text-align:center;
@@ -98,4 +99,25 @@ ul.list-news-thumbnail {
 
 .layout-margin{
   margin:20px;
+}
+
+button {
+    width: calc(100% - 60px) !important;
+    border-radius: 30px !important;
+    background: #fea142 !important;
+    font-size: 14pt !important;
+    padding: 4px 0 !important;
+    /* border: 1px solid #000 !important; */
+}
+label.mat-input-placeholder{
+	color: #00c5ae !important;
+    text-transform: uppercase;
+    font-size: 13pt !important;
+}
+.mat-form-field-underline {
+    background-color: #fea142;
+}
+.align-center.total-harga {
+    font-size: 20pt;
+    color: #fff;
 }

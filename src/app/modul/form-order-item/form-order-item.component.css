@@ -15,7 +15,7 @@ h1{
 }
 .order-item-form {
   width: 100%;
-  padding-top:30px;
+  padding-top:20px;
 }
 
 .field-full-width {
@@ -23,17 +23,52 @@ h1{
   padding-left:30px;
 }
 .cst-keyboard-virtual{
-    width: 278px;
+    width: calc(100% - 60px);
     /* border: 1px solid; */
     margin: 0 auto;
-    padding-bottom:45px;
+    padding-bottom:20px;
 
 }
 
 .bordered{
-  border: 1px solid;
+  border: 1px solid #4766a7;
   font-size: 21pt;
 }
 .cst-keyboard-virtual span:last-child{
   margin-bottom:40px;
+}
+
+.mat-option:first-child p {
+    margin-top: 16px;
+}
+.mat-option p {
+    display: block;
+    font-size: 10pt;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+.mat-option .mat-option-text{display:block !important;}
+.mat-option {
+    height: auto;
+}
+label {
+
+}
+input {
+    margin: 0 !important;
+	border:0 !important;
+	height:2rem !important; 
+	color:#fff !important;
+}
+.mat-form-field-infix {
+    padding: 0 !important;
+}
+.field-full-width{
+    width: calc(100% - 60px);
+    margin-left: 30px !important;
+	padding:0 !important;
+}
+.indigo.lighten-5 {
+    background-color: #fea142 !important;
+    color: #fff;
 }
