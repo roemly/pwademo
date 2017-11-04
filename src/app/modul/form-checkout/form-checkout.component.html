@@ -1,3 +1,10 @@
+<div class="cst-nav-toolbar" style="z-index: 10000">
+    <mat-toolbar class="cst-btn-toolbar">
+       <span><a class="cst-navigation-color" clickGoBack ><mat-icon>keyboard_backspace</mat-icon></a></span>
+      <span class="cst-title-form">ORDER {{id_order}}</span>
+    </mat-toolbar>
+</div>
+<div class="cst-display-content form-product-order">
 <div class="container">
   <div class="row">
     <mat-card *ngFor="let item of cart.getItems()" class="col s6 layout-margin">
@@ -17,6 +24,9 @@
 <div class="align-center">Alamat Pengiriman: {{alamat_tujuan}}</div>
 <div class="align-left"><mat-checkbox [(ngModel)]="isPajak" [disabled]="true">Pajak</mat-checkbox></div>
 <div class="align-left"><mat-checkbox [(ngModel)]="isAgree" [disabled]="true">Saya setuju dll</mat-checkbox></div>
+<div  class="block-bottom">
 <div  class="button-row">
   <button mat-raised-button color="warn">Bayar</button>
+</div>
+</div>
 </div>

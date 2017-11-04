@@ -24,15 +24,42 @@ body {
     right: 20px;
     color: white;
   }
+.layout-margin:first-child {border-top: 1px solid #00c5ae;}
+.list-product-order > .container {
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    max-height: calc(100% - 330px);
+    overflow-y: scroll;
+}
 .layout-margin {
     margin: 0px !important;
     max-width: 100% !important;
     background: transparent;
     border-bottom: 1px solid #00c5ae;
     box-shadow: none !important;
-	color:#fff !important
+	color:#fff !important;
+	padding:8px 16px;
 }
 .label-total-harga.align-center {
     text-transform: uppercase;
 	color:#00c5ae
+}
+mat-card-title.mat-card-title {
+    display: block;
+    text-align: left;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: #fea142;
+    font-weight: 500;
+	margin-bottom:0;
+}
+mat-card-content.mat-card-content {
+    text-align: left;
+}
+mat-card-content.mat-card-content:after{
+	content:"";
+	display:block;
+	position:relative;
+	clear:both;
 }

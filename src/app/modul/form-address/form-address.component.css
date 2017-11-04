@@ -1,4 +1,23 @@
-.alamat-full-width, .pajak-full-width, .aggrement-full-width{
-    width:calc(100% - 60px);
-    padding-left:30px;
+.alamat-full-width[_ngcontent-c1]{
+    padding: 30px 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.pajak-full-width[_ngcontent-c1]{
+    padding: 15px 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-product-order mat-card.cst-display-content.mat-card {
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+    padding: 0;
+}
+.form-product-order  .mat-form-field{width:100%}
+.cst-display-content.form-product-order {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }

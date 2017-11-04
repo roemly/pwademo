@@ -1,16 +1,30 @@
+<div class="cst-nav-toolbar" style="z-index: 10000">
+    <mat-toolbar class="cst-btn-toolbar">
+       <span><a class="cst-navigation-color" clickGoBack ><mat-icon>keyboard_backspace</mat-icon></a></span>
+      <span class="cst-title-form">ORDER {{id_order}}</span>
+    </mat-toolbar>
+</div>
+<div class="cst-display-content form-product-order">
 <mat-card class="cst-display-content">
+<div class="container">
   <mat-card-content>
     <section class="alamat-full-width">
-      <input matInput placeholder="Alamat tujuan" [(ngModel)]="alamat_order" name="alamatOrder" (change)="onChangeAlamat()">
+	<mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Kirim Ke" rows="5" [(ngModel)]="alamat_order" name="alamatOrder" (change)="onChangeAlamat()"></textarea>
+	 </mat-form-field>
+	 <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Catatan" rows="5" [(ngModel)]="catatan_order" name="catatanOrder" (change)="onChangeCatatan()"></textarea>
+	 </mat-form-field>
     </section>
     <section class="pajak-full-width">
-      <mat-checkbox [(ngModel)]="isPajak" (change)="onClickPajak()">Pajak</mat-checkbox>
-    </section>
-    <section class="aggrement-full-width">
-      <mat-checkbox [(ngModel)]="isAgree" (change)="onClickAgree()">Saya setuju dll</mat-checkbox>
+      <mat-checkbox [(ngModel)]="isPajak" (change)="onClickPajak()">Butuh faktur pajak</mat-checkbox>
     </section>
   </mat-card-content>
-  <div  class="button-row">
-    <a  routerLink="/form-checkout"><button mat-raised-button color="warn">Checkout</button></a>
+</div>
+  <div class="block-bottom">
+	  <div  class="button-row">
+		<a  routerLink="/form-checkout"><button mat-raised-button color="warn">Ok</button></a>
+	  </div>
   </div>
 </mat-card>
+</div>

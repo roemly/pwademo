@@ -38,18 +38,22 @@ h1{
   margin-bottom:40px;
 }
 
-.mat-option:first-child p {
-    margin-top: 16px;
-}
 .mat-option p {
     display: block;
     font-size: 10pt;
     white-space: pre-wrap;
     line-height: 1.4;
+	margin: 5px 0;
+	font-weight:normal
 }
 .mat-option .mat-option-text{display:block !important;}
-.mat-option {
-    height: auto;
+.mat-option,.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover) {
+    background: #fe0000;
+    border-bottom: 1px solid #fff;
+	color:#fff
+}
+.mat-option-text {
+    display: block;
 }
 label {
 

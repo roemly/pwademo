@@ -4,14 +4,15 @@
       <span class="cst-title-form">ORDER {{id_order}}</span>
     </mat-toolbar>
 </div>
-<div class="cst-display-content">
-  <div  class="button-row">
-    <a  routerLink="/form-order-item/{{id_order}}"><button mat-raised-button color="warn">Tambah Item</button></a>
-	<p style="margin-top: 0;margin-bottom: 0px;">&nbsp;</p>
+<div class="cst-display-content list-product-order">
+  <div class="block-top">
+	  <div class="button-row">
+		<a  routerLink="/form-order-item/{{id_order}}"><button mat-raised-button color="warn">Tambah Item</button></a>
+	  </div>
   </div>
   <div class="container">
     <div class="row">
-		<div class="col s12 ">
+		<div class="col s12">
 		  <mat-card *ngFor="let item of cart.getItems()" class="layout-margin">
 			<!--<img width="100" height="100" [src]="product.getProductById(item.id).image" alt="no Image Available">-->
 			  <mat-card-title>
@@ -19,17 +20,19 @@
 			  </mat-card-title>
 			  <mat-card-content>
 				<!--<span class="truncate">{{product.getProductById(item.id).description}}</span>-->
-				<p>Qty : {{item.qty}}</p>
-				<p>Price : {{item.price | number}}</p>
+				<p style="float:left;color:#00c5ae;margin:0">Qty : {{item.qty}}</p>
+				<p style="float:right;margin:0">Price : {{item.price | number}}</p>
 			  </mat-card-content>
 		  </mat-card>
 		</div>
     </div>
   </div>
-  <div class="label-total-harga align-center">Total</div>
-  <div class="align-center total-harga">{{cart.getTotal() | currency:'IDR':true}}</div>
+  <div class="block-bottom">
+	  <div class="label-total-harga align-center">Total</div>
+	  <div class="align-center total-harga">{{cart.getTotal() | currency:'IDR':true}}</div>
 
-  <div  class="button-row">
-    <a  routerLink="/form-address"><button mat-raised-button color="warn">Lanjut</button></a>
+	  <div  class="button-row">
+		<a  routerLink="/form-address"><button mat-raised-button color="warn">Order</button></a>
+	  </div>
   </div>
 </div>
