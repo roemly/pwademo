@@ -4,6 +4,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import {CartService} from '../../service/cart.service';
 import {ProductService} from '../../service/product.service';
 import {LoginService} from "../../service/login.service";
+import {MatSnackBar} from "@angular/material";
 @Component({
   templateUrl: './form-order.component.html',
   styleUrls:  ['./form-order.component.css'],
@@ -12,11 +13,11 @@ import {LoginService} from "../../service/login.service";
 export class FormOrderComponent implements OnInit {
   id_order: Number;
 
-
-  constructor(private route: ActivatedRoute,
-              private cart: CartService,
-              private product: ProductService,
-              private  current_user: LoginService) { }
+  constructor(public route: ActivatedRoute,
+              public cart: CartService,
+              public product: ProductService,
+              public  current_user: LoginService,
+              public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -24,5 +25,15 @@ export class FormOrderComponent implements OnInit {
     });
 
   }
+  onClickDelete(id: number){
+    const prodId = this.cart.getItems().find(d => {
+        return (d.id === id);
+    });
+    if(prodId != undefined){
+        this.cart.removeProduct(this.product.getProductById(id));
+        this.snackBar.open('Produk berhasil dihapus', 'X', {duration: 1500});
+    }
+    else this.snackBar.open('Tidak ada produk yang bisa dihapus', 'X', {duration: 1500});
 
+  }
 }
