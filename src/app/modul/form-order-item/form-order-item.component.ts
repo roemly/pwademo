@@ -42,7 +42,15 @@ export class FormOrderItemComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.id_temp = +params['idProd']; // (+) converts string 'id' to a number)
         });
-        this.products = product.getProductByCategory((this.id_order === 1) ? 'sika' : 'makita');
+        this.products = product.getProductByCategory(this.id_order ==1?'sika':'makita');
+        
+        //this.product.getProductByCategory(this.id_order ==1?'sika':'makita').then(
+        //  res => {
+        //    this.products=res;
+        //  }
+        //)
+        
+
         this.options = this.products.map(product => {
             return {
                 label: product.name,
