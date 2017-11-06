@@ -14,7 +14,6 @@ import {Cart} from "../../class/Cart";
 export class FormOrderComponent implements OnInit {
   id_order: Number;
   title: string = '';
-
   constructor(public route: ActivatedRoute,
               public cart: CartService,
               public product: ProductService,
