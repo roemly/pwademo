@@ -163,6 +163,10 @@ a.cst-navigation-color > * {
 	min-height:55px;
     font-weight: bold;
 }
+.block-bottom .chatting-form .mat-input-infix {
+    border-top: 1px solid #09bdad;
+    padding-top: 15px;
+}
 .summary-history-thumbnail {color:#fea142;}
 .title-history-thumbnail {
     color: #fff;

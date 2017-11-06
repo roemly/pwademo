@@ -37,13 +37,15 @@
 			</div>
 		</div>
 	</div>
+			  <div class="block-bottom">
 			  <form class="chatting-form">
 				<mat-form-field class="chatting-full-width">
-						<textarea matInput [(ngModel)]="chatting" name="chatting">
+						<textarea rows="5" matInput [(ngModel)]="chatting" name="chatting">
 						</textarea>
 				</mat-form-field>
 				<div  class="button-row">
 				  <button mat-raised-button color="warn" (click)="onClickSend()">KIRIM</button>
 				</div>
 			  </form>
+			  </div>
 </div>
