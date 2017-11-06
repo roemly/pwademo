@@ -1,5 +1,17 @@
+#catalog
+url: http://ptamp.aindo.com/api-get-catalog.php
+post param:json{
+    member_id=id
+    cat_id=sika|makita
+}
+//query then return value product sesuai categori dan harga sesuai kelas membernya
+return value json{id,title,price} 
+
+
+
+
 ##Order Proses##
-url: http://ptamp.aindo.com/api-order.php
+url: http://ptamp.aindo.com/api-post-order.php
 format data: json
     info:(member_id,kirim_ke,catatan,ck_faktur_pajak)
     transaksi:
