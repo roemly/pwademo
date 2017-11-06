@@ -14,10 +14,10 @@ export class FormAddressComponent implements OnInit {
   catatan_order: string = '';
   isPajak: boolean;
   isAgree: boolean;
-  constructor(private route: ActivatedRoute,
-              private cart: CartService,
-              private product: ProductService,
-              private  current_user: LoginService) { }
+  constructor(public route: ActivatedRoute,
+              public cart: CartService,
+              public product: ProductService,
+              public  current_user: LoginService) { }
 
   ngOnInit() {
     if(this.cart.getAlamatTujuan() == ''){
@@ -30,14 +30,17 @@ export class FormAddressComponent implements OnInit {
   }
   onChangeAlamat(): void {
     this.cart.setAlamatTujuan(this.alamat_order);
+    localStorage.cart = JSON.stringify(this.cart);
   }
   onChangeCatatan(): void {
     this.cart.setCatatan(this.catatan_order);
   }
   onClickPajak(): void {
     this.cart.setPajak(this.isPajak);
+    localStorage.cart = JSON.stringify(this.cart);
   }
-  onClickAgree(): void {
-    this.cart.setAgree(this.isAgree);
-  }
+  // onClickAgree(): void {
+  //   this.cart.setAgree(this.isAgree);
+  //   localStorage.cart = JSON.stringify(this.cart);
+  // }
 }

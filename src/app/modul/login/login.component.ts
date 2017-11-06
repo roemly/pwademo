@@ -13,8 +13,8 @@ export class LoginComponent {
   pass='';
 
   constructor(
-      private router:Router,
-      private users:LoginService
+      public router:Router,
+      public users:LoginService
   ){}
 
   onClick (){
