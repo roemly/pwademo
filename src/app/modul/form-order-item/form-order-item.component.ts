@@ -27,6 +27,7 @@ export class FormOrderItemComponent implements OnInit {
   options = [];
   products: Product[];
   filteredOptions: Observable<string[]>;
+  title: string = '';
 
   ngOnInit(): void {
     this.filteredOptions = this.myControl.valueChanges
@@ -46,7 +47,8 @@ export class FormOrderItemComponent implements OnInit {
         });
         
         this.products = product.getProductByCategory(this.id_order ==1?'sika':'makita');
-        
+        if(this.id_order == 1) this.title = 'SIKA';
+        else if(this.id_order == 2) this.title = 'MAKITA';
         //this.product.getProductByCategory(this.id_order ==1?'sika':'makita').then(
         //  res => {
         //    this.products=res;
