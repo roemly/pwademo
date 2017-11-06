@@ -19,7 +19,7 @@ export class CartService implements OnInit {
               public products: ProductService) {
     this._cart = new Cart();
     if(localStorage.items !== undefined) {
-      console.log('items kepanggil?');
+      // console.log('items kepanggil?');
 
       for(let item of JSON.parse(localStorage.items) as ItemCart[]){
         this._cart.addProduct(this.products.getProduct().find(_item => {
@@ -28,15 +28,15 @@ export class CartService implements OnInit {
       }
     }
     if(localStorage.alamatTujuan !== undefined) {
-        console.log('address kepanggil?');
+        // console.log('address kepanggil?');
       this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
     }
     if(localStorage.pajak !== undefined) {
-        console.log('pajak kepanggil?');
+        // console.log('pajak kepanggil?');
       this._isPajak = (JSON.parse(localStorage.pajak) as boolean);
     }
     if(localStorage.agree !== undefined) {
-        console.log('agree kepanggil?');
+        // console.log('agree kepanggil?');
       this._isAgree = (JSON.parse(localStorage.agree) as boolean);
     }
   }
