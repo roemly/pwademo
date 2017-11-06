@@ -22,17 +22,19 @@ export class FormAddressComponent implements OnInit {
     if(this.cart.getAlamatTujuan() == ''){
       if(this.current_user.getUserCurrent().alamat != '') this.cart.setAlamatTujuan(this.current_user.getUserCurrent().alamat);
     }
+    if(localStorage.alamatTujuan === undefined)localStorage.alamatTujuan = JSON.stringify(this.cart.getAlamatTujuan());
+    if(localStorage.pajak === undefined)localStorage.pajak = JSON.stringify(this.cart.getPajak());
     this.alamat_order = this.cart.getAlamatTujuan();
     this.isPajak = this.cart.getPajak();
     this.isAgree = this.cart.getAgree();
   }
   onChangeAlamat(): void {
     this.cart.setAlamatTujuan(this.alamat_order);
-    localStorage.cart = JSON.stringify(this.cart);
+    localStorage.alamatTujuan = JSON.stringify(this.cart.getAlamatTujuan());
   }
   onClickPajak(): void {
     this.cart.setPajak(this.isPajak);
-    localStorage.cart = JSON.stringify(this.cart);
+    localStorage.pajak = JSON.stringify(this.cart.getPajak());
   }
   // onClickAgree(): void {
   //   this.cart.setAgree(this.isAgree);
