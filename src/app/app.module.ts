@@ -134,8 +134,12 @@ import { ChattingComponent } from './modul/chatting/chatting.component';
         component: FormOrderComponent
       },
       {
-        path: 'form-order-item/:id',
-        component: FormOrderItemComponent
+          path: 'form-order-item/:id',
+          component: FormOrderItemComponent
+      },
+      {
+          path: 'form-order-item/:id/:idProd',
+          component: FormOrderItemComponent
       },
       {
         path: 'form-checkout',

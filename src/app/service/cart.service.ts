@@ -15,8 +15,12 @@ export class CartService implements OnInit {
     this._cart = new Cart();
   }
 
-  addProduct(product: Product, qty: number): void {
-    this._cart.addProduct(product, qty);
+  removeProduct(prod: Product): void{
+    this._cart.removeProduct(prod);
+  }
+
+  addProduct(product: Product, qty: number): boolean {
+    return this._cart.addProduct(product, qty);
   }
   getItems(): ItemCart[]{
     return this._cart.item;

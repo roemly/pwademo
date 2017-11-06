@@ -8,6 +8,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import {CartService} from '../../service/cart.service';
+import {MatSnackBar} from "@angular/material";
 
 @Component({
   templateUrl: './form-order-item.component.html',
@@ -16,27 +17,13 @@ import {CartService} from '../../service/cart.service';
 })
 export class FormOrderItemComponent implements OnInit {
   id_order: number;
+  isAdd: boolean;
+  id_temp:number = -1;
   qty = 0;
   myControl: FormControl = new FormControl();
   options = [];
   products: Product[];
   filteredOptions: Observable<string[]>;
-
-  constructor(private route: ActivatedRoute,
-              private product: ProductService,
-              private cart: CartService) {
-    this.route.params.subscribe(params => {
-      this.id_order = +params['id']; // (+) converts string 'id' to a number
-    });
-    this.products = product.getProductByCategory((this.id_order === 1) ? 'sika' : 'makita');
-    this.options = this.products.map(product => {
-      return {
-        label: product.name,
-        sublabel: product.description,
-        val: String(product.id)
-      };
-    });
-  }
 
   ngOnInit(): void {
     this.filteredOptions = this.myControl.valueChanges
@@ -44,6 +31,27 @@ export class FormOrderItemComponent implements OnInit {
       .map(val => val ? this.filter(val) : this.options.slice());
 
   }
+
+    constructor(public route: ActivatedRoute,
+                public product: ProductService,
+                public cart: CartService,
+                public snackBar: MatSnackBar) {
+        this.route.params.subscribe(params => {
+            this.id_order = +params['id']; // (+) converts string 'id' to a number
+        });
+        this.route.params.subscribe(params => {
+            this.id_temp = +params['idProd']; // (+) converts string 'id' to a number)
+        });
+        this.products = product.getProductByCategory((this.id_order === 1) ? 'sika' : 'makita');
+        this.options = this.products.map(product => {
+            return {
+                label: product.name,
+                sublabel: product.description,
+                val: String(product.id)
+            };
+        });
+
+    }
 
   NumberKeyboard(s: String) {
     if (s === 'delete') {
@@ -75,6 +83,7 @@ export class FormOrderItemComponent implements OnInit {
       option.label.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
   display(option: any): string{
+
     return option ? option.label : option;
   }
   addToCart(): void{
@@ -84,8 +93,11 @@ export class FormOrderItemComponent implements OnInit {
     } else {
       value = parseInt(this.myControl.value.val);
     }
-    this.cart.addProduct(this.products.find(item => {
+    this.isAdd = this.cart.addProduct(this.products.find(item => {
      return item.id === value;
     }), this.qty);
+
+    if(this.isAdd) this.snackBar.open('Produk berhasil ditambah', 'X', {duration: 1500});
+    else this.snackBar.open('Produk sudah ada dikeranjang', 'X', {duration: 1500});
   }
 }

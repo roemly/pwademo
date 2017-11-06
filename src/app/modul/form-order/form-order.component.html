@@ -23,6 +23,10 @@
 				<p style="float:left;color:#00c5ae;margin:0">Qty : {{item.qty}}</p>
 				<p style="float:right;margin:0">Price : {{item.price | number}}</p>
 			  </mat-card-content>
+              <mat-card-actions>
+                  <a  routerLink="/form-order-item/{{id_order}}/{{item.id}}"><button mat-button>UBAH</button></a>
+                  <button mat-button (click)="onClickDelete(item.id)">HAPUS</button>
+              </mat-card-actions>
 		  </mat-card>
 		</div>
     </div>
