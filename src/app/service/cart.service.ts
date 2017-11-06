@@ -20,22 +20,12 @@ export class CartService implements OnInit {
     this._cart = new Cart();
     if(localStorage.items !== undefined) {
       console.log('items kepanggil?');
-      // this._cart.setitem((JSON.parse(localStorage.items) as ItemCart[]));
-      // let itemProd = JSON.parse(localStorage.items, function (key, value){
-      //     console.log(isNumber(value) + ' - ' + key + ' = ' + value);
-      //     if(key == '_id') return this.products.getProductById(value);
-      //     // if(key == '_id') return products.getProductById(value);
-      // }) as Product;
-      // let itemQty = JSON.parse(localStorage.items, function (key, value){
-      //   console.log(isNumber(value) + ' - ' + key + ' = ' + value);
-      //   // if(key == '_id') return itemProd.push(this.products.getProductById(value));
-      //   if(key == '_qty') return value;
-      //   // if(key == '_id') return products.getProductById(value);
-      // });
-      let a = JSON.parse(localStorage.items) as ItemCart[];
-      // console.log(itemProd);
-      // console.log(itemQty);
-      console.log(a[0]['_qty']);
+
+      for(let item of JSON.parse(localStorage.items) as ItemCart[]){
+        this._cart.addProduct(this.products.getProduct().find(_item => {
+            return _item.id === item['_id'];
+        }), item['_qty']);
+      }
     }
     if(localStorage.alamatTujuan !== undefined) {
         console.log('address kepanggil?');
@@ -49,13 +39,6 @@ export class CartService implements OnInit {
         console.log('agree kepanggil?');
       this._isAgree = (JSON.parse(localStorage.agree) as boolean);
     }
-    // if(localStorage.cart !== undefined){
-    //     // this.thisObject = (JSON.parse(localStorage.cart) as CartService);
-    //     this._cart = (JSON.parse(localStorage.cart) as CartService).getCart();
-    //     this._alamatTujuan = (JSON.parse(localStorage.cart) as CartService).getAlamatTujuan();
-    //     this._isPajak = (JSON.parse(localStorage.cart) as CartService).getPajak();
-    //     this._isAgree = (JSON.parse(localStorage.cart) as CartService).getAgree();
-    // }
   }
 
   removeProduct(prod: Product): void{
