@@ -13,6 +13,7 @@ import {Cart} from "../../class/Cart";
 })
 export class FormOrderComponent implements OnInit {
   id_order: Number;
+  title: string = '';
 
   constructor(public route: ActivatedRoute,
               public cart: CartService,
@@ -24,6 +25,8 @@ export class FormOrderComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id_order = Number(params['id']); // (+) converts string 'id' to a number
     });
+    if(this.id_order == 1) this.title = 'SIKA';
+    else if(this.id_order == 2) this.title = 'MAKITA';
   }
   onClickDelete(id: number){
     const prodId = this.cart.getItems().find(d => {
