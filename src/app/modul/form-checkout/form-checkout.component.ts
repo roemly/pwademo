@@ -13,10 +13,10 @@ export class FormCheckoutComponent implements OnInit {
   alamat_tujuan: string = '';
   isPajak = false;
   isAgree = false;
-  constructor(private route: ActivatedRoute,
-              private cart: CartService,
-              private product: ProductService,
-              private  current_user: LoginService) { }
+  constructor(public route: ActivatedRoute,
+              public cart: CartService,
+              public product: ProductService,
+              public  current_user: LoginService) { }
 
   ngOnInit(): void {
       this.alamat_tujuan = this.cart.getAlamatTujuan();
