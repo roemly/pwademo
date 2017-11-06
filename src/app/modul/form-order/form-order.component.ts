@@ -31,9 +31,9 @@ export class FormOrderComponent implements OnInit {
     });
     if(prodId != undefined){
         this.cart.removeProduct(this.product.getProductById(id));
-        this.snackBar.open('Produk berhasil dihapus', 'X', {duration: 1500});
+        this.snackBar.open('Produk berhasil dihapus', '', {duration: 1500});
         localStorage.items = JSON.stringify(this.cart.getItems());
     }
-    else this.snackBar.open('Tidak ada produk yang bisa dihapus', 'X', {duration: 1500});
+    else this.snackBar.open('Tidak ada produk yang bisa dihapus', '', {duration: 1500});
   }
 }
