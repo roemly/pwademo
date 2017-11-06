@@ -5,6 +5,7 @@ import {CartService} from '../../service/cart.service';
 import {ProductService} from '../../service/product.service';
 import {LoginService} from "../../service/login.service";
 import {MatSnackBar} from "@angular/material";
+import {Cart} from "../../class/Cart";
 @Component({
   templateUrl: './form-order.component.html',
   styleUrls:  ['./form-order.component.css'],
@@ -23,7 +24,6 @@ export class FormOrderComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id_order = Number(params['id']); // (+) converts string 'id' to a number
     });
-
   }
   onClickDelete(id: number){
     const prodId = this.cart.getItems().find(d => {
@@ -32,8 +32,8 @@ export class FormOrderComponent implements OnInit {
     if(prodId != undefined){
         this.cart.removeProduct(this.product.getProductById(id));
         this.snackBar.open('Produk berhasil dihapus', 'X', {duration: 1500});
+        localStorage.items = JSON.stringify(this.cart.getItems());
     }
     else this.snackBar.open('Tidak ada produk yang bisa dihapus', 'X', {duration: 1500});
-
   }
 }

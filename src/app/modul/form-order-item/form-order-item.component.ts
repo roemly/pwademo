@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {FormControl} from '@angular/forms';
 import {ProductService} from '../../service/product.service';
 import {Product} from '../../class/Product';
@@ -9,6 +9,9 @@ import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import {CartService} from '../../service/cart.service';
 import {MatSnackBar} from "@angular/material";
+import { Location } from '@angular/common';
+import {Cart} from "../../class/Cart";
+import {ItemCart} from "../../class/ItemCart";
 
 @Component({
   templateUrl: './form-order-item.component.html',
@@ -35,14 +38,22 @@ export class FormOrderItemComponent implements OnInit {
     constructor(public route: ActivatedRoute,
                 public product: ProductService,
                 public cart: CartService,
-                public snackBar: MatSnackBar) {
+                public snackBar: MatSnackBar,
+                public router: Router,
+                public location: Location) {
         this.route.params.subscribe(params => {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
         });
-        this.route.params.subscribe(params => {
-            this.id_temp = +params['idProd']; // (+) converts string 'id' to a number)
-        });
-        this.products = product.getProductByCategory((this.id_order === 1) ? 'sika' : 'makita');
+        
+        this.products = product.getProductByCategory(this.id_order ==1?'sika':'makita');
+        
+        //this.product.getProductByCategory(this.id_order ==1?'sika':'makita').then(
+        //  res => {
+        //    this.products=res;
+        //  }
+        //)
+        
+
         this.options = this.products.map(product => {
             return {
                 label: product.name,
@@ -50,7 +61,6 @@ export class FormOrderItemComponent implements OnInit {
                 val: String(product.id)
             };
         });
-
     }
 
   NumberKeyboard(s: String) {
@@ -97,7 +107,12 @@ export class FormOrderItemComponent implements OnInit {
      return item.id === value;
     }), this.qty);
 
-    if(this.isAdd) this.snackBar.open('Produk berhasil ditambah', 'X', {duration: 1500});
-    else this.snackBar.open('Produk sudah ada dikeranjang', 'X', {duration: 1500});
+    if(this.isAdd) {
+      console.log('yang ini?');
+      // this.snackBar.open('Produk berhasil ditambah', '', {duration: 1500});
+      localStorage.items = JSON.stringify(this.cart.getItems());
+      this.location.back();
+    }
+    else this.snackBar.open('Produk sudah ada dikeranjang', '', {duration: 1500});
   }
 }

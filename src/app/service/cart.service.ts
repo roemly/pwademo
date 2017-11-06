@@ -3,6 +3,8 @@ import {LoginService} from './login.service';
 import {Cart} from '../class/Cart';
 import {Product} from '../class/Product';
 import {ItemCart} from '../class/ItemCart';
+import {ProductService} from "./product.service";
+import {isNumber} from "util";
 
 @Injectable()
 export class CartService implements OnInit {
@@ -10,14 +12,45 @@ export class CartService implements OnInit {
   private _alamatTujuan: string = '';
   private _catatan: string = '';
   private _isPajak: boolean = false;
-  private _isAgree: boolean = false
+  private _isAgree: boolean = false;
+  // private thisObject: CartService = null;
 
-  constructor(private login: LoginService) {
+  constructor(public login: LoginService,
+              public products: ProductService) {
     this._cart = new Cart();
+    if(localStorage.items !== undefined) {
+      console.log('items kepanggil?');
+
+      for(let item of JSON.parse(localStorage.items) as ItemCart[]){
+        this._cart.addProduct(this.products.getProduct().find(_item => {
+            return _item.id === item['_id'];
+        }), item['_qty']);
+      }
+    }
+    if(localStorage.alamatTujuan !== undefined) {
+        console.log('address kepanggil?');
+      this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
+    }
+    if(localStorage.pajak !== undefined) {
+        console.log('pajak kepanggil?');
+      this._isPajak = (JSON.parse(localStorage.pajak) as boolean);
+    }
+    if(localStorage.agree !== undefined) {
+        console.log('agree kepanggil?');
+      this._isAgree = (JSON.parse(localStorage.agree) as boolean);
+    }
   }
 
   removeProduct(prod: Product): void{
     this._cart.removeProduct(prod);
+  }
+
+  getCart(): Cart {
+    return this._cart;
+  }
+
+  setCart(_cart: Cart = null): void {
+    this._cart = _cart;
   }
 
   addProduct(product: Product, qty: number): boolean {

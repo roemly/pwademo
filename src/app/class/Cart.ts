@@ -22,9 +22,13 @@ export class Cart {
         qty,
         product.price
       ));
+        // this.location.back();
       return true;
-      // this.location.back();
     }
+  }
+
+  setitem(items: ItemCart[]): void {
+    this._item = items;
   }
 
   get item(): ItemCart[] {

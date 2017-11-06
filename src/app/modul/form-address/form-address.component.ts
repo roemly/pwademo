@@ -14,15 +14,17 @@ export class FormAddressComponent implements OnInit {
   catatan_order: string = '';
   isPajak: boolean;
   isAgree: boolean;
-  constructor(private route: ActivatedRoute,
-              private cart: CartService,
-              private product: ProductService,
-              private  current_user: LoginService) { }
+  constructor(public route: ActivatedRoute,
+              public cart: CartService,
+              public product: ProductService,
+              public  current_user: LoginService) { }
 
   ngOnInit() {
     if(this.cart.getAlamatTujuan() == ''){
       if(this.current_user.getUserCurrent().alamat != '') this.cart.setAlamatTujuan(this.current_user.getUserCurrent().alamat);
     }
+    if(localStorage.alamatTujuan === undefined)localStorage.alamatTujuan = JSON.stringify(this.cart.getAlamatTujuan());
+    if(localStorage.pajak === undefined)localStorage.pajak = JSON.stringify(this.cart.getPajak());
     this.alamat_order = this.cart.getAlamatTujuan();
     this.catatan_order= this.cart.getCatatan();
     this.isPajak = this.cart.getPajak();
@@ -30,14 +32,17 @@ export class FormAddressComponent implements OnInit {
   }
   onChangeAlamat(): void {
     this.cart.setAlamatTujuan(this.alamat_order);
+    localStorage.alamatTujuan = JSON.stringify(this.cart.getAlamatTujuan());
   }
   onChangeCatatan(): void {
     this.cart.setCatatan(this.catatan_order);
   }
   onClickPajak(): void {
     this.cart.setPajak(this.isPajak);
+    localStorage.pajak = JSON.stringify(this.cart.getPajak());
   }
-  onClickAgree(): void {
-    this.cart.setAgree(this.isAgree);
-  }
+  // onClickAgree(): void {
+  //   this.cart.setAgree(this.isAgree);
+  //   localStorage.cart = JSON.stringify(this.cart);
+  // }
 }
