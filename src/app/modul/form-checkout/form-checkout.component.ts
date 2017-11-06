@@ -11,6 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class FormCheckoutComponent implements OnInit {
   alamat_tujuan: string = '';
+  catatan: string ='';
   isPajak = false;
   isAgree = false;
   constructor(private route: ActivatedRoute,
@@ -20,6 +21,7 @@ export class FormCheckoutComponent implements OnInit {
 
   ngOnInit(): void {
       this.alamat_tujuan = this.cart.getAlamatTujuan();
+      this.catatan = this.cart.getCatatan();
       this.isPajak = this.cart.getPajak();
       this.isAgree = this.cart.getAgree();
   }

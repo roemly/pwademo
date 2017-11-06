@@ -23,12 +23,15 @@
   </div>
 <div class="align-center">Total Belanja: {{cart.getTotal() | currency:'IDR':true}}</div>
 <div class="align-center">Alamat Pengiriman: {{alamat_tujuan}}</div>
+<div class="align-center">Catatan: {{catatan}}</div>
 <div class="align-left"><mat-checkbox [(ngModel)]="isPajak" [disabled]="true">Pajak</mat-checkbox></div>
-<div class="align-left"><mat-checkbox [(ngModel)]="isAgree" [disabled]="true">Saya setuju dll</mat-checkbox></div>
+<div class="align-left"><mat-checkbox [(ngModel)]="isAgree" >Saya setuju dll</mat-checkbox></div>
 </div>
 <!-- <div  class="block-bottom"> -->
 <div  class="button-row">
+  <a routerLink="/testing">
   <button mat-raised-button color="warn">Bayar</button>
+</a>
 </div>
 <!-- </div> -->
 </div>

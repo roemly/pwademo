@@ -8,6 +8,7 @@ import {ItemCart} from '../class/ItemCart';
 export class CartService implements OnInit {
   private _cart: Cart;
   private _alamatTujuan: string = '';
+  private _catatan: string = '';
   private _isPajak: boolean = false;
   private _isAgree: boolean = false
 
@@ -37,6 +38,12 @@ export class CartService implements OnInit {
   }
   setAlamatTujuan(tujuan: string = ''): void {
     this._alamatTujuan = tujuan;
+  }
+  getCatatan(): string {
+    return this._catatan;
+  }
+  setCatatan(catatan: string = ''): void {
+    this._catatan = catatan;
   }
   getPajak(): boolean {
       return this._isPajak;

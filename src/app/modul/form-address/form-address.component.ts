@@ -11,6 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class FormAddressComponent implements OnInit {
   alamat_order: string = '';
+  catatan_order: string = '';
   isPajak: boolean;
   isAgree: boolean;
   constructor(private route: ActivatedRoute,
@@ -23,11 +24,15 @@ export class FormAddressComponent implements OnInit {
       if(this.current_user.getUserCurrent().alamat != '') this.cart.setAlamatTujuan(this.current_user.getUserCurrent().alamat);
     }
     this.alamat_order = this.cart.getAlamatTujuan();
+    this.catatan_order= this.cart.getCatatan();
     this.isPajak = this.cart.getPajak();
     this.isAgree = this.cart.getAgree();
   }
   onChangeAlamat(): void {
     this.cart.setAlamatTujuan(this.alamat_order);
+  }
+  onChangeCatatan(): void {
+    this.cart.setCatatan(this.catatan_order);
   }
   onClickPajak(): void {
     this.cart.setPajak(this.isPajak);

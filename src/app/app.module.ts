@@ -54,6 +54,7 @@ import { FormCheckoutComponent } from './modul/form-checkout/form-checkout.compo
 import { FormAddressComponent } from './modul/form-address/form-address.component';
 import { ChangepasswordComponent } from './modul/changepassword/changepassword.component';
 import { ChattingComponent } from './modul/chatting/chatting.component';
+import { TestingComponent } from './modul/testing/testing.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { ChattingComponent } from './modul/chatting/chatting.component';
     FormCheckoutComponent,
     FormAddressComponent,
     ChangepasswordComponent,
-    ChattingComponent
+    ChattingComponent,
+    TestingComponent
   ],
 
   imports: [
@@ -156,6 +158,10 @@ import { ChattingComponent } from './modul/chatting/chatting.component';
       {
         path: 'chatting',
         component: ChattingComponent
+      },
+      {
+        path: 'testing',
+        component: TestingComponent
       }
     ])
   ],

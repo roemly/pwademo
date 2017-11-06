@@ -20,3 +20,12 @@ format data: json
 
 
 Return Value Json {status:OK|FAILED}
+
+
+#Login
+url: http://ptamp.aindo.com/api-login.php
+post 
+    username 
+    email
+return 
+    OK|FAILED
