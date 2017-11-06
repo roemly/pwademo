@@ -175,23 +175,21 @@ ul.list-news-thumbnail li{
     margin-bottom: 6px;
     padding-bottom: 13px;
 }
-ul.list-history-thumbnail li.half-payment:after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 40px;
-    background: #4766a7;
-    float: left;
-    border-radius: 50px 0 0 50px;
-    position: absolute;
-    top: 5px;
-    margin-right: 6px;	
-	border: 1px solid #00c5ae;
-}
-ul.list-history-thumbnail li.zero-payment:before {
+ul.list-history-thumbnail li.zero-payment .icon-history {
 	background:#4766a7;
 }
-ul.list-history-thumbnail li:before {
+ul.list-history-thumbnail li.half-payment  .icon-history:before {
+	content:"";
+	display:block;
+	border-radius:50px 0 0 50px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#4766a7;
+	width:20px;
+	height:40px;
+}
+ul.list-history-thumbnail li .icon-history {
     content: "";
     display: block;
     width: 40px;

@@ -5,31 +5,45 @@
   </mat-toolbar>
 </div>
 <div class="cst-display-content">
-  <ul class="list-chats-thumbnail">
-    <li >
-      <div class="date-chats-thumbnail">{{'29'}} <span>{{'09'}}</span><span>{{'10.10'}}</span></div>
-      <div class="data-chats-thumbnail">
-        <div class="content-chats-thumbnail">
-
-        </div>
-      </div>
-    </li>
-  </ul>
-  <mat-list>
-    <mat-list-item>
-      <mat-chip-list>
-        <mat-chip>{{'29'}}<span>{{'09'}}</span><span>{{'10.10'}}</span></mat-chip>
-        <mat-chip>{{'hello world'}}</mat-chip>
-      </mat-chip-list>
-    </mat-list-item>
-  </mat-list>
-  <form class="chatting-form">
-    <mat-form-field class="chatting-full-width">
-            <textarea matInput [(ngModel)]="chatting" name="chatting">
-            </textarea>
-    </mat-form-field>
-    <div  class="button-row">
-      <button mat-raised-button color="warn" (click)="onClickSend()">KIRIM</button>
-    </div>
-  </form>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+			  <ul class="list-chats-thumbnail">
+				<li class="cust-block">
+				  <div class="date-chats-thumbnail">{{'29'}} <span>{{'OKT'}}</span><span>{{'10.10'}}</span></div>
+				  <div class="data-chats-thumbnail">
+					<div class="content-chats-thumbnail">
+						Mohon barangnya dikirim sebagian yaa, 50-50. Terimakasih
+					</div>
+				  </div>
+				</li>
+				<li class="admin-block">
+				  <div class="data-chats-thumbnail">
+					<div class="content-chats-thumbnail">
+						Iyaa pak.
+					</div>
+				  </div>
+				  <div class="date-chats-thumbnail">{{'29'}} <span>{{'OKT'}}</span><span>{{'10.50'}}</span></div>
+				</li>
+			  </ul>
+			  <!-- <mat-list> -->
+				<!-- <mat-list-item> -->
+				  <!-- <mat-chip-list> -->
+					<!-- <mat-chip>{{'29'}}<span>{{'09'}}</span><span>{{'10.10'}}</span></mat-chip> -->
+					<!-- <mat-chip>{{'hello world'}}</mat-chip> -->
+				  <!-- </mat-chip-list> -->
+				<!-- </mat-list-item> -->
+			  <!-- </mat-list> -->
+			</div>
+		</div>
+	</div>
+			  <form class="chatting-form">
+				<mat-form-field class="chatting-full-width">
+						<textarea matInput [(ngModel)]="chatting" name="chatting">
+						</textarea>
+				</mat-form-field>
+				<div  class="button-row">
+				  <button mat-raised-button color="warn" (click)="onClickSend()">KIRIM</button>
+				</div>
+			  </form>
 </div>

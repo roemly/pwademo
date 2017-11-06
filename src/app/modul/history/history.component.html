@@ -13,6 +13,7 @@
 					<div class="col s12">	
 					  <ul class="list-history-thumbnail">
 						<li *ngFor="let order of orderDetail.getByStatus('PROSES')">
+						  <span class="icon-history"></span>
 						  <div class="date-history-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
@@ -24,6 +25,7 @@
 						  </div>
 						</li>
 						<li class="full-payment">
+						  <span class="icon-history"></span>
 						  <div class="date-history-thumbnail">29 <span>Nov</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
@@ -35,6 +37,7 @@
 						  </div>
 						</li>
 						<li class="half-payment">
+						  <span class="icon-history"></span>
 						  <div class="date-history-thumbnail">02 <span>Aug</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
@@ -46,6 +49,7 @@
 						  </div>
 						</li>
 						<li class="zero-payment">
+						  <span class="icon-history"></span>
 						  <div class="date-history-thumbnail">12 <span>Jul</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">

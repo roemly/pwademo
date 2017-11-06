@@ -2,3 +2,7 @@
     width:calc(100% - 60px);
     padding-left:30px;
 }
+
+form.pengaturan-form{
+    padding-top: 20px;
+}

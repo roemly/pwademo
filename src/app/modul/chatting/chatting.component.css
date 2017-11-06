@@ -1,4 +1,37 @@
+.cst-display-content .container{padding-top:20px}
 .chatting-full-width {
     width:calc(100% - 60px);
     padding-left:30px;
+}
+ul.list-chats-thumbnail {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.date-chats-thumbnail span{
+    display: block;
+    font-size: 13pt;
+    line-height: 0.9;
+}
+.date-chats-thumbnail span:last-child{
+    display: block;
+    font-size: 10pt;
+    line-height: 0.8;
+}
+.date-chats-thumbnail {
+    color: #00c5ae;
+    font-size: 22pt;
+	text-align:center;
+    text-transform: uppercase;
+    float: left;
+    width: 40px;
+	min-height:55px;
+    font-weight: bold;
+	line-height:0.8;
+}
+.list-chats-thumbnail li:after{
+	content:"";
+	display:block;
+	position:relative;
+	clear:both;
 }
