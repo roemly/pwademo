@@ -40,11 +40,16 @@ body {
     border-bottom: 1px solid #00c5ae;
     box-shadow: none !important;
 	color:#fff !important;
-	padding:8px 16px;
+	padding:12px 2px;
 }
 .label-total-harga.align-center {
     text-transform: uppercase;
 	color:#00c5ae
+}
+mat-card-title.mat-card-title a{color:#fea142;}
+.mat-card-actions, .mat-card-content, .mat-card-subtitle, .mat-card-title {
+    display: block;
+    margin-bottom: 0;
 }
 mat-card-title.mat-card-title {
     display: block;
@@ -63,4 +68,37 @@ mat-card-content.mat-card-content:after{
 	display:block;
 	position:relative;
 	clear:both;
+}
+mat-card-actions.mat-card-actions button {font-size: 11pt !important;}
+mat-card-actions.mat-card-actions *{
+    width: 20px !important;
+    display: block;
+    height: 20px !important;
+    float: left;
+    line-height: 0.3;
+    min-width: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+	color:#000;
+	border-radius:50%;
+}
+mat-card-actions.mat-card-actions:after {
+    content: "";
+    display: block;
+    clear: both;
+    position: relative;
+}
+.mat-card>.mat-card-actions:last-child {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    padding: 0;
+    margin: 0 !important;
+}
+.mat-card-actions .mat-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 21px;
+    font-size: 17px;
 }

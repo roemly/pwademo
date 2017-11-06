@@ -4,6 +4,7 @@
     display:block;
     width:100%;
 }
+
 h1{
     display: block;
     background-color: #7fa0d5;
@@ -22,4 +23,16 @@ h1{
 .login-full-width {
     width:calc(100% - 60px);
     padding-left:30px;
+}
+
+h1 {
+    padding: 24px 0 !important;
+    font-weight: 500;
+    font-size: 15pt !important;
+}
+input {
+    margin: 0 !important;
+    border: 0 !important;
+    height: 1.5rem !important;
+    color: #fff !important;
 }

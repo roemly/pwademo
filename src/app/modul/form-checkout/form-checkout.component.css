@@ -1,19 +1,19 @@
-.layout-margin[_ngcontent-c1]:first-child {
+.layout-margin:first-child {
     border-top: 1px solid #00c5ae;
 }
 .mat-card:not([class*=mat-elevation-z]) {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
-.layout-margin[_ngcontent-c1] {
+.layout-margin{
     margin: 0px !important;
     max-width: 100% !important;
     background: transparent;
     border-bottom: 1px solid #00c5ae;
     box-shadow: none !important;
     color: #fff !important;
-    padding: 8px 16px;
+    padding: 12px 2px;
 }
-mat-card-title.mat-card-title[_ngcontent-c1] {
+mat-card-title.mat-card-title {
     display: block;
     text-align: left;
     font-size: 11pt;
@@ -22,9 +22,63 @@ mat-card-title.mat-card-title[_ngcontent-c1] {
     font-weight: 500;
     margin-bottom: 0;
 }
-mat-card-content.mat-card-content[_ngcontent-c1]:after {
+mat-card-content.mat-card-content:after {
     content: "";
     display: block;
     position: relative;
     clear: both;
+}
+.layout-margin:first-child {
+    border-top: 1px solid #00c5ae;
+}
+.layout-margin {
+    margin: 0px !important;
+    max-width: 100% !important;
+    background: transparent;
+    border-bottom: 1px solid #00c5ae;
+    box-shadow: none !important;
+    color: #fff !important;
+    padding: 12px 2px;
+}
+mat-card-title.mat-card-title{
+    display: block;
+    text-align: left;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: #fea142;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+mat-card-content.mat-card-content{
+    text-align: left;
+}
+mat-card-content.mat-card-content:after {
+    content: "";
+    display: block;
+    position: relative;
+    clear: both;
+}
+.form-product-checkout .container {
+    padding-top: 20px;
+}
+.detail-order-block{
+    padding: 30px 0;
+    border-bottom: 1px solid #00c5ae;
+    margin-bottom: 20px;
+}
+.label-total-harga{
+    text-transform: uppercase;
+    color: #00c5ae;
+}
+.total-harga{
+    font-size: 20pt;
+    color: #fff;
+    margin-bottom: 19px;
+}
+.form-product-checkout {
+    color: #fff;
+}
+.content-detail-order {
+    margin-bottom: 20px;
+    color: #fff;
 }

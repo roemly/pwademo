@@ -25,19 +25,33 @@
       <input matInput placeholder="Qty" disabled [(ngModel)]="qty" name="qty">
     </mat-form-field>
       <div class="row cst-keyboard-virtual center-align">
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('1')">1</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('2')">2</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('3')">3</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('4')">4</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('5')">5</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('6')">6</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('7')">7</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('8')">8</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('9')">9</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('0')">0</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('00')">00</div>
-        <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('delete')"><mat-icon>backspace</mat-icon></div>
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('1')">1</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('2')">2</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('3')">3</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('4')">4</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('5')">5</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('6')">6</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('7')">7</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('8')">8</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('9')">9</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('0')">0</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('00')">00</div> -->
+        <!-- <div class="col s4 center-align indigo lighten-5 bordered" (click)="NumberKeyboard('delete')"><mat-icon>backspace</mat-icon></div> -->
 
+	  <mat-grid-list cols="3" rowHeight="2:1">
+		<mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('1')"><span>1</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('2')"><span>2</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('3')"><span>3</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('4')"><span>4</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('5')"><span>5</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('6')"><span>6</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('7')"><span>7</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('8')"><span>8</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('9')"><span>9</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('0')"><span>0</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('00')"><span>00</span></div></mat-grid-tile>
+        <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('delete')"><mat-icon><span>backspace</span></mat-icon></div></mat-grid-tile>
+		</mat-grid-list>
       </div>
     <div class="align-center total-harga">{{getTotal() | currency:'IDR':true}}</div>
     <div  class="button-row">

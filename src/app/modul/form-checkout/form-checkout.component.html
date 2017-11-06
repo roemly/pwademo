@@ -4,7 +4,7 @@
       <span class="cst-title-form">ORDER {{id_order}}</span>
     </mat-toolbar>
 </div>
-<div class="cst-display-content form-product-order">
+<div class="cst-display-content form-product-checkout">
 <div class="container">
   <div class="row">
   <div class="col s12">
@@ -19,14 +19,19 @@
         <p style="float:right;margin:0">Price : {{item.price}}</p>
       </mat-card-content>
     </mat-card>
-  </div>
-  </div>
-<div class="align-center">Total Belanja: {{cart.getTotal() | currency:'IDR':true}}</div>
-<div class="align-center">Alamat Pengiriman: {{alamat_tujuan}}</div>
-<div class="align-center">Catatan: {{catatan}}</div>
-<div class="align-left"><mat-checkbox [(ngModel)]="isPajak" [disabled]="true">Pajak</mat-checkbox></div>
-<div class="align-left"><mat-checkbox [(ngModel)]="isAgree" >Saya setuju dll</mat-checkbox></div>
+ <div class="detail-order-block">
+<div class="label-total-harga">KIRIM KE:</div>
+<div class="content-detail-order">{{alamat_tujuan}}</div>
+<div class="label-total-harga">CATATAN:</div>
+<div class="content-detail-order">{{catatan}}</div>
+<div class="align-left"><mat-checkbox [(ngModel)]="isPajak" [disabled]="true">Butuh faktur pajak</mat-checkbox></div>
 </div>
+ <div class="label-total-harga align-center">TOTAL</div>
+<div class="align-center total-harga">{{cart.getTotal() | currency:'IDR':true}}</div>
+<div class="align-left"><mat-checkbox [(ngModel)]="isAgree" >Saya telah memeriksa dan menyetujui order ini, dan memahami bahwa order yang sudah dibuat tidak bisa dibatalkan dengan alasan apapun.</mat-checkbox></div>
+</div>
+  </div>
+  </div>
 <!-- <div  class="block-bottom"> -->
 <div  class="button-row">
   <a routerLink="/testing">

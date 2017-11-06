@@ -1,0 +1,12 @@
+.page-history .mat-tab-labels .mat-tab-label.mat-tab-label-active {
+	background:transparent;
+	color:#fff;
+	opacity:1
+}
+.page-history .mat-tab-labels .mat-tab-label {
+    width: 33.333%;
+    background: #09bdad;
+    text-transform: uppercase;
+    color: #fff;
+}
+.page-history .mat-tab-header{border:0}

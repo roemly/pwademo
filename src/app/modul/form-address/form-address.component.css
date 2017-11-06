@@ -1,9 +1,9 @@
-.alamat-full-width[_ngcontent-c1]{
+.alamat-full-width{
     padding: 30px 15px 0;
     width: 100%;
     box-sizing: border-box;
 }
-.pajak-full-width[_ngcontent-c1]{
+.pajak-full-width{
     padding: 15px 15px 0;
     width: 100%;
     box-sizing: border-box;
@@ -20,4 +20,6 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+.form-product-order .cst-display-content {
 }

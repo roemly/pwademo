@@ -113,19 +113,32 @@ a.cst-navigation-color > * {
 }
 /*NEWS*/
 
-.date-news-thumbnail span {
+.date-news-thumbnail span{
     display: block;
     font-size: 15pt;
     line-height: 0.3;
 }
-.data-news-thumbnail {
+.date-history-thumbnail span {
+    display: block;
+    font-size: 12pt;
+    line-height: 0.3;
+	margin-top:2px
+}
+.data-news-thumbnail{
     width: calc(100% - 55px);
     padding-left: 15px;
     float: left;
     padding-top: 7px;
     color:#fff;
 }
-.date-news-thumbnail {
+.data-history-thumbnail {
+    width: calc(100% - 98px);
+    padding-left: 10px;
+    float: left;
+    padding-top: 7px;
+    color:#fff;
+}
+.date-news-thumbnail{
     color: #00c5ae;
     font-size: 27pt;
 	text-align:center;
@@ -135,22 +148,80 @@ a.cst-navigation-color > * {
 	min-height:55px;
     font-weight: bold;
 }
-.title-news-thumbnail {
+.title-news-thumbnail{
     color: #fea142;
     font-weight: bold;
     margin-bottom: 3px;
 }
-ul.list-news-thumbnail li:last-child {border:0}
-ul.list-news-thumbnail li {
+.date-history-thumbnail {
+    color: #00c5ae;
+    font-size: 22pt;
+	text-align:center;
+    text-transform: uppercase;
+    float: left;
+    width: 40px;
+	min-height:55px;
+    font-weight: bold;
+}
+.summary-history-thumbnail {color:#fea142;}
+.title-history-thumbnail {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+ul.list-news-thumbnail li:last-child{border:0}
+ul.list-news-thumbnail li{
     border-bottom: 1px solid #00c5ae;
     margin-bottom: 6px;
     padding-bottom: 13px;
 }
-ul.list-news-thumbnail li:after {
+ul.list-history-thumbnail li.half-payment:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 40px;
+    background: #4766a7;
+    float: left;
+    border-radius: 50px 0 0 50px;
+    position: absolute;
+    top: 5px;
+    margin-right: 6px;	
+	border: 1px solid #00c5ae;
+}
+ul.list-history-thumbnail li.zero-payment:before {
+	background:#4766a7;
+}
+ul.list-history-thumbnail li:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #00c5ae;
+    float: left;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    margin-right: 6px;
+    border: 1px solid #00c5ae;
+}
+ul.list-history-thumbnail li:first-child {border-top: 1px solid #00c5ae;}
+ul.list-history-thumbnail li {
+    border-bottom: 1px solid #00c5ae;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+	position:relative;
+}
+ul.list-news-thumbnail li:after,ul.list-history-thumbnail li:after {
     content: "";
     display: block;
     clear: both;
     position: relative;
+}
+ul.list-history-thumbnail {
+    list-style: none;
+    margin: 0;
+    padding: 30px 0 0;
 }
 ul.list-news-thumbnail {
     list-style: none;
@@ -194,8 +265,10 @@ label.mat-input-placeholder{
 	left:-15%;
 	top:0;
 }
-.gambar-atas.login-page img{
-	left:0%;
+.gambar-atas.login-page img {
+    left: 0%;
+    width: 100%;
+    height: auto;
 }
 .gambar-atas{
     overflow-x: hidden;
@@ -476,7 +549,41 @@ input {
 .order-item-form .mat-option-text {
     display: inline-block;
 }
-.form-product-order .mat-checkbox-inner-container{background:#fff;border-radius:3px}
+.summary-news-thumbnail {
+    font-size: 11pt;
+}
+.form-product-order .mat-checkbox-inner-container,.form-product-checkout .mat-checkbox-inner-container{background:#fff;border-radius:3px}
+
+.form-product-checkout .mat-checkbox-layout {
+    cursor: inherit;
+    align-items: baseline;
+    display: inline-flex;
+    white-space: pre-wrap;
+    vertical-align: top;
+}
+.form-product-checkout .mat-checkbox-disabled .mat-checkbox-label{color:#fff}
+.form-product-checkout .mat-checkbox-checkmark-path {
+    stroke: #fea142!important;
+}
+.form-product-checkout .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background{background:#4766a7}
+.page-history .mat-tab-labels .mat-tab-label.mat-tab-label-active {
+	background:transparent;
+	color:#fff;
+	opacity:1
+}
+.page-history .mat-tab-labels .mat-tab-label {
+    width: 33.333%;
+    background: #09bdad;
+    text-transform: uppercase;
+    color: #fff;
+}
+.page-history {
+    margin-top: -4px;
+}
+.page-history .mat-tab-header{border:0}
+.page-history .mat-tab-group.mat-primary .mat-ink-bar,.page-history  .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: transparent;
+}
 @media (min-width:650px){
 	.gambar-atas img{position:relative;left:0;display:block;width:100%;height:auto}
 	.gambar-atas{

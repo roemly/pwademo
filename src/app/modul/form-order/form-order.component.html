@@ -16,7 +16,7 @@
 		  <mat-card *ngFor="let item of cart.getItems()" class="layout-margin">
 			<!--<img width="100" height="100" [src]="product.getProductById(item.id).image" alt="no Image Available">-->
 			  <mat-card-title>
-				{{product.getProductById(item.id).name}}
+				<a routerLink="/form-order-item/{{id_order}}/{{item.id}}">{{product.getProductById(item.id).name}}</a>
 			  </mat-card-title>
 			  <mat-card-content>
 				<!--<span class="truncate">{{product.getProductById(item.id).description}}</span>-->
@@ -24,8 +24,8 @@
 				<p style="float:right;margin:0">Price : {{item.price | number}}</p>
 			  </mat-card-content>
               <mat-card-actions>
-                  <a  routerLink="/form-order-item/{{id_order}}/{{item.id}}"><button mat-button>UBAH</button></a>
-                  <button mat-button (click)="onClickDelete(item.id)">HAPUS</button>
+                  
+                  <button mat-button (click)="onClickDelete(item.id)"><mat-icon>close</mat-icon></button>
               </mat-card-actions>
 		  </mat-card>
 		</div>
