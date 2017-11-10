@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Product} from '../class/Product';
 import {PRODUCTS} from './product-data';
-import { Headers, Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import { Headers, Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ProductService {
@@ -17,25 +18,85 @@ export class ProductService {
   
   products: Product[] = null;
   
-  constructor(private http: Http) {}
+  constructor(private http: Http) {
+    // this.getProduct1().then(value => {
+    //     this.products = value;
+    // });
+    //   this.fetchdata1();
+  }
 
   getProduct(): Product[] {
     if (this.products) {
       return this.products;
     }
-    const data = PRODUCTS;
-    this.products = data;
-    return data;
+    // const data = _products;
+    // this.products = data;
+    //   const data = [];
+    // this.getProduct1().then(value => {
+    //   this.products = value;
+    //   console.log(this.products);
+    // });
+    // this.products = data;
+    // console.log(this.products);
+    // return data;
+    const result: Product[] = [];
+        let i: number = 0;
+        this.fetchdata().subscribe(
+        (data) => {
+          data.forEach(d => {
+              i = i + 1;
+              result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+          });
+          this.products = result;
+          return this.products;
+        }
+    );
   }
+
+  fetchdata() {
+      //ganti link data yang mau diambil dari server disini
+      return this.http.get('https://falsesilver.me/fiesto/public/api/post-all')
+          .map((res) => res.json());
+  }
+
+  // fetchdata1(){
+  //     const result: Product[] = [];
+  //     let i: number = 0;
+  //     this.http.get('https://falsesilver.me/fiesto/public/api/post-all')
+  //         .map((res) => res.json()).subscribe(
+  //         (data) => {
+  //             data.forEach(d => {
+  //                 i = i + 1;
+  //                 result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+  //             });
+  //             this.products = result;
+  //         }
+  //     );
+  // }
 
   getProductByCategory(category: string): Product[] {
     
     if (this.products) {
       return this.products.filter(item => item.category === category);
     }
-    const data = PRODUCTS;
-    this.products = data;
-    return data.filter(item => item.category === category);
+    // const data = PRODUCTS;
+    // this.products = data;
+    const result: Product[] = [];
+    let i: number = 0;
+    this.fetchdata().subscribe(
+        (data) => {
+            data.forEach(d => {
+                i = i + 1;
+                result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+            });
+            this.products = result;
+            return this.products.filter(item => item.category === category);
+        }
+    );
+    // const data = this.fetchdata().then(function(value) {
+    //     return value;
+    // };
+    // return this.products.filter(item => item.category === category);
     
     
     // return this.http
@@ -50,5 +111,4 @@ export class ProductService {
   getProductById(id: number): Product{
     return this.products.find(item => item.id === id);
   }
-
 }
