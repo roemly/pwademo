@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 import {Cart} from "../../class/Cart";
 import {ItemCart} from "../../class/ItemCart";
 import "rxjs/add/operator/startWith";
+import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
   templateUrl: './form-order-item.component.html',
@@ -28,36 +29,127 @@ export class FormOrderItemComponent implements OnInit {
   products: Product[];
   filteredOptions: Observable<string[]>;
   title: string = '';
+  r: Product[] = [];
 
   ngOnInit(): void {
-    const result: Product[] = [];
+    let result: Product[] = [];
     let i: number = 0;
-    this.product.fetchdata().subscribe(
-        (data) => {
-          data.forEach(d => {
-              i = i + 1;
-              result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+    // this.product.fetchdata().subscribe(
+    //     (data) => {
+    //       if(this.r.length > 0) result = [];
+    //       else{
+    //           // for (let i = 0; i < 20000; i++){
+    //           //     this.r.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+    //           // }
+    //           // result = this.r;
+    //           // console.log(this.r);
+    //           console.log(data);
+    //           data.forEach(d => {
+    //               i = i + 1;
+    //               result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+    //           });
+    //       }
+    //
+    //       // result = result.filter(item => item.category === (this.id_order ==1?'sika':'makita'));
+    //       // this.product.products = result;
+    //       this.product.products = this.r;
+    //       this.products = this.product.getProductByCategory(this.id_order ==1?'sika':'makita');
+    //       console.log('products: ',this.products);
+    //       this.options = this.products.map(p => {
+    //               return {
+    //                   label: p.name,
+    //                   sublabel: p.description,
+    //                   val: String(p.id)
+    //               };
+    //           });
+    //       this.filteredOptions = this.myControl.valueChanges
+    //           .startWith(null)
+    //           .map(val => {
+    //               console.log('qty: ', this.qty);
+    //               if (val) {
+    //                   let temp = this.filter(val);
+    //                   console.log('filter: ', temp);
+    //                   console.log('temp',temp.length);
+    //                   let filternow = [];
+    //                   if(temp.length > 10){
+    //                       for(let i = 0; i < 10; i++)
+    //                           filternow[i] = temp[i];
+    //                   }
+    //                   else filternow = temp;
+    //                   console.log('filternow',filternow.length);
+    //                   return filternow;
+    //
+    //               }
+    //               else {
+    //                   console.log('slice: ', this.options.slice());
+    //                   console.log('options',this.options.length);
+    //                   let filternow = [];
+    //                   if(this.options.length > 10){
+    //                       for(let i = 0; i < 10; i++)
+    //                           filternow[i] = this.options[i];
+    //                   }
+    //                   else filternow = this.options;
+    //                   console.log('filternow',filternow.length);
+    //                   return filternow.slice();
+    //               }
+    //           });
+    //       // console.log(this.product.products);
+    //     }
+    // );
+    //   if(this.product.products == null) console.log('form order null');
+    //   this.product.fetchdata1().subscribe(
+    //       data => {
+    //           // console.log(typeof data);
+    //           if(this.product.products == null || this.product.category != this.title){
+    //               console.log('form order');
+    //               this.product.products = data.filter(item => item.category === this.title.toLowerCase());
+    //               // console.log(this.title);
+    //               // console.log(this.product.category);
+    //           }
+    //       }
+    //   );
+      this.products = this.product.getProduct();
+      this.options = this.products.map(p => {
+          return {
+              label: String(p.name),
+              sublabel: String(p.description),
+              val: String(p.id)
+          };
+      });
+      this.filteredOptions = this.myControl.valueChanges
+          .startWith(null)
+          .map(val => {
+              console.log('qty: ', this.qty);
+              if (val) {
+                  let temp = this.filter(val);
+                  // console.log('filter: ', temp);
+                  // console.log('temp',temp.length);
+                  let filternow = [];
+                  if(temp.length > 10){
+                      for(let i = 0; i < 10; i++)
+                          filternow[i] = temp[i];
+                  }
+                  else filternow = temp;
+                  console.log('filternow',filternow.length);
+                  return filternow;
+
+              }
+              else {
+                  // console.log('slice: ', this.options.slice());
+                  // console.log('options',this.options.length);
+                  let filternow = [];
+                  if(this.options.length > 10){
+                      for(let i = 0; i < 10; i++)
+                          filternow[i] = this.options[i];
+                  }
+                  else filternow = this.options;
+                  // console.log('filternow',filternow.length);
+                  return filternow.slice();
+              }
           });
-          // result = result.filter(item => item.category === (this.id_order ==1?'sika':'makita'));
-          this.product.products = result;
-          this.products = this.product.getProductByCategory(this.id_order ==1?'sika':'makita');
-          console.log(this.products);
-          this.options = this.products.map(p => {
-                  return {
-                      label: p.name,
-                      sublabel: p.description,
-                      val: String(p.id)
-                  };
-              });
-          this.filteredOptions = this.myControl.valueChanges
-              .startWith(null)
-              .map(val => val ? this.filter(val) : this.options.slice());
-          // console.log(this.product.products);
-        }
-    );
-    this.filteredOptions = this.myControl.valueChanges
-        .startWith(null)
-        .map(val => val ? this.filter(val) : this.options.slice());
+    // this.filteredOptions = this.myControl.valueChanges
+    //     .startWith(null)
+    //     .map(val => val ? this.filter(val) : this.options.slice());
 
   }
 
@@ -70,6 +162,7 @@ export class FormOrderItemComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
         });
+
         // console.log('b');
         // this.products = product.getProductByCategory(this.id_order ==1?'sika':'makita');
 
@@ -119,31 +212,30 @@ export class FormOrderItemComponent implements OnInit {
     } else{
       id = null;
     }
-    if(id === null || id === undefined) return 0;
+    if(id === null || id === undefined || this.products.find(item => item.id == id) == null) {
+        // console.log('this id');
+        return 0;
+    }
+    // console.log('that id',this.products.find(item => item.id == id) == null);
     return this.qty * this.products.find(item => item.id == id).price;
   }
   filter(val: any): string[] {
-    console.log('val before: ', val);
     if (typeof (val) !== 'string'){
+      console.log('val: ', val);
       val = val.label;
-      // console.log('val before: ', val.label);
     }
-    console.log('val after: ', val);
-    console.log('products: ', this.product.products);
-    // const temp = [];
-    // this.options.forEach(d => {
-    //     if(d.label.contains(val) || d.sublabel.contains(val)) temp.push(d);
-    // });
+    // let temp =
+
     return this.options.filter(option =>
-        option.label.toLowerCase().indexOf(val.toLowerCase()) === 0 || option.sublabel.toLowerCase().indexOf(val.toLowerCase()) === 0);
+        option.label.indexOf(val.toLowerCase()) > -1 || option.sublabel.indexOf(val.toLowerCase()) > -1
+    );
     // return this.options.filter(option =>
     //   option.label.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
-  // doingfilter(value, index, arr){
-  //   return arr.fin
-  // }
-  display(option: any): string{
 
+  display(option: any): string{
+    // console.log('option: ', option);
+    // console.log('olabel: ', option !== null ? option.label : null);
     return option ? option.label : option;
   }
   addToCart(): void{

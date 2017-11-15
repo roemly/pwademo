@@ -3,6 +3,7 @@ import {Product} from '../class/Product';
 import {PRODUCTS} from './product-data';
 import { Headers, Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -17,12 +18,15 @@ export class ProductService {
 });
   
   products: Product[] = null;
+  category: string = '';
+  databaseProducts: Product[] = null;
   
   constructor(private http: Http) {
     // this.getProduct1().then(value => {
     //     this.products = value;
     // });
-    //   this.fetchdata1();
+    //   if(this.databaseProducts == null)
+    //     this.fetchdata1().subscribe(data => this.databaseProducts = data);
   }
 
   getProduct(): Product[] {
@@ -39,25 +43,34 @@ export class ProductService {
     // this.products = data;
     // console.log(this.products);
     // return data;
-    const result: Product[] = [];
-        let i: number = 0;
-        this.fetchdata().subscribe(
+    // const result: Product[] = [];
+    // let i: number = 0;
+    this.fetchdata1().subscribe(
         (data) => {
-          data.forEach(d => {
-              i = i + 1;
-              result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
-          });
-          this.products = result;
+          // data.forEach(d => {
+          //     i = i + 1;
+          //     result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+          // });
+          this.products = data.filter(item => item.category === this.category);
           return this.products;
         }
     );
   }
 
-  fetchdata() {
-      //ganti link data yang mau diambil dari server disini
-      return this.http.get('https://falsesilver.me/fiesto/public/api/post-all')
-          .map((res) => res.json());
-  }
+    // fetchdata() {
+    //     //ganti link data yang mau diambil dari server disini
+    //     return this.http.get('https://falsesilver.me/fiesto/public/api/post-all')
+    //     // return this.http.get(this.api_catalog_data_url)
+    //         .map((res) => res.json());
+    // }
+
+    fetchdata1(): Observable<Product[]> {
+        //ganti link data yang mau diambil dari server disini
+        return this.http.get('assets/dummy-data.json')
+        // return this.http.get(this.api_catalog_data_url)
+            .map((res: Response) => <Product[]>res.json());
+            //.do(data => console.log(JSON.stringify(data)));
+    }
 
   // fetchdata1(){
   //     const result: Product[] = [];
@@ -81,16 +94,16 @@ export class ProductService {
     }
     // const data = PRODUCTS;
     // this.products = data;
-    const result: Product[] = [];
-    let i: number = 0;
-    this.fetchdata().subscribe(
+    // const result: Product[] = [];
+    // let i: number = 0;
+    this.fetchdata1().subscribe(
         (data) => {
-            data.forEach(d => {
-                i = i + 1;
-                result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
-            });
-            this.products = result;
-            return this.products.filter(item => item.category === category);
+            // data.forEach(d => {
+            //     i = i + 1;
+            //     result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
+            // });
+            this.products = data.filter(item => item.category === category);
+            return this.products;
         }
     );
     // const data = this.fetchdata().then(function(value) {
@@ -109,6 +122,7 @@ export class ProductService {
    }
 
   getProductById(id: number): Product{
-    return this.products.find(item => item.id === id);
+    return (this.databaseProducts != null) ? this.databaseProducts.find(item =>
+        item.id === id) : null;
   }
 }

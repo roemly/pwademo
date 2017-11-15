@@ -13,20 +13,14 @@ export class CartService implements OnInit {
   private _catatan: string = '';
   private _isPajak: boolean = false;
   private _isAgree: boolean = false;
+  public title: string = '';
   // private thisObject: CartService = null;
 
   constructor(public login: LoginService,
               public products: ProductService) {
     this._cart = new Cart();
-    if(localStorage.items !== undefined) {
-      // console.log('items kepanggil?');
 
-      for(let item of JSON.parse(localStorage.items) as ItemCart[]){
-        this._cart.addProduct(this.products.getProduct().find(_item => {
-            return _item.id === item['_id'];
-        }), item['_qty']);
-      }
-    }
+
     if(localStorage.alamatTujuan !== undefined) {
         // console.log('address kepanggil?');
       this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
@@ -39,6 +33,38 @@ export class CartService implements OnInit {
         // console.log('agree kepanggil?');
       this._isAgree = (JSON.parse(localStorage.agree) as boolean);
     }
+  }
+
+  refreshdata(): void{
+      if(this.products.databaseProducts == null){
+          this.products.fetchdata1().subscribe(data => this.products.databaseProducts = data);
+      }
+      if(this.products.products == null || this.products.category != this.title){
+          console.log('cart',this.title);
+          console.log('product before',this.products.category);
+          this.products.fetchdata1().subscribe(
+              data => {
+                  // console.log(this.title);
+                  this.products.products = data.filter(item => item.category === this.title.toLowerCase());
+                  if(localStorage.items !== undefined) {
+                      // console.log('items kepanggil?');
+                      for(let item of JSON.parse(localStorage.items) as ItemCart[]){
+                          // console.log('find', this.product.getProduct());
+                          let tempItem = data.find(_item => {
+                              return _item.id === item['_id'];
+                          });
+                          console.log('tempitem',tempItem);
+                          if(tempItem != null)
+                              this._cart.addProduct(tempItem, item['_qty']);
+                      }
+                  }
+                  console.log('-----');
+
+                  this.products.category = this.title;
+                  console.log('product after',this.products.category);
+              }
+          );
+      }
   }
 
   removeProduct(prod: Product): void{

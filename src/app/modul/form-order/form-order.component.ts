@@ -6,6 +6,7 @@ import {ProductService} from '../../service/product.service';
 import {LoginService} from "../../service/login.service";
 import {MatSnackBar} from "@angular/material";
 import {Cart} from "../../class/Cart";
+import {ItemCart} from "../../class/ItemCart";
 @Component({
   templateUrl: './form-order.component.html',
   styleUrls:  ['./form-order.component.css'],
@@ -18,7 +19,7 @@ export class FormOrderComponent implements OnInit {
               public cart: CartService,
               public product: ProductService,
               public  current_user: LoginService,
-              public snackBar: MatSnackBar) { }
+              public snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -26,6 +27,9 @@ export class FormOrderComponent implements OnInit {
     });
     if(this.id_order == 1) this.title = 'SIKA';
     else if(this.id_order == 2) this.title = 'MAKITA';
+    this.cart.title = this.title.toLowerCase();
+    this.cart.refreshdata();
+    console.log('now',this.cart.title);
   }
   onClickDelete(id: number){
     const prodId = this.cart.getItems().find(d => {
