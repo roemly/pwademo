@@ -12,9 +12,10 @@
 				<div class="row">
 					<div class="col s12">	
 					  <ul class="list-history-thumbnail">
-						<li *ngFor="let order of orderDetail.getByStatus('PROSES')">
+					  	<li *ngFor="let order of orderDetail.getByStatus('PROSES')" class="zero-payment">
+						<!--<li *ngFor="let order of orderDetail.getorderlist()" class="zero-payment">-->
 						  <span class="icon-history"></span>
-						  <div class="date-history-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
 							  Order ID : {{order.id}}
@@ -24,42 +25,42 @@
 							</div>
 						  </div>
 						</li>
-						<li class="full-payment">
-						  <span class="icon-history"></span>
-						  <div class="date-history-thumbnail">29 <span>Nov</span></div>
-						  <div class="data-history-thumbnail">
-							<div class="title-history-thumbnail">
-							  PO No. 0100023
-							</div>
-							<div class="summary-history-thumbnail">
-							  Rp. 1.000.000
-							</div>
-						  </div>
-						</li>
-						<li class="half-payment">
-						  <span class="icon-history"></span>
-						  <div class="date-history-thumbnail">02 <span>Aug</span></div>
-						  <div class="data-history-thumbnail">
-							<div class="title-history-thumbnail">
-							  PO No. 0100030
-							</div>
-							<div class="summary-history-thumbnail">
-							  Rp. 2.400.000
-							</div>
-						  </div>
-						</li>
-						<li class="zero-payment">
-						  <span class="icon-history"></span>
-						  <div class="date-history-thumbnail">12 <span>Jul</span></div>
-						  <div class="data-history-thumbnail">
-							<div class="title-history-thumbnail">
-							  PO No. 0100032
-							</div>
-							<div class="summary-history-thumbnail">
-							  Rp. 7.400.000
-							</div>
-						  </div>
-						</li>
+						<!--<li class="full-payment">-->
+						  <!--<span class="icon-history"></span>-->
+						  <!--<div class="date-history-thumbnail">29 <span>Nov</span></div>-->
+						  <!--<div class="data-history-thumbnail">-->
+							<!--<div class="title-history-thumbnail">-->
+							  <!--PO No. 0100023-->
+							<!--</div>-->
+							<!--<div class="summary-history-thumbnail">-->
+							  <!--Rp. 1.000.000-->
+							<!--</div>-->
+						  <!--</div>-->
+						<!--</li>-->
+						<!--<li class="half-payment">-->
+						  <!--<span class="icon-history"></span>-->
+						  <!--<div class="date-history-thumbnail">02 <span>Aug</span></div>-->
+						  <!--<div class="data-history-thumbnail">-->
+							<!--<div class="title-history-thumbnail">-->
+							  <!--PO No. 0100030-->
+							<!--</div>-->
+							<!--<div class="summary-history-thumbnail">-->
+							  <!--Rp. 2.400.000-->
+							<!--</div>-->
+						  <!--</div>-->
+						<!--</li>-->
+						<!--<li class="zero-payment">-->
+						  <!--<span class="icon-history"></span>-->
+						  <!--<div class="date-history-thumbnail">12 <span>Jul</span></div>-->
+						  <!--<div class="data-history-thumbnail">-->
+							<!--<div class="title-history-thumbnail">-->
+							  <!--PO No. 0100032-->
+							<!--</div>-->
+							<!--<div class="summary-history-thumbnail">-->
+							  <!--Rp. 7.400.000-->
+							<!--</div>-->
+						  <!--</div>-->
+						<!--</li>-->
 					  </ul>
 					</div>
 				</div>
@@ -70,8 +71,10 @@
 				<div class="row">
 					<div class="col s12">
 						<ul class="list-history-thumbnail">
-						  <li *ngFor="let order of orderDetail.getByStatus('TERKIRIM')">
-							<div class="date-history-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+						  <li *ngFor="let order of orderDetail.getByStatus('TERKIRIM')" class="half-payment">
+							<!--<li *ngFor="let order of orderDetail.getorderlist()" class="half-payment">-->
+							  <span class="icon-history"></span>
+							<div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 							<div class="data-history-thumbnail">
 							  <div class="title-history-thumbnail">
 								Order ID : {{order.id}}
@@ -91,8 +94,10 @@
 				<div class="row">
 					<div class="col s12">
 					  <ul class="list-history-thumbnail">
-						<li *ngFor="let order of orderDetail.getByStatus('ARSIP')">
-						  <div class="date-history-thumbnail">{{order.created_at.getDay() + 1}} <span>{{order.created_at.getMonth() + 1}}</span></div>
+						<li *ngFor="let order of orderDetail.getByStatus('ARSIP')" class="full-payment">
+					  	<!--<li *ngFor="let order of orderDetail.getorderlist()" class="full-payment">-->
+							<span class="icon-history"></span>
+						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
 							  Order ID : {{order.id}}

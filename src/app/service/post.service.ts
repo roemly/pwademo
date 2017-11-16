@@ -1,17 +1,33 @@
 import { Injectable } from '@angular/core';
 import {Post} from '../class/Post';
-import {Posts} from './post-data';
+// import {Posts} from './post-data';
+import {Observable} from "rxjs/Observable";
+import { Headers, Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class PostService {
   posts: Post[] = null;
-  constructor() { }
+  constructor(private http: Http) { }
   getPost(): Post[]{
     if (this.posts !== null) {
+      // console.log('i');
       return this.posts;
     }
-    let data = Posts;
-    this.posts = data;
-    return data;
+    // return null;
+    // this.fetchdata().subscribe(data => {
+    //   this.posts = data;
+    //   console.log('a');
+    //   return this.posts;
+    // });
+    // let data = Posts;
+    // this.posts = data;
+    // return data;
+  }
+  fetchdata(): Observable<Post[]> {
+    return this.http.get('assets/dummy-post.json')
+        .map((res: Response) => <Post[]>res.json());
+        // .do(data => console.log(JSON.stringify(data)));
   }
 }

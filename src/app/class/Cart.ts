@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 
 export class Cart {
   private _item: ItemCart[] = new Array<ItemCart>();
-  private location: Location;
+  // private location: Location;
   constructor() {
   }
 

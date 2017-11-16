@@ -6,9 +6,9 @@ export class Order{
   total_price: number=0;
   detail: OrderDetail[];
   status: string;
-  created_at: Date;
+  created_at: string;
 
-    constructor(id: number,user_id: number,status: string,  detail: OrderDetail[], created_at: Date) {
+    constructor(id: number,user_id: number,status: string,  detail: OrderDetail[], created_at: string) {
         this.user_id = user_id;
         this.id = id;
         this.detail = detail;

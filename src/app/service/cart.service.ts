@@ -40,8 +40,8 @@ export class CartService implements OnInit {
           this.products.fetchdata1().subscribe(data => this.products.databaseProducts = data);
       }
       if(this.products.products == null || this.products.category != this.title){
-          console.log('cart',this.title);
-          console.log('product before',this.products.category);
+          // console.log('cart',this.title);
+          // console.log('product before',this.products.category);
           this.products.fetchdata1().subscribe(
               data => {
                   // console.log(this.title);
@@ -58,10 +58,10 @@ export class CartService implements OnInit {
                               this._cart.addProduct(tempItem, item['_qty']);
                       }
                   }
-                  console.log('-----');
+                  // console.log('-----');
 
                   this.products.category = this.title;
-                  console.log('product after',this.products.category);
+                  // console.log('product after',this.products.category);
               }
           );
       }

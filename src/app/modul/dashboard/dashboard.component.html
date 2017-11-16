@@ -19,7 +19,7 @@
 </div>
 <ul class="list-news-thumbnail">
 	<li *ngFor="let post of posts.getPost()">
-		<div class="date-news-thumbnail">{{post.created_at.getDay() + 1}} <span>{{post.created_at.getMonth() + 1}}</span></div>
+		<div class="date-news-thumbnail">{{post.created_at.substr(8,2)}} <span>{{post.created_at.substr(5,2)}}</span></div>
 		<div class="data-news-thumbnail">
 			<div class="title-news-thumbnail">
 				{{post.title}}

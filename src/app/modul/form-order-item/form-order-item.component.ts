@@ -245,12 +245,16 @@ export class FormOrderItemComponent implements OnInit {
     } else {
       value = parseInt(this.myControl.value.val);
     }
+    if(value == 0){
+        this.snackBar.open('Produk yang dibeli tidak boleh nol', '', {duration: 1500});
+        return;
+    }
     this.isAdd = this.cart.addProduct(this.products.find(item => {
      return item.id === value;
     }), this.qty);
 
     if(this.isAdd) {
-      console.log('yang ini?');
+      // console.log('yang ini?');
       // this.snackBar.open('Produk berhasil ditambah', '', {duration: 1500});
       localStorage.items = JSON.stringify(this.cart.getItems());
       this.location.back();

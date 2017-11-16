@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {OrderDetail} from '../../class/OrderDetail';
 import {OrderService} from '../../service/order.service';
 import {Router} from '@angular/router';
@@ -9,9 +9,20 @@ import {LoginService} from '../../service/login.service';
   styleUrls:  ['./history.component.css'],
   selector: 'app-history',
 })
-export class HistoryComponent {
+export class HistoryComponent implements OnInit{
   title = 'History';
-
+  ngOnInit(): void {
+    if(this.orderDetail.orderlist == null){
+        this.orderDetail.fetchdata().subscribe(data => {
+            this.orderDetail.orderlist = data.filter(item => {
+                if(this.login.getUserCurrent().id == item.user_id){
+                    // console.log(item);
+                    return item;
+                }
+            });
+        });
+    }
+  }
   constructor(
       private orderDetail: OrderService,
       private router: Router,

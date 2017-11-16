@@ -66,7 +66,7 @@ export class ProductService {
 
     fetchdata1(): Observable<Product[]> {
         //ganti link data yang mau diambil dari server disini
-        return this.http.get('assets/dummy-data.json')
+        return this.http.get('assets/dummy-product.json')
         // return this.http.get(this.api_catalog_data_url)
             .map((res: Response) => <Product[]>res.json());
             //.do(data => console.log(JSON.stringify(data)));
