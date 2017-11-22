@@ -28,7 +28,7 @@ export class FormOrderComponent implements OnInit {
     if(this.id_order == 1) this.title = 'SIKA';
     else if(this.id_order == 2) this.title = 'MAKITA';
     this.cart.title = this.title.toLowerCase();
-    this.cart.refreshdata();
+    // this.cart.refreshdata();
     console.log('now',this.cart.title);
   }
   onClickDelete(id: number){

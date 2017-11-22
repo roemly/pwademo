@@ -27,7 +27,7 @@ export class FormOrderItemComponent implements OnInit {
   myControl: FormControl = new FormControl();
   options = [];
   products: Product[];
-  filteredOptions: Observable<string[]>;
+  filteredOptions: any;
   title: string = '';
   r: Product[] = [];
 
@@ -109,43 +109,49 @@ export class FormOrderItemComponent implements OnInit {
     //       }
     //   );
       this.products = this.product.getProduct();
-      this.options = this.products.map(p => {
-          return {
-              label: String(p.name),
-              sublabel: String(p.description),
-              val: String(p.id)
-          };
-      });
+
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
-              console.log('qty: ', this.qty);
-              if (val) {
-                  let temp = this.filter(val);
-                  // console.log('filter: ', temp);
-                  // console.log('temp',temp.length);
-                  let filternow = [];
-                  if(temp.length > 10){
-                      for(let i = 0; i < 10; i++)
-                          filternow[i] = temp[i];
-                  }
-                  else filternow = temp;
-                  console.log('filternow',filternow.length);
-                  return filternow;
+              // console.log('qty: ', this.qty);
+              // if (val) {
+              //     let temp = this.filter(val);
+              //     // console.log('filter: ', temp);
+              //     // console.log('temp',temp.length);
+              //     let filternow = [];
+              //     if(temp.length > 10){
+              //         for(let i = 0; i < 10; i++)
+              //             filternow[i] = temp[i];
+              //     }
+              //     else filternow = temp;
+              //     console.log('filternow', filternow.length);
+              //     return filternow;
+              //
+              // }
+              // else {
+              //     // console.log('slice: ', this.options.slice());
+              //     // console.log('options',this.options.length);
+              //     let filternow = [];
+              //     if(this.options.length > 10){
+              //         for(let i = 0; i < 10; i++)
+              //             filternow[i] = this.options[i];
+              //     }
+              //     else filternow = this.options;
+              //     // console.log('filternow',filternow.length);
+              //     return filternow.slice();
+              // }
 
-              }
-              else {
-                  // console.log('slice: ', this.options.slice());
-                  // console.log('options',this.options.length);
-                  let filternow = [];
-                  if(this.options.length > 10){
-                      for(let i = 0; i < 10; i++)
-                          filternow[i] = this.options[i];
-                  }
-                  else filternow = this.options;
-                  // console.log('filternow',filternow.length);
-                  return filternow.slice();
-              }
+              this.product.fetchDataWithKey(val).subscribe(data => {
+                  this.options = data.map(p => {
+                      return {
+                          label: String(p.name),
+                          sublabel: String(p.description),
+                          val: String(p.id)
+                      };
+                  });
+              });
+              console.log(val);
+              return this.options;
           });
     // this.filteredOptions = this.myControl.valueChanges
     //     .startWith(null)
@@ -190,7 +196,7 @@ export class FormOrderItemComponent implements OnInit {
         //         val: String(product.id)
         //     };
         // });
-
+        console.log(this.product.getProduct());
     }
 
   NumberKeyboard(s: String) {
@@ -212,7 +218,7 @@ export class FormOrderItemComponent implements OnInit {
     } else{
       id = null;
     }
-    if(id === null || id === undefined || this.products.find(item => item.id == id) == null) {
+    if( !id  || !this.products || this.products.find(item => item.id == id) == null) {
         // console.log('this id');
         return 0;
     }
@@ -249,9 +255,9 @@ export class FormOrderItemComponent implements OnInit {
         this.snackBar.open('Produk yang dibeli tidak boleh nol', '', {duration: 1500});
         return;
     }
-    this.isAdd = this.cart.addProduct(this.products.find(item => {
-     return item.id === value;
-    }), this.qty);
+    console.log(value);
+    console.log(this.product.getProductById(value));
+    this.isAdd = this.cart.addProduct(this.product.getProductById(value), this.qty);
 
     if(this.isAdd) {
       // console.log('yang ini?');

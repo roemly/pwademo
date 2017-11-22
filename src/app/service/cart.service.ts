@@ -36,9 +36,6 @@ export class CartService implements OnInit {
   }
 
   refreshdata(): void{
-      if(this.products.databaseProducts == null){
-          this.products.fetchdata1().subscribe(data => this.products.databaseProducts = data);
-      }
       if(this.products.products == null || this.products.category != this.title){
           // console.log('cart',this.title);
           // console.log('product before',this.products.category);

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "../../service/login.service";
-import {ProductService} from "../../service/product.service";
-import {CartService} from "../../service/cart.service";
-import {ActivatedRoute} from "@angular/router";
+import {LoginService} from '../../service/login.service';
+import {ProductService} from '../../service/product.service';
+import {CartService} from '../../service/cart.service';
+import {ActivatedRoute} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-checkout',
@@ -10,11 +11,12 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./form-checkout.component.css']
 })
 export class FormCheckoutComponent implements OnInit {
-  alamat_tujuan: string = '';
-  catatan: string ='';
+  alamat_tujuan = '';
+  catatan = '';
   isPajak = false;
   isAgree = false;
   constructor(public route: ActivatedRoute,
+              public router: Router,
               public cart: CartService,
               public product: ProductService,
               public  current_user: LoginService) { }
@@ -25,5 +27,13 @@ export class FormCheckoutComponent implements OnInit {
       this.isPajak = this.cart.getPajak();
       this.isAgree = this.cart.getAgree();
   }
-
+  bayar(): void{
+      const test = true;
+      if (test){
+          this.router.navigate(['testing']);
+      }
+      else {
+          console.log('false');
+      }
+  }
 }

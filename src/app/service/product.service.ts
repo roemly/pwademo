@@ -19,7 +19,6 @@ export class ProductService {
   
   products: Product[] = null;
   category: string = '';
-  databaseProducts: Product[] = null;
   
   constructor(private http: Http) {
     // this.getProduct1().then(value => {
@@ -51,7 +50,9 @@ export class ProductService {
           //     i = i + 1;
           //     result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
           // });
-          this.products = data.filter(item => item.category === this.category);
+          this.products = data;
+            console.log("get ");
+            console.log(this.products);
           return this.products;
         }
     );
@@ -69,7 +70,14 @@ export class ProductService {
         return this.http.get('assets/dummy-product.json')
         // return this.http.get(this.api_catalog_data_url)
             .map((res: Response) => <Product[]>res.json());
-            //.do(data => console.log(JSON.stringify(data)));
+        //.do(data => console.log(JSON.stringify(data)));
+    }
+    fetchDataWithKey(key : string): Observable<Product[]> {
+        //ganti link data yang mau diambil dari server disini
+        return this.http.get('http://fsretail.tk/fiesto/public/api/product-by-key?key=' + key + '&limit=10')
+        // return this.http.get(this.api_catalog_data_url)
+            .map((res: Response) => <Product[]>res.json());
+        //.do(data => console.log(JSON.stringify(data)));
     }
 
   // fetchdata1(){
@@ -122,7 +130,6 @@ export class ProductService {
    }
 
   getProductById(id: number): Product{
-    return (this.databaseProducts != null) ? this.databaseProducts.find(item =>
-        item.id === id) : null;
+    return (this.products != null) ? this.products.find(item => item.id === id) : null;
   }
 }
