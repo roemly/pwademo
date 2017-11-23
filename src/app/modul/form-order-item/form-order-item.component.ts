@@ -34,113 +34,12 @@ export class FormOrderItemComponent implements OnInit {
   ngOnInit(): void {
     let result: Product[] = [];
     let i: number = 0;
-    // this.product.fetchdata().subscribe(
-    //     (data) => {
-    //       if(this.r.length > 0) result = [];
-    //       else{
-    //           // for (let i = 0; i < 20000; i++){
-    //           //     this.r.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
-    //           // }
-    //           // result = this.r;
-    //           // console.log(this.r);
-    //           console.log(data);
-    //           data.forEach(d => {
-    //               i = i + 1;
-    //               result.push(new Product(i, 'title' + i, 'desc' + i, i, i, (i % 2 == 0) ? 'sika':'makita'));
-    //           });
-    //       }
-    //
-    //       // result = result.filter(item => item.category === (this.id_order ==1?'sika':'makita'));
-    //       // this.product.products = result;
-    //       this.product.products = this.r;
-    //       this.products = this.product.getProductByCategory(this.id_order ==1?'sika':'makita');
-    //       console.log('products: ',this.products);
-    //       this.options = this.products.map(p => {
-    //               return {
-    //                   label: p.name,
-    //                   sublabel: p.description,
-    //                   val: String(p.id)
-    //               };
-    //           });
-    //       this.filteredOptions = this.myControl.valueChanges
-    //           .startWith(null)
-    //           .map(val => {
-    //               console.log('qty: ', this.qty);
-    //               if (val) {
-    //                   let temp = this.filter(val);
-    //                   console.log('filter: ', temp);
-    //                   console.log('temp',temp.length);
-    //                   let filternow = [];
-    //                   if(temp.length > 10){
-    //                       for(let i = 0; i < 10; i++)
-    //                           filternow[i] = temp[i];
-    //                   }
-    //                   else filternow = temp;
-    //                   console.log('filternow',filternow.length);
-    //                   return filternow;
-    //
-    //               }
-    //               else {
-    //                   console.log('slice: ', this.options.slice());
-    //                   console.log('options',this.options.length);
-    //                   let filternow = [];
-    //                   if(this.options.length > 10){
-    //                       for(let i = 0; i < 10; i++)
-    //                           filternow[i] = this.options[i];
-    //                   }
-    //                   else filternow = this.options;
-    //                   console.log('filternow',filternow.length);
-    //                   return filternow.slice();
-    //               }
-    //           });
-    //       // console.log(this.product.products);
-    //     }
-    // );
-    //   if(this.product.products == null) console.log('form order null');
-    //   this.product.fetchdata1().subscribe(
-    //       data => {
-    //           // console.log(typeof data);
-    //           if(this.product.products == null || this.product.category != this.title){
-    //               console.log('form order');
-    //               this.product.products = data.filter(item => item.category === this.title.toLowerCase());
-    //               // console.log(this.title);
-    //               // console.log(this.product.category);
-    //           }
-    //       }
-    //   );
+
       this.products = this.product.getProduct();
 
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
-              // console.log('qty: ', this.qty);
-              // if (val) {
-              //     let temp = this.filter(val);
-              //     // console.log('filter: ', temp);
-              //     // console.log('temp',temp.length);
-              //     let filternow = [];
-              //     if(temp.length > 10){
-              //         for(let i = 0; i < 10; i++)
-              //             filternow[i] = temp[i];
-              //     }
-              //     else filternow = temp;
-              //     console.log('filternow', filternow.length);
-              //     return filternow;
-              //
-              // }
-              // else {
-              //     // console.log('slice: ', this.options.slice());
-              //     // console.log('options',this.options.length);
-              //     let filternow = [];
-              //     if(this.options.length > 10){
-              //         for(let i = 0; i < 10; i++)
-              //             filternow[i] = this.options[i];
-              //     }
-              //     else filternow = this.options;
-              //     // console.log('filternow',filternow.length);
-              //     return filternow.slice();
-              // }
-
               this.product.fetchDataWithKey(val).subscribe(data => {
                   this.options = data.map(p => {
                       return {
@@ -153,9 +52,6 @@ export class FormOrderItemComponent implements OnInit {
               console.log(val);
               return this.options;
           });
-    // this.filteredOptions = this.myControl.valueChanges
-    //     .startWith(null)
-    //     .map(val => val ? this.filter(val) : this.options.slice());
 
   }
 
@@ -169,34 +65,8 @@ export class FormOrderItemComponent implements OnInit {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
         });
 
-        // console.log('b');
-        // this.products = product.getProductByCategory(this.id_order ==1?'sika':'makita');
-
-        // this.options = this.products.map(product => {
-        //     console.log('product in map: ',product);
-        //     return {
-        //         label: product.name,
-        //         sublabel: product.description,
-        //         val: String(product.id)
-        //     };
-        // });
-
-        // this.product.getProductByCategory(this.id_order ==1?'sika':'makita').then(
-        //     res => {
-        //         this.products=res;
-        //     }
-        // )
         if(this.id_order == 1) this.title = 'SIKA';
         else if(this.id_order == 2) this.title = 'MAKITA';
-
-        // this.options = this.products.map(product => {
-        //     return {
-        //         label: product.name,
-        //         sublabel: product.description,
-        //         val: String(product.id)
-        //     };
-        // });
-        console.log(this.product.getProduct());
     }
 
   NumberKeyboard(s: String) {
@@ -219,7 +89,6 @@ export class FormOrderItemComponent implements OnInit {
       id = null;
     }
     if( !id  || !this.products || this.products.find(item => item.id == id) == null) {
-        // console.log('this id');
         return 0;
     }
     // console.log('that id',this.products.find(item => item.id == id) == null);
