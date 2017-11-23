@@ -3,10 +3,10 @@ import {CartService} from "../../service/cart.service";
 import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-testing',
-  templateUrl: './testing.component.html',
-  styleUrls: ['./testing.component.css']
+  templateUrl: './success.component.html',
+  styleUrls: ['./success.component.css']
 })
-export class TestingComponent implements OnInit {
+export class SuccessComponent implements OnInit {
 alamat_tujuan: any= '';
 catatan: any= '';
 isPajak: any= false;

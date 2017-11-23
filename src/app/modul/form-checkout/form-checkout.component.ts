@@ -28,12 +28,12 @@ export class FormCheckoutComponent implements OnInit {
       this.isAgree = this.cart.getAgree();
   }
   bayar(): void{
-      const test = true;
+      const test = false;
       if (test){
-          this.router.navigate(['testing']);
+          this.router.navigate(['success']);
       }
       else {
-          console.log('false');
+          this.router.navigate(['fail']);
       }
   }
 }

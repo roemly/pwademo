@@ -2,14 +2,13 @@
   "name": "pt-amp",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+  "scripts": {"ng": "ng",
+    "start": "ng serve && ",
+    "build": "ng build --prod --aot && npm run precache",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precache": "sw-precache"
+    "precache": "sw-precache --config=sw-precache-config.js"
   },
   "private": true,
   "dependencies": {
