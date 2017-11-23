@@ -141,7 +141,7 @@ export class FormOrderItemComponent implements OnInit {
               //     return filternow.slice();
               // }
 
-              this.product.fetchDataWithKey(val).subscribe(data => {
+              this.product.fetchDataWithKey(val,JSON.parse(localStorage.user).id ,this.id_order).subscribe(data => {
                   this.options = data.map(p => {
                       return {
                           label: String(p.name),
@@ -188,7 +188,8 @@ export class FormOrderItemComponent implements OnInit {
         // )
         if(this.id_order == 1) this.title = 'SIKA';
         else if(this.id_order == 2) this.title = 'MAKITA';
-
+        else if(this.id_order == 3) this.title = 'LAKONI';
+        
         // this.options = this.products.map(product => {
         //     return {
         //         label: product.name,
