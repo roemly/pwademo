@@ -57,6 +57,7 @@ import { ChangepasswordComponent } from './modul/changepassword/changepassword.c
 import { ChattingComponent } from './modul/chatting/chatting.component';
 import { SuccessComponent } from './modul/success/success.component';
 import { FailComponent } from './modul/fail/fail.component';
+import {SubscriptionService} from "./service/subcription.service";
 
 
 @NgModule({
@@ -178,7 +179,8 @@ import { FailComponent } from './modul/fail/fail.component';
     LoginService,
     CartService,
     PostService,
-    OrderService
+    OrderService,
+    SubscriptionService,
   ],
   bootstrap: [AppComponent],
   exports: [

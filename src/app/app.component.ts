@@ -7,13 +7,13 @@ import {SubscriptionService} from "./service/subcription.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(subService: SubscriptionService){
+  constructor(private subService: SubscriptionService){
 
   }
-  unSub() :void{
+  unSub(): void{
     this.subService.unsubscribeUser();
   }
-  Sub ():void {
+  Sub(): void {
     this.subService.subscribeUser();
   }
 }
