@@ -47,9 +47,16 @@ export class ProductService {
         return this.http.get(this.api_catalog_data_url )
             .map((res: Response) => <Product[]>res.json());
     }
+<<<<<<< HEAD
     fetchDataWithKey(key: string): Observable<Product[]> {
         //ganti link data yang mau diambil dari server disini
         return this.http.get('http://fsretail.tk/fiesto/public/api/product-by-key?key=' + key + '&limit=10')
+=======
+    fetchDataWithKey(key : string, member_id : string, cat_id : number): Observable<Product[]> {
+        //ganti link data yang mau diambil dari server disini
+        return this.http.get('https://ptamp.aindo.com/api/api-get-catalog.php?member_id=' + member_id + '&cat_id=' + cat_id + '&key=' + key + '&limit=10')
+        // return this.http.get(this.api_catalog_data_url)
+>>>>>>> 5694a42a0defb89893844858f8e57a5c76b6827f
             .map((res: Response) => <Product[]>res.json());
     }
 

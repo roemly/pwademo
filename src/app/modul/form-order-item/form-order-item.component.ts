@@ -40,7 +40,39 @@ export class FormOrderItemComponent implements OnInit {
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
+<<<<<<< HEAD
               this.product.fetchDataWithKey(val).subscribe(data => {
+=======
+              // console.log('qty: ', this.qty);
+              // if (val) {
+              //     let temp = this.filter(val);
+              //     // console.log('filter: ', temp);
+              //     // console.log('temp',temp.length);
+              //     let filternow = [];
+              //     if(temp.length > 10){
+              //         for(let i = 0; i < 10; i++)
+              //             filternow[i] = temp[i];
+              //     }
+              //     else filternow = temp;
+              //     console.log('filternow', filternow.length);
+              //     return filternow;
+              //
+              // }
+              // else {
+              //     // console.log('slice: ', this.options.slice());
+              //     // console.log('options',this.options.length);
+              //     let filternow = [];
+              //     if(this.options.length > 10){
+              //         for(let i = 0; i < 10; i++)
+              //             filternow[i] = this.options[i];
+              //     }
+              //     else filternow = this.options;
+              //     // console.log('filternow',filternow.length);
+              //     return filternow.slice();
+              // }
+
+              this.product.fetchDataWithKey(val,JSON.parse(localStorage.user).id ,this.id_order).subscribe(data => {
+>>>>>>> 5694a42a0defb89893844858f8e57a5c76b6827f
                   this.options = data.map(p => {
                       return {
                           label: String(p.name),
@@ -67,6 +99,19 @@ export class FormOrderItemComponent implements OnInit {
 
         if(this.id_order == 1) this.title = 'SIKA';
         else if(this.id_order == 2) this.title = 'MAKITA';
+<<<<<<< HEAD
+=======
+        else if(this.id_order == 3) this.title = 'LAKONI';
+        
+        // this.options = this.products.map(product => {
+        //     return {
+        //         label: product.name,
+        //         sublabel: product.description,
+        //         val: String(product.id)
+        //     };
+        // });
+        console.log(this.product.getProduct());
+>>>>>>> 5694a42a0defb89893844858f8e57a5c76b6827f
     }
 
   NumberKeyboard(s: String) {
