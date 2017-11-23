@@ -11,25 +11,26 @@ export class SubscriptionService {
   private apiUrl = 'https://falsesilver.me/fiesto/public/api/subcription/add';
   private apiUrlDel = 'https://falsesilver.me/fiesto/public/api/subcription/delete';
   constructor(private http: Http) {
+      let tis = this;
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       console.log('Service Worker and Pusher Supported');
-      navigator.serviceWorker.register('service-worker.js')
+      navigator.serviceWorker.register('/service-worker.js')
           .then(swReg => {
             console.log('Service Worker registered', swReg);
             this.swRegistration = swReg;
 
             this.swRegistration.pushManager.getSubscription()
                 .then(function(subscription) {
-                  this.isSubscribed = !(subscription === null);
-
-                  if (this.isSubscribed) {
+                  tis.isSubscribed = !(subscription === null);
+                  console.log(tis.isSubscribed);
+                  if (tis.isSubscribed) {
                     console.log('User IS subscribed.');
                   } else {
                     console.log('User is NOT subscribed.');
                   }
                 });
 
-            if (!this.isSubscribed) {
+            if (!tis.isSubscribed) {
               this.subscribeUser();
             }
           })

@@ -4,11 +4,11 @@
   "license": "MIT",
   "scripts": {"ng": "ng",
     "start": "ng serve && ",
-    "build": "ng build --prod --aot && npm run precache",
+    "build": "ng build && npm run precache",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precache": "sw-precache --config=sw-precache-config.js"
+    "precache": "sw-precache --root=dist --config=sw-precache-config.js"
   },
   "private": true,
   "dependencies": {
