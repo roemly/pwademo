@@ -47,15 +47,9 @@ export class ProductService {
         return this.http.get(this.api_catalog_data_url )
             .map((res: Response) => <Product[]>res.json());
     }
-<<<<<<< Updated upstream
     fetchDataWithKey(key: string,member_id: string, cat_id: number): Observable<Product[]> {
         //ganti link data yang mau diambil dari server disini
         return this.http.get('http://ptamp.aindo.com/api/api-get-catalog.php?member_id=' + member_id + '&cat_id=' + cat_id + '&key=' + key + '&limit=10')
-=======
-    fetchDataWithKey(key: string,member_id : string, cat_id: number): Observable<Product[]> {
-        //ganti link data yang mau diambil dari server disini
-        return this.http.get('http://ptamp.aindo.com/api/api-get-catalog.php?key=' + key +'&member_id='+ member_id +'&cat_id='+ cat_id + '&limit=10')
->>>>>>> Stashed changes
             .map((res: Response) => <Product[]>res.json());
     }
     addProduct(product: Product): void {
