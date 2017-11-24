@@ -40,16 +40,19 @@ export class FormOrderItemComponent implements OnInit {
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
-              this.product.fetchDataWithKey(val,JSON.parse(localStorage.user).id ,this.id_order).subscribe(data => {
+              this.product.fetchDataWithKey(val, JSON.parse(localStorage.user).id, this.id_order).subscribe(data => {
                   this.options = data.map(p => {
                       return {
                           label: String(p.name),
                           sublabel: String(p.description),
-                          val: String(p.id)
+                          val: String(p.id),
+                          data : p
                       };
                   });
               });
-              console.log(val);
+              if(val instanceof Object){
+                  console.log('catch' + val);
+              }
               return this.options;
           });
 
@@ -78,22 +81,10 @@ export class FormOrderItemComponent implements OnInit {
     }
   }
   getTotal (): number{
-    if (this.myControl.value === null){
-      return 0;
+    if (this.myControl.value instanceof Object){
+        return this.qty * this.myControl.value.data.price;
     }
-    let id:number;
-    if (!isNaN(parseFloat(this.myControl.value)) && isFinite(this.myControl.value)) {
-      id = parseInt(this.myControl.value);
-    } else if(typeof(this.myControl.value) === 'object'){
-      id = this.myControl.value.val;
-    } else{
-      id = null;
-    }
-    if( !id  || !this.products || this.products.find(item => item.id == id) == null) {
-        return 0;
-    }
-    // console.log('that id',this.products.find(item => item.id == id) == null);
-    return this.qty * this.products.find(item => item.id == id).price;
+    return 0;
   }
   filter(val: any): string[] {
     if (typeof (val) !== 'string'){
@@ -115,23 +106,8 @@ export class FormOrderItemComponent implements OnInit {
     return option ? option.label : option;
   }
   addToCart(): void{
-    let value;
-    if (typeof(this.myControl.value) === 'string' ){
-      value = parseInt(this.myControl.value);
-    } else {
-      value = parseInt(this.myControl.value.val);
-    }
-    if(value == 0){
-        this.snackBar.open('Produk yang dibeli tidak boleh nol', '', {duration: 1500});
-        return;
-    }
-    console.log(value);
-    console.log(this.product.getProductById(value));
-    this.isAdd = this.cart.addProduct(this.product.getProductById(value), this.qty);
-
+    this.isAdd = this.cart.addProduct(this.myControl.value.data as Product, this.qty);
     if(this.isAdd) {
-      // console.log('yang ini?');
-      // this.snackBar.open('Produk berhasil ditambah', '', {duration: 1500});
       localStorage.items = JSON.stringify(this.cart.getItems());
       this.location.back();
     }

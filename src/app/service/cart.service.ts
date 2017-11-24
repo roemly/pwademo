@@ -77,6 +77,7 @@ export class CartService implements OnInit {
   }
 
   addProduct(product: Product, qty: number): boolean {
+      this.products.addProduct(product);
     return this._cart.addProduct(product, qty);
   }
   getItems(): ItemCart[]{
