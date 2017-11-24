@@ -11,7 +11,7 @@ import {LoginService} from "../../service/login.service";
 export class LoginComponent {
   email='';
   pass='';
-
+  message: string = 'test';
   constructor(
       public router:Router,
       public users:LoginService
@@ -21,5 +21,8 @@ export class LoginComponent {
 
       if (this.users.attempt(this.email, this.pass))
         this.router.navigate(['dashboard']);
+      else{
+        this.message = 'Username atau password salah!';
+      }
   }
 }

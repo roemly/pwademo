@@ -17,7 +17,7 @@ export class LoginService {
   attempt (username: string, password: string): Boolean {
     //call an api to authenticate
     let flag = false;
-    this.http.post(this.url,{username : username, password: password}).toPromise()
+    this.http.post(this.url, {username : username, password: password}).toPromise()
         .then(response => {
           console.log(response);
           flag = true;
