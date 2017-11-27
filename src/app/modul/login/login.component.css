@@ -7,7 +7,7 @@
 
 h1{
     display: block;
-    background-color: #7fa0d5;
+    background-color: #f8b713;
     padding-top:15px;
     padding-bottom:15px;
     margin:0;
@@ -35,4 +35,18 @@ input {
     border: 0 !important;
     height: 1.5rem !important;
     color: #fff !important;
+}
+.gambar-atas img:last-child{
+    height: 80px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 4px;
+}
+button {
+    margin-bottom: 40px !important;
 }

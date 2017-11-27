@@ -94,7 +94,7 @@ a.cst-navigation-color > * {
     color:white;
 }
 .cst-btn-toolbar{
-    background-color: #7fa0d5;
+    background-color: #f8b713;
 }
 .cst-display-content{padding-top:60px;height: 100%}
 .padding-double{padding-top:120px !important;}
@@ -149,7 +149,7 @@ a.cst-navigation-color > * {
     font-weight: bold;
 }
 .title-news-thumbnail{
-    color: #fea142;
+    color: #f8b713;
     font-weight: bold;
     margin-bottom: 3px;
 }
@@ -167,7 +167,7 @@ a.cst-navigation-color > * {
     border-top: 1px solid #09bdad;
     padding-top: 15px;
 }
-.summary-history-thumbnail {color:#fea142;}
+.summary-history-thumbnail {color:#f8b713;}
 .title-history-thumbnail {
     color: #fff;
     font-weight: bold;
@@ -242,18 +242,21 @@ button {
     width: calc(100% - 60px) !important;
     border-radius: 30px !important;
 	text-transform:uppercase;
-    background: #fea142 !important;
+    background: #f8b713 !important;
     font-size: 14pt !important;
     padding: 4px 0 !important;
     /* border: 1px solid #000 !important; */
 }
 label.mat-input-placeholder{
-	color: #00c5ae !important;
+	color: #fff !important;
     text-transform: uppercase;
     font-size: 13pt !important;
 }
+.mat-form-field-ripple {
+    background-color: #fff;
+}
 .mat-form-field-underline {
-    background-color: #fea142;
+    background-color: #f8b713;
 }
 .align-center.total-harga {
     font-size: 20pt;
@@ -565,7 +568,7 @@ input {
 }
 .form-product-checkout .mat-checkbox-disabled .mat-checkbox-label{color:#fff}
 .form-product-checkout .mat-checkbox-checkmark-path {
-    stroke: #fea142!important;
+    stroke: #f8b713!important;
 }
 .form-product-checkout .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background{background:#4766a7}
 .page-history .mat-tab-labels .mat-tab-label.mat-tab-label-active {
@@ -592,3 +595,4 @@ input {
 		height:auto !important;
 	}
 }
+.mat-checkbox-inner-container{margin-top:1px !important }
