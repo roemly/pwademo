@@ -36,9 +36,6 @@ export class CartService implements OnInit {
   }
 
   refreshdata(): void{
-      if(this.products.databaseProducts == null){
-          this.products.fetchdata1().subscribe(data => this.products.databaseProducts = data);
-      }
       if(this.products.products == null || this.products.category != this.title){
           // console.log('cart',this.title);
           // console.log('product before',this.products.category);
@@ -80,6 +77,7 @@ export class CartService implements OnInit {
   }
 
   addProduct(product: Product, qty: number): boolean {
+      this.products.addProduct(product);
     return this._cart.addProduct(product, qty);
   }
   getItems(): ItemCart[]{

@@ -10,6 +10,7 @@
       <mat-form-field class="login-full-width">
         <input matInput placeholder="Password" [(ngModel)]="pass" name="password">
     </mat-form-field>
+    <div style="color: red;text-align: center">{{message}}</div>
     <div  class="button-row">
         <button mat-raised-button color="warn" (click)="onClick()">Login</button>
     </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {LoginService} from "../../service/login.service";
+import {LoginService} from '../../service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +9,22 @@ import {LoginService} from "../../service/login.service";
 })
 
 export class LoginComponent {
-  email='';
-  pass='';
-
+  email= '';
+  pass= '';
+  message = 'test';
   constructor(
-      public router:Router,
-      public users:LoginService
+      public router: Router,
+      public users: LoginService
   ){}
 
   onClick (){
-
-      if (this.users.attempt(this.email, this.pass))
-        this.router.navigate(['dashboard']);
+        console.log();
+      this.users.attempt(this.email, this.pass).then(t => {
+        if(t._body === "[]"){
+            this.message = 'username atau password salah!';
+        }else {
+            this.router.navigate(['dashboard']);
+        }
+      });
   }
 }

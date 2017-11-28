@@ -55,7 +55,9 @@ import { FormCheckoutComponent } from './modul/form-checkout/form-checkout.compo
 import { FormAddressComponent } from './modul/form-address/form-address.component';
 import { ChangepasswordComponent } from './modul/changepassword/changepassword.component';
 import { ChattingComponent } from './modul/chatting/chatting.component';
-import { TestingComponent } from './modul/testing/testing.component';
+import { SuccessComponent } from './modul/success/success.component';
+import { FailComponent } from './modul/fail/fail.component';
+import {SubscriptionService} from "./service/subcription.service";
 
 
 @NgModule({
@@ -72,7 +74,8 @@ import { TestingComponent } from './modul/testing/testing.component';
     FormAddressComponent,
     ChangepasswordComponent,
     ChattingComponent,
-    TestingComponent
+    SuccessComponent,
+    FailComponent
   ],
 
   imports: [
@@ -162,8 +165,12 @@ import { TestingComponent } from './modul/testing/testing.component';
         component: ChattingComponent
       },
       {
-        path: 'testing',
-        component: TestingComponent
+        path: 'success',
+        component: SuccessComponent
+      },
+      {
+        path: 'fail',
+        component: FailComponent
       }
     ])
   ],
@@ -172,7 +179,8 @@ import { TestingComponent } from './modul/testing/testing.component';
     LoginService,
     CartService,
     PostService,
-    OrderService
+    OrderService,
+    SubscriptionService,
   ],
   bootstrap: [AppComponent],
   exports: [

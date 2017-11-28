@@ -10,10 +10,22 @@
 		<a routerLink="/form-order/2"><img class="" src="assets/logo-makita.png"/> </a>
     </mat-grid-tile>
     <mat-grid-tile>
-        <a routerLink="/history"><img class="" src="assets/history.png"/> </a>
+		<a routerLink="/form-order/3">Lakoni </a>
     </mat-grid-tile>
     <mat-grid-tile>
-        <a routerLink="/setting"><img class="" src="assets/setting.png"/> </a>
+					<button mat-icon-button [matMenuTriggerFor]="menu">
+						<mat-icon>more_vert</mat-icon>
+					</button>
+				  <mat-menu #menu="matMenu">
+					<button mat-menu-item routerLink="/history">
+					  <mat-icon>history</mat-icon>
+					  <span>History</span>
+					</button>
+					<button mat-menu-item  routerLink="/setting">
+					  <mat-icon>settings</mat-icon>
+					  <span>Setting</span>
+					</button>
+				  </mat-menu>
     </mat-grid-tile>
 </mat-grid-list>
 </div>
