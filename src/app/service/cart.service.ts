@@ -3,55 +3,67 @@ import {LoginService} from './login.service';
 import {Cart} from '../class/Cart';
 import {Product} from '../class/Product';
 import {ItemCart} from '../class/ItemCart';
-import {ProductService} from "./product.service";
-import {isNumber} from "util";
+import {ProductService} from './product.service';
+import {isNumber} from 'util';
+import {Http} from '@angular/http';
+import {toPromise} from 'rxjs/operator/toPromise';
 
 @Injectable()
 export class CartService implements OnInit {
   private _cart: Cart;
-  private _alamatTujuan: string = '';
-  private _catatan: string = '';
-  private _isPajak: boolean = false;
-  private _isAgree: boolean = false;
-  public title: string = '';
+  private _alamatTujuan = '';
+  private _catatan = '';
+  private _isPajak = false;
+  private _isAgree = false;
+  public title = '';
+  private url = 'http://ptamp.pwaaindo.com';
   // private thisObject: CartService = null;
 
   constructor(public login: LoginService,
-              public products: ProductService) {
+              public products: ProductService,
+              public http: Http) {
     this._cart = new Cart();
 
 
-    if(localStorage.alamatTujuan !== undefined) {
+    if (localStorage.alamatTujuan !== undefined) {
         // console.log('address kepanggil?');
       this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
     }
-    if(localStorage.pajak !== undefined) {
+    if (localStorage.pajak !== undefined) {
         // console.log('pajak kepanggil?');
       this._isPajak = (JSON.parse(localStorage.pajak) as boolean);
     }
-    if(localStorage.agree !== undefined) {
+    if (localStorage.agree !== undefined) {
         // console.log('agree kepanggil?');
       this._isAgree = (JSON.parse(localStorage.agree) as boolean);
     }
   }
+  sendOrder(): any{
+      const status = false;
+      const result = this.http.post(this.url, {
+              user : this.login.getUserCurrent(),
+              cart : this._cart
+  }).toPromise();
+      return Promise.resolve(result);
+  }
 
   refreshdata(): void{
-      if(this.products.products == null || this.products.category != this.title){
+      if (this.products.products == null || this.products.category != this.title){
           // console.log('cart',this.title);
           // console.log('product before',this.products.category);
           this.products.fetchdata1().subscribe(
               data => {
                   // console.log(this.title);
                   this.products.products = data.filter(item => item.category === this.title.toLowerCase());
-                  if(localStorage.items !== undefined) {
+                  if (localStorage.items !== undefined) {
                       // console.log('items kepanggil?');
-                      for(let item of JSON.parse(localStorage.items) as ItemCart[]){
+                      for (const item of JSON.parse(localStorage.items) as ItemCart[]){
                           // console.log('find', this.product.getProduct());
-                          let tempItem = data.find(_item => {
+                          const tempItem = data.find(_item => {
                               return _item.id === item['_id'];
                           });
-                          console.log('tempitem',tempItem);
-                          if(tempItem != null)
+                          console.log('tempitem', tempItem);
+                          if (tempItem != null)
                               this._cart.addProduct(tempItem, item['_qty']);
                       }
                   }

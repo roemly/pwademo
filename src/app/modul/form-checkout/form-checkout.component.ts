@@ -27,13 +27,14 @@ export class FormCheckoutComponent implements OnInit {
       this.isPajak = this.cart.getPajak();
       this.isAgree = this.cart.getAgree();
   }
-  bayar(): void{
-      const test = false;
-      if (test){
-          this.router.navigate(['success']);
-      }
-      else {
-          this.router.navigate(['fail']);
-      }
+  bayar(): void {
+      this.cart.sendOrder()
+          .then(response => {
+            this.router.navigate(['success']);
+          })
+          .catch(response => {
+            console.log(response);
+            this.router.navigate(['fail']);
+          });
   }
 }
