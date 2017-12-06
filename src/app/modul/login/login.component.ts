@@ -25,10 +25,13 @@ export class LoginComponent {
         if(t._body === "[]"){
             this.message = 'username atau password salah!';
         }else {
-          console.log('berhasil');
-          localStorage.user = JSON.stringify(t._body);
+          //console.log('berhasil');
+          localStorage.user = t._body;
+          this.users.refreshData();
           this.router.navigate(['dashboard']);
         }
       });
   }
 }
+
+

@@ -13,6 +13,8 @@ import {Cart} from "../../class/Cart";
 import {ItemCart} from "../../class/ItemCart";
 import "rxjs/add/operator/startWith";
 import {forEach} from "@angular/router/src/utils/collection";
+import { CloseScrollStrategy } from '@angular/cdk/overlay/typings/scroll/close-scroll-strategy';
+import { LoginService } from '../../service/login.service';
 
 @Component({
   templateUrl: './form-order-item.component.html',
@@ -40,7 +42,9 @@ export class FormOrderItemComponent implements OnInit {
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
-              this.product.fetchDataWithKey(val, JSON.parse(localStorage.user).id, this.id_order).subscribe(data => {
+            console.log(typeof(this.users.getUserCurrent()));
+            console.log(JSON.parse(localStorage.user).id);
+              this.product.fetchDataWithKey(val, String(this.users.getUserCurrent().id), this.id_order).subscribe(data => {
                   this.options = data.map(p => {
                       return {
                           label: String(p.name),
@@ -63,16 +67,18 @@ export class FormOrderItemComponent implements OnInit {
                 public cart: CartService,
                 public snackBar: MatSnackBar,
                 public router: Router,
-                public location: Location) {
+                public location: Location,
+                private users : LoginService) {
         this.route.params.subscribe(params => {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
+            console.log(this.id_order);
         });
 
         if(this.id_order == 1) this.title = 'SIKA';
         else if(this.id_order == 2) this.title = 'MAKITA';
         else if(this.id_order == 3) this.title = 'LAKONI';
     }
-
+    
   NumberKeyboard(s: String) {
     if (s === 'delete') {
       this.qty = Math.floor(this.qty / 10);

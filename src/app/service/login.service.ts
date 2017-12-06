@@ -14,11 +14,14 @@ export class LoginService {
     }
   }
 
-   attempt (username: string, password: string): any {
+  attempt (username: string, password: string): any {
     //call an api to authenticate
     let flag = false,finish = false;
     let result = this.http.post(this.url, {username : username, password: password}).toPromise();
     return Promise.resolve(result);
+  }
+  refreshData(): void {
+    this.user = JSON.parse(localStorage.user) as User;
   }
 
   changePassword (new_password: string) {

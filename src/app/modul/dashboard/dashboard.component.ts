@@ -35,8 +35,8 @@ export class DashboardComponent implements OnInit{
   }
   constructor(private posts: PostService, private router: Router, private login: LoginService, private orderDetail: OrderService){
     if (!login.isLogin()) {
-      console.log('Login');
-      console.log(localStorage.user);
+     // console.log('Login');
+    //  console.log(localStorage.user);
       this.router.navigate(['login']);
     }
 
