@@ -5,24 +5,26 @@ export class Product{
   private _category: string;
   private _qty: number = 0;
   private _price:number = 0;
-
+  private _kelipatan: number=0;
   image: string = 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' ;
-  constructor(id: number, name: string, description: string, qty: number, price: number,category: string, image: string = null) {
+  constructor(id: number, name: string, description: string, qty: number, price: number,category: string, image: string = null, kelipatan: number) {
     this.id = id;
     this._name = name;
     this._qty = qty;
     this._price = price;
     this._description = description;
     this._category = category;
+    this._kelipatan = kelipatan;
     if (image){
       this.image = image;
     }
   }
+
   get name(): string {
     return this._name;
   }
 
-  get category(): string {
+  get category(): string {a
     return this._category;
   }
 

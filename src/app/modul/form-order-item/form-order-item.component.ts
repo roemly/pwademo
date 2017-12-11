@@ -25,13 +25,14 @@ export class FormOrderItemComponent implements OnInit {
   id_order: number;
   isAdd: boolean;
   id_temp:number = -1;
-  qty = 0;
+  qty:number = 0;
   myControl: FormControl = new FormControl();
   options = [];
   products: Product[];
   filteredOptions: any;
   title: string = '';
   r: Product[] = [];
+  kelipatan: number = 1;
 
   ngOnInit(): void {
     let result: Product[] = [];
@@ -55,7 +56,9 @@ export class FormOrderItemComponent implements OnInit {
                   });
               });
               if(val instanceof Object){
-                  console.log('catch' + val);
+                  console.log('catch' + JSON.stringify(val));
+                  this.kelipatan = val.data.kelipatan;
+                  console.log(this.kelipatan);
               }
               return this.options;
           });
@@ -71,14 +74,20 @@ export class FormOrderItemComponent implements OnInit {
                 private users : LoginService) {
         this.route.params.subscribe(params => {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
-            console.log(this.id_order);
         });
-
+        console.log(this.kelipatan)
         if(this.id_order == 1) this.title = 'SIKA';
         else if(this.id_order == 2) this.title = 'MAKITA';
         else if(this.id_order == 3) this.title = 'LAKONI';
     }
-    
+    stepUp(): void{
+        this.qty += Number(this.kelipatan);
+    }
+    stepDown(): void{
+      if(this.qty- this.kelipatan >= 0){
+          this.qty -= this.kelipatan;
+      }
+    }
   NumberKeyboard(s: String) {
     if (s === 'delete') {
       this.qty = Math.floor(this.qty / 10);
