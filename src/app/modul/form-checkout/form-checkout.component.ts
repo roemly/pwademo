@@ -27,6 +27,9 @@ export class FormCheckoutComponent implements OnInit {
       this.isPajak = this.cart.getPajak();
       this.isAgree = this.cart.getAgree();
   }
+  changeAgree(): void {
+      this.cart.setAgree(this.isAgree);
+  }
   bayar(): void {
       this.cart.sendOrder()
           .then(response => {
