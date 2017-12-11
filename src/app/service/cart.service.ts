@@ -42,7 +42,11 @@ export class CartService implements OnInit {
       const status = false;
       const result = this.http.post(this.url, {
               user : this.login.getUserCurrent(),
-              cart : this._cart
+              cart : this._cart,
+              address : this._alamatTujuan,
+              note : this._catatan,
+              tax : this._isPajak,
+              aggrement : this._isAgree
   }).toPromise();
       return Promise.resolve(result);
   }
