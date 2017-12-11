@@ -1,5 +1,19 @@
-  <h1 class="align-center white-text" >Transaksi Berhasil!</h1>
+  <h1 class="align-center white-text" >{{message}}</h1>
   <h3 class="align-center white-text">alamat {{alamat_tujuan}}</h3>
   <h3 class="align-center white-text">catatan {{catatan}}</h3>
   <h3 class="align-center white-text">isPajak{{isPajak}}</h3>
   <h3 class="align-center white-text">isAgree{{isAgree}}</h3>
+  <div class="row align-center">
+    <div class="col s6">
+      <button mat-menu-item routerLink="/dashboard" class="align-center">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+    </div>
+    <div class="col s6">
+      <button mat-menu-item routerLink="/history" class="align-center">
+        <mat-icon>history</mat-icon>
+        <span>History</span>
+      </button>
+    </div>
+  </div>

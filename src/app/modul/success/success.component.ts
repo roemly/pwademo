@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CartService} from "../../service/cart.service";
-import {ActivatedRoute} from "@angular/router";
+import {CartService} from '../../service/cart.service';
+import {ActivatedRoute} from '@angular/router';
+import {LoginService} from "../../service/login.service";
 @Component({
   selector: 'app-testing',
   templateUrl: './success.component.html',
@@ -11,7 +12,12 @@ alamat_tujuan: any= '';
 catatan: any= '';
 isPajak: any= false;
 isAgree: any= false;
-  constructor( private cart: CartService) { }
+message = '';
+  constructor( public route: ActivatedRoute,
+               private cart: CartService,
+               private user: LoginService) {
+    this.message = user.getMessage();
+  }
 
   ngOnInit() {
     this.alamat_tujuan = this.cart.getAlamatTujuan();

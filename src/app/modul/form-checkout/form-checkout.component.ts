@@ -33,11 +33,12 @@ export class FormCheckoutComponent implements OnInit {
   bayar(): void {
       this.cart.sendOrder()
           .then(response => {
+              this.current_user.setMessage(JSON.parse(response._body).msg);
             this.router.navigate(['success']);
           })
           .catch(response => {
             console.log(response);
-            this.router.navigate(['fail']);
+            this.router.navigate(['fail'], { queryParams: { data : JSON.parse(response._body) } });
           });
   }
 }
