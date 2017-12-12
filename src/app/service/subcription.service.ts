@@ -7,9 +7,9 @@ import 'rxjs/add/operator/toPromise';
 export class SubscriptionService {
   isSubscribed: Boolean = false;
   swRegistration: any = null;
-  private applicationServerPublicKey = 'BFiymjsEVb2vhNcXlwF7AD2m8fnMtkpgRmFmeG1TlrkY80TSjBLFGbKBWvL1Te-C9D9Hh7vUp6nJmlgUfpTtUnc';
-  private apiUrl = 'https://falsesilver.me/fiesto/public/api/subcription/add';
-  private apiUrlDel = 'https://falsesilver.me/fiesto/public/api/subcription/delete';
+  private applicationServerPublicKey = 'BBISJmDmHI4Yr0hTw90F-C2VpohCfqrhImrQExeGUBvHIz0GYOSllTEJi3RxuiKotIWRmbLrmgMj7D0b-k7kL-U';
+  private apiUrl = 'https://ptamp.aindo.com/api/api-subscription-register.php';
+  private apiUrlDel = 'https://ptamp.aindo.com/api/api-subscription-remove.php';
   constructor(private http: Http) {
       let tis = this;
     if ('serviceWorker' in navigator && 'PushManager' in window) {

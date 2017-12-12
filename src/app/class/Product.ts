@@ -24,7 +24,7 @@ export class Product{
     return this._name;
   }
 
-  get category(): string {a
+  get category(): string {
     return this._category;
   }
 
