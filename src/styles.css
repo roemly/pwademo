@@ -38,9 +38,15 @@ html {
   font-size:11pt;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  color:#fff;
 }
-
+.first-home-menu mat-grid-tile.mat-grid-tile:last-child {
+  width: 10% !important;
+  float: right !important;
+  left: auto !important;
+  right: 22px;
+  top: -3px !important;
+} 
 body{margin:0;background-color:#4766a7;}
 .cst-bg-color{
     background-color:#4766a7;

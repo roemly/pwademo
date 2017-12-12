@@ -43,7 +43,7 @@ export class FormOrderItemComponent implements OnInit {
       this.filteredOptions = this.myControl.valueChanges
           .startWith(null)
           .map(val => {
-            console.log(typeof(this.users.getUserCurrent()));
+           // console.log(typeof(this.users.getUserCurrent()));
             console.log(JSON.parse(localStorage.user).id);
               this.product.fetchDataWithKey(val, String(this.users.getUserCurrent().id), this.id_order).subscribe(data => {
                   this.options = data.map(p => {

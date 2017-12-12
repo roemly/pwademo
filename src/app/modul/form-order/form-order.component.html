@@ -21,7 +21,7 @@
 			  <mat-card-content>
 				<!--<span class="truncate">{{product.getProductById(item.id).description}}</span>-->
 				<p style="float:left;color:#00c5ae;margin:0">Qty : {{item.qty}}</p>
-				<p style="float:right;margin:0">Price : {{item.price | number}}</p>
+				<p style="float:right;margin:0">Price : {{item.price * item.qty | number}}</p>
 			  </mat-card-content>
               <mat-card-actions>
                   

@@ -12,7 +12,7 @@ import {LoginService} from '../../service/login.service';
 export class HistoryComponent implements OnInit{
   title = 'History';
   ngOnInit(): void {
-    if(this.orderDetail.orderlist == null){
+    //
         // console.log('null');
         this.orderDetail.fetchdata().subscribe(data => {
             this.orderDetail.orderlist = data.filter(item => {
@@ -22,7 +22,7 @@ export class HistoryComponent implements OnInit{
                 }
             });
         });
-    }
+   // }
   }
   constructor(
       private orderDetail: OrderService,

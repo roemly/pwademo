@@ -24,7 +24,7 @@ export class OrderService {
   getByStatus(status: string): Order[] {
     if(this.orderlist != null){
         this.orderlist.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
-        // console.log(this.orderlist);
+        console.log(this.orderlist);
         return this.orderlist.filter(item => {
             // console.log('item',item);
             if(item.status == status){
@@ -35,7 +35,7 @@ export class OrderService {
     }
   }
   fetchdata(): Observable<Order[]> {
-      return this.http.get('assets/dummy-history.json')
+      return this.http.get('http://ptamp.aindo.com/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
           .map((res: Response) => <Order[]>res.json());
   }
 }
