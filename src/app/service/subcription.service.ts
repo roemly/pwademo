@@ -18,7 +18,6 @@ export class SubscriptionService {
           .then(swReg => {
             console.log('Service Worker registered', swReg);
             this.swRegistration = swReg;
-
             this.swRegistration.pushManager.getSubscription()
                 .then(function(subscription) {
                   tis.isSubscribed = !(subscription === null);

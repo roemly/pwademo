@@ -16,7 +16,7 @@ export class CartService implements OnInit {
   private _isPajak = false;
   private _isAgree = false;
   public title = '';
-  private url = 'http://ptamp.aindo.com/api/api-post-order.php';
+  private url = 'https://ptamp.aindo.com/api/api-post-order.php';
   // private thisObject: CartService = null;
 
   constructor(public login: LoginService,

@@ -7,7 +7,7 @@ import {Http} from '@angular/http';
 @Injectable()
 export class LoginService {
   private user: User = null;
-  private url = 'http://ptamp.aindo.com/api/api-login.php';
+  private url = 'https://ptamp.aindo.com/api/api-login.php';
   private message = '';
   constructor(private http: Http) {
     if (localStorage.user !== undefined){

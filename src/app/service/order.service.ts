@@ -35,7 +35,7 @@ export class OrderService {
     }
   }
   fetchdata(): Observable<Order[]> {
-      return this.http.get('http://ptamp.aindo.com/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
+      return this.http.get('https://ptamp.aindo.com/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
           .map((res: Response) => <Order[]>res.json());
   }
 }
