@@ -57,7 +57,9 @@ export class FormOrderItemComponent implements OnInit {
               });
               if(val instanceof Object){
                   console.log('catch' + JSON.stringify(val));
+                  this.qty = 0;
                   this.kelipatan = val.data.kelipatan;
+
                   console.log(this.kelipatan);
               }
               return this.options;
@@ -96,7 +98,10 @@ export class FormOrderItemComponent implements OnInit {
     }
   }
   getTotal (): number{
+
     if (this.myControl.value instanceof Object){
+        // console.log(this.myControl.value.data);
+        // this.qty = 0;
         return this.qty * this.myControl.value.data.price;
     }
     return 0;

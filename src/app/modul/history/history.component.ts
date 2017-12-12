@@ -13,10 +13,11 @@ export class HistoryComponent implements OnInit{
   title = 'History';
   ngOnInit(): void {
     if(this.orderDetail.orderlist == null){
+        // console.log('null');
         this.orderDetail.fetchdata().subscribe(data => {
             this.orderDetail.orderlist = data.filter(item => {
                 if(this.login.getUserCurrent().id == item.user_id){
-                    // console.log(item);
+                    console.log(item);
                     return item;
                 }
             });
