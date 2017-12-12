@@ -9,13 +9,9 @@ import 'rxjs/add/operator/map';
 import {CartService} from '../../service/cart.service';
 import {MatSnackBar} from "@angular/material";
 import { Location } from '@angular/common';
-import {Cart} from "../../class/Cart";
-import {ItemCart} from "../../class/ItemCart";
 import "rxjs/add/operator/startWith";
-import {forEach} from "@angular/router/src/utils/collection";
-import { CloseScrollStrategy } from '@angular/cdk/overlay/typings/scroll/close-scroll-strategy';
 import { LoginService } from '../../service/login.service';
-
+import "rxjs/add/operator/debounceTime";
 @Component({
   templateUrl: './form-order-item.component.html',
   styleUrls: ['./form-order-item.component.css'],
@@ -41,10 +37,9 @@ export class FormOrderItemComponent implements OnInit {
       this.products = this.product.getProduct();
 
       this.filteredOptions = this.myControl.valueChanges
+          .debounceTime(300)
           .startWith(null)
           .map(val => {
-            console.log(typeof(this.users.getUserCurrent()));
-            console.log(JSON.parse(localStorage.user).id);
               this.product.fetchDataWithKey(val, String(this.users.getUserCurrent().id), this.id_order).subscribe(data => {
                   this.options = data.map(p => {
                       return {
