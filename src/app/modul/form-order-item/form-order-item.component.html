@@ -42,12 +42,12 @@
         <mat-grid-tile><div class=" center-align indigo lighten-5 bordered" (click)="NumberKeyboard('delete')"><mat-icon><span>backspace</span></mat-icon></div></mat-grid-tile>
 		</mat-grid-list>
       </div>
-
+		
         <ng-template #stepper>
           <label ><span class="white-text">hanya bisa kelipatan {{kelipatan}}</span></label>
-          <div class="row">
+          <div class="row button-add-qyt">
             <div class="col s6">
-              <button (click)="stepDown()" class="col s6 btn-floating btn-large waves-effect waves-light red"><span style="font-size:4em">-</span></button>
+              <button (click)="stepDown()" class="btn-floating btn-large waves-effect waves-light red"><span style="font-size:4em">-</span></button>
             </div>
 
             <div class="col s6">

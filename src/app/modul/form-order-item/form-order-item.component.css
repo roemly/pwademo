@@ -3,6 +3,39 @@
   height:250px;
   display:block;
 }
+.cst-keyboard-virtual.center-align {
+    position: relative;
+}
+.row.button-add-qyt {
+    position: absolute;
+    width: 30%;
+    top: -61px;
+    right: 0;
+    margin: 0;
+}
+span.white-text {
+    display: block;
+    /* background: #fff; */
+    /* text-align: center; */
+    color: #ffb700;
+    border-top: 1px solid #f8b713;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 18px;
+    margin-top: -10px;
+}
+.button-add-qyt .col.s6 {
+    padding: 0 0 0 5px !important;
+}
+.button-add-qyt button {
+    display: block;
+    border-radius: 0 !important;
+    width: 100% !important;
+    height: 40px;
+	padding:0 !important;
+    font-size: 6pt !important;
+    color: #fff;
+}
 h1{
   display: block;
   background-color: #7fa0d5;

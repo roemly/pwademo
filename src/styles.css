@@ -40,6 +40,11 @@ html {
   font-weight: normal;
   color:#fff;
 }
+.first-home-menu mat-grid-tile.mat-grid-tile:nth-child(2) {width:30% !important}
+.first-home-menu mat-grid-tile.mat-grid-tile:nth-child(3) {
+	left: calc(((27% - 0.75px) + 1px) * 2) !important;
+    width: 30% !important;
+}
 .first-home-menu mat-grid-tile.mat-grid-tile:last-child {
   width: 10% !important;
   float: right !important;
@@ -247,6 +252,7 @@ ul.list-news-thumbnail {
 button {
     width: calc(100% - 60px) !important;
     border-radius: 30px !important;
+	border:0;
 	text-transform:uppercase;
     background: #f8b713 !important;
     font-size: 14pt !important;

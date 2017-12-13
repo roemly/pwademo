@@ -1,18 +1,25 @@
 <div class="cst-nav-toolbar">
   <mat-toolbar class="cst-btn-toolbar">
-    <button mat-menu-item routerLink="/dashboard" class="align-center">
+    <button mat-menu-item routerLink="/dashboard" class="align-left">
       <mat-icon>home</mat-icon>
     </button>
-    <button mat-menu-item routerLink="/history" class="align-center">
+    <button mat-menu-item routerLink="/history" class="align-right">
       <mat-icon>history</mat-icon>
       <span>History</span>
     </button>
   </mat-toolbar>
 </div>
 <div class="cst-display-content">
+<div class="container">
+<div class="row">
+<div class="col s12">
 <h1 class="align-center white-text" >{{message}}</h1>
-  <h3 class="align-center white-text">alamat {{alamat_tujuan}}</h3>
-  <h3 class="align-center white-text">catatan {{catatan}}</h3>
-  <h3 class="align-center white-text">isPajak{{isPajak}}</h3>
-  <h3 class="align-center white-text">isAgree{{isAgree}}</h3>
+  <!-- <h3 class="white-text">alamat {{alamat_tujuan}}</h3> -->
+  <div class="label-catatan">CATATAN:</div> 
+  <div class="content-detail-order">{{catatan}}</div>
+  <!-- <h3 class="white-text">isPajak{{isPajak}}</h3> -->
+  <!-- <h3 class="white-text">isAgree{{isAgree}}</h3> -->
+</div>
+</div>
+</div>
 </div>

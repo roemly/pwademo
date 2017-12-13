@@ -1,0 +1,17 @@
+button.align-left{text-align:left;color:#fff}
+button.align-right{text-align:right;color:#fff}
+.mat-menu-item span{
+	vertical-align:bottom !important
+}
+.mat-menu-item .mat-icon, .mat-menu-item-submenu-trigger::after {
+    color: #fff !important;
+}
+.label-catatan{
+    text-transform: uppercase;
+    color: #00c5ae;
+}
+h1{border-bottom:1px solid #00c5ae;margin-bottom:20px;padding-bottom:25px;}
+.mat-menu-item{line-height:1.2 !important}
+.mat-menu-item .mat-icon {
+    margin-right: 0px !important;
+}
