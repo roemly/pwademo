@@ -1,0 +1,27 @@
+.baris-order-detail
+{
+    border-bottom:2px solid #cecece;
+}
+.page-history-detail {
+    padding: 20px;
+    margin-top: 62px;
+}
+.tabel-order-detail{
+    width:100%;
+}
+.baris-order-judul th, .baris-order-detail td {
+    text-align: left;
+    border-bottom: 2px solid;
+    padding-top:5px;
+    padding-bottom:10px;
+}
+.baris-total-order td {
+    text-align: left;
+    padding-top:5px;
+}
+.floatleft{
+    float:left;
+}
+.floatright{
+    float:right;
+}

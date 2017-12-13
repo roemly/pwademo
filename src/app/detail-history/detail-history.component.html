@@ -1,14 +1,42 @@
+<div class="cst-nav-toolbar">
+  <mat-toolbar class="cst-btn-toolbar">
+     <span><a class="cst-navigation-color" clickGoBack ><mat-icon>keyboard_backspace</mat-icon></a></span>
+    <span class="cst-title-form">Detail Order</span>
+  </mat-toolbar>
+</div>
+<div class="cst-display-content page-history-detail">
+     
+    
+    <table>
+        <tr><td>Tanggal</td><td>:</td><td>{{current_order.created_at}}</td></tr>
+        <tr><td>Faktur Pajak</td><td>:</td><td>{{current_order.tax}}</td></tr>
+        <tr><td>Kirim Ke</td><td>:</td><td>{{current_order.kirim_ke}}</td></tr>
+        <tr><td>Catatan</td><td>:</td><td>{{current_order.catatan}}</td></tr>
+        <tr><td>Status</td><td>:</td><td>{{current_order.status}}</td></tr>
+    </table>
+    <h3>Detail Order</h3>
+    <table class="tabel-order-detail" cellspacing="0" cellpadding="0">
+        <tr  class="baris-order-judul">
+          <th>Produk</th>
+          <th>Subtotal</th>
+        </tr>
+      
+        <tr *ngFor="let item of current_order.detail" class="baris-order-detail">
+          <td colspan="2">
+            <div class="judul-item">
+                {{item.product.name}}
+            </div>
+            <div class="floatleft"><span>@{{item.product.price | number}}</span> x <span>{{item.product.qty | number}}</span></div>
+            <div class="floatright"><span>{{item.product.price * item.product.qty | number}}</span></div>
+          </td>
+        </tr>
+        <tr class="baris-total-order">
+            <td>Total</td>
+            <td>{{current_order.total_price |  number}}</td>
+          </tr>
+      </table>
 
-  {{current_order.created_at}}<br>
-  {{current_order.id}}<br>
-  {{current_order.status}}<br>
-  {{current_order.tax}}<br>
-  {{current_order.total_price}}<br><br>
-  Detail
-  <div *ngFor="let item of current_order.detail">
-    {{item.product.name}}<br>
-    {{item.product.description}}<br>
-    {{item.product.category}}<br>
-    {{item.product.price}}<br>
-    {{item.product.qty}}<br>
-  </div>
+  
+</div>
+
+  

@@ -25,6 +25,20 @@
     );
   });
 
+  self.addEventListener('push', function(event) {
+    console.log('[Service Worker] Push Received.');
+    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+  
+    const title = 'Push Codelab';
+    const options = {
+      body: 'Yay it works.',
+      icon: 'assets/amp-logo.png',
+      badge: 'assets/home.png'
+    };
+  
+    event.waitUntil(self.registration.showNotification(title, options));
+  });
+
   function fetchAndCache(url) {
     return fetch(url)
     .then(function(response) {
@@ -43,5 +57,7 @@
       // You could return a custom offline 404 page here
     });
   }
+
+  
 
 })();
