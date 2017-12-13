@@ -58,6 +58,7 @@ import { ChattingComponent } from './modul/chatting/chatting.component';
 import { SuccessComponent } from './modul/success/success.component';
 import { FailComponent } from './modul/fail/fail.component';
 import {SubscriptionService} from "./service/subcription.service";
+import { DetailHistoryComponent } from './detail-history/detail-history.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import {SubscriptionService} from "./service/subcription.service";
     ChangepasswordComponent,
     ChattingComponent,
     SuccessComponent,
-    FailComponent
+    FailComponent,
+    DetailHistoryComponent
   ],
 
   imports: [
@@ -139,6 +141,10 @@ import {SubscriptionService} from "./service/subcription.service";
       {
         path: 'form-order/:id',
         component: FormOrderComponent
+      },
+      {
+        path: 'detail-history/:id',
+        component: DetailHistoryComponent
       },
       {
           path: 'form-order-item/:id',

@@ -14,26 +14,32 @@ export class OrderService {
     private login: LoginService,
     private http: Http
   ) {
-    // this.getorderlist();
   }
 
   getorderlist(): Order[] {
-    if (this.orderlist != null)
+    if (this.orderlist == null){
+        this.fetchdata().subscribe(data =>{
+            console.log(data);
+            this.orderlist = data;
+        });
+    }
       return this.orderlist;
   }
-  getByStatus(status: string): Order[] {
-    if(this.orderlist != null){
-        this.orderlist.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
-        console.log(this.orderlist);
-        return this.orderlist.filter(item => {
-            // console.log('item',item);
-            if(item.status == status){
-              return item;
-            }
-        });
-        // return this.orderlist;
+    getByStatus(status: string): Order[] {
+        if(this.orderlist != null){
+            this.orderlist.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
+            return this.orderlist.filter(item => {
+                // console.log('item',item);
+                if(item.status == status){
+                    return item;
+                }
+            });
+            // return this.orderlist;
+        }
     }
-  }
+    getById(id: any): Order {
+        return this.getorderlist().find(item => item.id === id);
+    }
   fetchdata(): Observable<Order[]> {
       return this.http.get('https://ptamp.aindo.com/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
           .map((res: Response) => <Order[]>res.json());

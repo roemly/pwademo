@@ -1,0 +1,14 @@
+
+  {{current_order.created_at}}<br>
+  {{current_order.id}}<br>
+  {{current_order.status}}<br>
+  {{current_order.tax}}<br>
+  {{current_order.total_price}}<br><br>
+  Detail
+  <div *ngFor="let item of current_order.detail">
+    {{item.product.name}}<br>
+    {{item.product.description}}<br>
+    {{item.product.category}}<br>
+    {{item.product.price}}<br>
+    {{item.product.qty}}<br>
+  </div>

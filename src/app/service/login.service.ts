@@ -8,6 +8,7 @@ import {Http} from '@angular/http';
 export class LoginService {
   private user: User = null;
   private url = 'https://ptamp.aindo.com/api/api-login.php';
+  private urlChangePassword = 'https://ptamp.aindo.com/api/api-change-password.php';
   private message = '';
   constructor(private http: Http) {
     if (localStorage.user !== undefined){
@@ -32,9 +33,14 @@ export class LoginService {
     this.user = JSON.parse(localStorage.user) as User;
   }
 
-  changePassword (new_password: string) {
-      this.user.token = new_password;
-      localStorage.user = JSON.stringify(this.user);
+  changePassword (old_pass: string,new_password: string) {
+      let res = this.http.post(this.urlChangePassword,{
+        member_id : this.user.id,
+        password_lama: old_pass,
+        password_baru1: new_password,
+        password_baru2: new_password,
+      }).toPromise()
+    return Promise.resolve(res);
   }
   getUserCurrent(): User {
     return this.user;

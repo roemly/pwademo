@@ -18,7 +18,7 @@
 						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
-							  Order ID : {{order.id}}
+								Order ID : <a routerLink="/detail-history/{{order.id}}">{{order.id}}</a>
 							</div>
 							<div class="summary-history-thumbnail">
 							  Rp. {{order.total_price | number}}
