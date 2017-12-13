@@ -31,13 +31,13 @@
 </div>
 <ul class="list-news-thumbnail">
 	<li *ngFor="let post of posts.getPost()">
-		<div class="date-news-thumbnail">{{post.created_at.substr(8,2)}} <span>{{post.created_at.substr(5,2)}}</span></div>
+		<div class="date-news-thumbnail">{{post.created_at.substr(8,2)}} <span>{{post.month}}</span></div>
 		<div class="data-news-thumbnail">
 			<div class="title-news-thumbnail">
 				{{post.title}}
 			</div>
-			<div class="summary-news-thumbnail">
-				{{post.content.substr(0,100)}}
+			<div class="summary-news-thumbnail" [innerHTML]="post.content">
+				
 			</div>
 		</div>
 	</li>

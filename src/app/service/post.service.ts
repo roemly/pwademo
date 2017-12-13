@@ -26,7 +26,7 @@ export class PostService {
     // return data;
   }
   fetchdata(): Observable<Post[]> {
-    return this.http.get('assets/dummy-post.json')
+    return this.http.get('https://ptamp.aindo.com/api/api-news.php')
         .map((res: Response) => <Post[]>res.json());
         // .do(data => console.log(JSON.stringify(data)));
   }

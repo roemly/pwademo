@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit{
             // })
             this.posts.posts = data;
             // console.log(data);
-            this.posts.posts.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
+            //this.posts.posts.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
             // console.log(this.posts.posts);
 
             // console.log(typeof data[0].created_at);
