@@ -89,12 +89,12 @@
 				</div>
 			</div>
         </mat-tab>
-        <mat-tab label="Arsip">
+        <mat-tab label="LUNAS">
 			<div class="container">
 				<div class="row">
 					<div class="col s12">
 					  <ul class="list-history-thumbnail">
-						<li *ngFor="let order of orderDetail.getByStatus('ARSIP')" class="full-payment">
+						<li *ngFor="let order of orderDetail.getByStatus('LUNAS')" class="{{order.class}}">
 					  	<!--<li *ngFor="let order of orderDetail.getorderlist()" class="full-payment">-->
 							<span class="icon-history"></span>
 						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
