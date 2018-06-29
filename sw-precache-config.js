@@ -1,17 +1,17 @@
 module.exports = {
   staticFileGlobs: [
-    'dist/**.html',
-    'dist/**.js',
-    'dist/**.css',
-    'dist/assets/images/*',
-    'dist/assets/icons/*',
-    'dist/assets/roboto/*',
+    'dist/shop/**.html',
+    'dist/shop/**.js',
+    'dist/shop/**.css',
+    'dist/shop/assets/images/*',
+    'dist/shop/assets/icons/*',
+    'dist/shop/assets/roboto/*',
   ],
-  root: 'dist',
-  stripPrefix: 'dist/',
-  navigateFallback: '/index.html',
+  root: 'dist/shop',
+  stripPrefix: 'dist/shop/',
+  navigateFallback: '/shop/index.html',
   runtimeCaching: [{
-    urlPattern: /http/,
+    urlPattern: /https:\/\/ptamp\.co.id\/shop/,
     handler: 'networkFirst'
   }],
   importScripts: ["./push-notification.js"]

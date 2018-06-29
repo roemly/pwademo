@@ -4,7 +4,7 @@
     <span class="cst-title-form">Detail Order</span>
   </mat-toolbar>
 </div>
-<div class="cst-display-content page-history-detail">  
+<div class="cst-display-content page-history-detail" ng-model="current_order">  
     <table>
         <tr><td>Tanggal</td><td>:</td><td>{{current_order.created_at}}</td></tr>
         <tr><td>Faktur Pajak</td><td>:</td><td>{{current_order.tax}}</td></tr>
@@ -24,13 +24,13 @@
             <div class="judul-item">
                 {{item.product.name}}
             </div>
-            <div class="floatleft"><span>@{{item.product.price | number}}</span> x <span>{{item.product.qty | number}}</span></div>
-            <div class="floatright"><span>{{item.product.price * item.product.qty | number}}</span></div>
+            <div class="floatleft"><span>@Rp{{item.product.price | number | pointReplacer}}</span> x <span>{{item.product.qty | number}}</span></div>
+            <div class="floatright"><span>Rp{{item.product.price * item.product.qty | number | pointReplacer}}</span></div>
           </td>
         </tr>
         <tr class="baris-total-order">
             <td>Total</td>
-            <td >{{current_order.total_price |  number}}</td>
+            <td >Rp{{current_order.total_price |  number | pointReplacer}}</td>
           </tr>
       </table>
   

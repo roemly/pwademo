@@ -7,11 +7,11 @@ import {Product} from '../../class/Product';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {CartService} from '../../service/cart.service';
-import {MatSnackBar} from "@angular/material";
+import {MatSnackBar} from '@angular/material';
 import { Location } from '@angular/common';
-import "rxjs/add/operator/startWith";
+import 'rxjs/add/operator/startWith';
 import { LoginService } from '../../service/login.service';
-import "rxjs/add/operator/debounceTime";
+import 'rxjs/add/operator/debounceTime';
 @Component({
   templateUrl: './form-order-item.component.html',
   styleUrls: ['./form-order-item.component.css'],
@@ -20,8 +20,8 @@ import "rxjs/add/operator/debounceTime";
 export class FormOrderItemComponent implements OnInit {
   id_order: number;
   isAdd: boolean;
-  id_temp:number = -1;
-  qty:number = 0;
+  id_temp: number = -1;
+  qty: number = 0;
   myControl: FormControl = new FormControl();
   options = [];
   products: Product[];
@@ -37,7 +37,7 @@ export class FormOrderItemComponent implements OnInit {
       this.products = this.product.getProduct();
 
       this.filteredOptions = this.myControl.valueChanges
-          .debounceTime(300)
+          .debounceTime(200)
           .startWith(null)
           .map(val => {
               this.product.fetchDataWithKey(val, String(this.users.getUserCurrent().id), this.id_order).subscribe(data => {
@@ -50,7 +50,7 @@ export class FormOrderItemComponent implements OnInit {
                       };
                   });
               });
-              if(val instanceof Object){
+              if ( val instanceof Object ) {
                   console.log('catch' + JSON.stringify(val));
                   this.qty = 0;
                   this.kelipatan = val.data.kelipatan;
@@ -68,20 +68,21 @@ export class FormOrderItemComponent implements OnInit {
                 public snackBar: MatSnackBar,
                 public router: Router,
                 public location: Location,
-                private users : LoginService) {
+                private users: LoginService) {
         this.route.params.subscribe(params => {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
         });
-        console.log(this.kelipatan)
-        if(this.id_order == 1) this.title = 'SIKA';
-        else if(this.id_order == 2) this.title = 'MAKITA';
-        else if(this.id_order == 3) this.title = 'LAKONI';
+        
+        if (this.id_order == 1) { this.title = 'SIKA'; }
+        else if ( this.id_order == 2 ) { this.title = 'MAKITA'; }
+        else if ( this.id_order == 3 ) { this.title = 'LAKONI'; }
+        else if ( this.id_order == 4 ) { this.title = 'WD 40'; }
     }
-    stepUp(): void{
+    stepUp(): void {
         this.qty += Number(this.kelipatan);
     }
-    stepDown(): void{
-      if(this.qty- this.kelipatan >= 0){
+    stepDown(): void {
+      if ( this.qty - this.kelipatan >= 0 ) {
           this.qty -= this.kelipatan;
       }
     }
@@ -92,9 +93,9 @@ export class FormOrderItemComponent implements OnInit {
       this.qty = parseInt(String(this.qty) + s, 10);
     }
   }
-  getTotal (): number{
+  getTotal (): number {
 
-    if (this.myControl.value instanceof Object){
+    if (this.myControl.value instanceof Object) {
         // console.log(this.myControl.value.data);
         // this.qty = 0;
         return this.qty * this.myControl.value.data.price;
@@ -102,7 +103,7 @@ export class FormOrderItemComponent implements OnInit {
     return 0;
   }
   filter(val: any): string[] {
-    if (typeof (val) !== 'string'){
+    if (typeof (val) !== 'string') {
       console.log('val: ', val);
       val = val.label;
     }
@@ -115,17 +116,16 @@ export class FormOrderItemComponent implements OnInit {
     //   option.label.toLowerCase().indexOf(val.toLowerCase()) === 0);
   }
 
-  display(option: any): string{
+  display(option: any): string {
     // console.log('option: ', option);
     // console.log('olabel: ', option !== null ? option.label : null);
     return option ? option.label : option;
   }
-  addToCart(): void{
+  addToCart(): void {
     this.isAdd = this.cart.addProduct(this.myControl.value.data as Product, this.qty);
-    if(this.isAdd) {
+    if ( this.isAdd ) {
       localStorage.items = JSON.stringify(this.cart.getItems());
       this.location.back();
-    }
-    else this.snackBar.open('Produk sudah ada dikeranjang', '', {duration: 1500});
+    } else { this.snackBar.open('Produk sudah ada dikeranjang', '', {duration: 1500}); }
   }
 }

@@ -8,12 +8,10 @@ import {SubscriptionService} from "./service/subcription.service";
 })
 export class AppComponent {
   constructor(private subService: SubscriptionService){
-
   }
   unSub(): void{
     this.subService.unsubscribeUser();
   }
-  Sub(): void {
-    this.subService.subscribeUser();
-  }
+ 
+  
 }

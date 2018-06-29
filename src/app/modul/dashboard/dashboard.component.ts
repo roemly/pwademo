@@ -6,6 +6,8 @@ import {LoginService} from '../../service/login.service';
 import {OrderService} from "../../service/order.service";
 import {OrderDetail} from "../../class/OrderDetail";
 import {Order} from "../../class/Order";
+import {SubscriptionService} from "../../service/subcription.service";
+
 
 @Component({
   selector: 'app-dashboard',
@@ -33,14 +35,24 @@ export class DashboardComponent implements OnInit{
     }
 
   }
-  constructor(private posts: PostService, private router: Router, private login: LoginService, private orderDetail: OrderService){
+  constructor(public posts: PostService, private router: Router, private login: LoginService, private orderDetail: OrderService, private subService: SubscriptionService){
     if (!login.isLogin()) {
      // console.log('Login');
     //  console.log(localStorage.user);
       this.router.navigate(['login']);
+    }else{
+      subService.isServiceWorkerRunning(this.login.getUserCurrent().id);
     }
 
     // console.log('const');
    }
+  unSub(): void{
+    this.subService.unsubscribeUser();
+  }
+  /*
+  Sub(): void {
+    this.subService.subscribeUser();
+  }
+  */
 }
 

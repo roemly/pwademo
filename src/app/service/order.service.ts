@@ -10,21 +10,22 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export class OrderService {
   orderlist: Order[] = null;
-  constructor(
-    private login: LoginService,
-    private http: Http
-  ) {
-  }
-
-  getorderlist(): Order[] {
-    if (this.orderlist == null){
-        this.fetchdata().subscribe(data =>{
-            console.log(data);
-            this.orderlist = data;
-        });
+    constructor(
+        private login: LoginService,
+        private http: Http
+        ) {
     }
-      return this.orderlist;
-  }
+
+    getorderlist(): Order[] {
+        if (this.orderlist == null){
+            this.fetchdata().subscribe(data =>{
+                console.log(data);
+                this.orderlist = data;
+            });
+        }
+        return this.orderlist;
+    }
+
     getByStatus(status: string): Order[] {
         if(this.orderlist != null){
             this.orderlist.sort((n1,n2) => (Date.parse(n1.created_at) > Date.parse(n2.created_at)) ? -1 : 1);
@@ -40,8 +41,8 @@ export class OrderService {
     getById(id: any): Order {
         return this.getorderlist().find(item => item.id === id);
     }
-  fetchdata(): Observable<Order[]> {
-      return this.http.get('https://ptamp.aindo.com/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
-          .map((res: Response) => <Order[]>res.json());
-  }
+    fetchdata(): Observable<Order[]> {
+        return this.http.get('https://ptamp.co.id/shop/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
+            .map((res: Response) => <Order[]>res.json());
+    }
 }

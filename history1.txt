@@ -1,0 +1,1000 @@
+  997  nano completion.bash.inc 
+  998  nano path.bash.inc 
+  999  py
+ 1000  python completion.bash.inc 
+ 1001  python path.bash.inc 
+ 1002  ls
+ 1003  cat README 
+ 1004  xport CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+ 1005  export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+ 1006  echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+ 1007  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+ 1008  sudo apt-get update && sudo apt-get install google-cloud-sdk
+ 1009  sudo apt-get install google-cloud-sdk-app-engine-php
+ 1010  gcloud
+ 1011  gloud init
+ 1012  sudo apt-get install google-cloud-sdk
+ 1013  gcloud init
+ 1014  apt-get install google-cloud-sdk-app-engine-php
+ 1015  gloud init
+ 1016  gcloud init
+ 1017  gcloud
+ 1018  gcloud init --console-only
+ 1019  gcloud compute instances help
+ 1020  gcloud compute instances --help
+ 1021  gcloud compute --help
+ 1022  cd ../../public_html
+ 1023  cd gcloud/
+ 1024  mkdir baru2
+ 1025  git checkout https://github.com/GoogleCloudPlatform/google-cloud-php.git
+ 1026  git checkout
+ 1027  git --help
+ 1028  git checkout --help
+ 1029  git checkout -p https://github.com/GoogleCloudPlatform/google-cloud-php.git
+ 1030  git checkout https://github.com/GoogleCloudPlatform/google-cloud-php.git
+ 1031  git checkout --help
+ 1032  git init
+ 1033  ls
+ 1034  cd baru2
+ 1035  git init
+ 1036  git checkout https://github.com/GoogleCloudPlatform/google-cloud-php.git
+ 1037  git checkout -p https://github.com/GoogleCloudPlatform/google-cloud-php.git
+ 1038  ls
+ 1039  gcloud init
+ 1040  chmod -R 777 *
+ 1041  ls
+ 1042  ng serve -h 192.168.111.170
+ 1043  ng serve --host 192.168.111.170
+ 1044  git pull
+ 1045  git commit -m "login problem gara gara kurang refresh dari localstorage dan Autocomplete gak keluar gara gara strigify"
+ 1046  git push
+ 1047  cd ..
+ 1048  ls
+ 1049  chmod -R 777 BEESMART\ V3
+ 1050  cd webapps/
+ 1051  cd pt-amp
+ 1052  git pull
+ 1053  ng serve
+ 1054  cd public_html
+ 1055  cd webapps/
+ 1056  ls
+ 1057  cd pt-amp
+ 1058  ng serve
+ 1059  ng serve --prod
+ 1060  ng serve
+ 1061  git pull
+ 1062  ng serve
+ 1063  chmod -R 777 *
+ 1064  ng serve
+ 1065  chmod -R 777 *
+ 1066  top
+ 1067  cd pt-amp
+ 1068  ls
+ 1069  git pull
+ 1070  ng serve
+ 1071  exit
+ 1072  cd public_html
+ 1073  cd webapps/
+ 1074  ls
+ 1075  composer create-project valizada/telegram-bot-client
+ 1076  ls
+ 1077  cd telegram-bot-client/
+ 1078  ls
+ 1079  crontab -e
+ 1080  exit
+ 1081  gcloud init
+ 1082  apt-get install telegram-cli
+ 1083  sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev libpython-dev make 
+ 1084  telegram-cli
+ 1085  ls
+ 1086  cd web-root/
+ 1087  ls
+ 1088  cd ..
+ 1089  mkdir telegram
+ 1090  cd telegram/
+ 1091  git clone --recursive https://github.com/vysheng/tg.git && cd tg
+ 1092  cd ..
+ 1093  s
+ 1094  ls
+ 1095  cd ..
+ 1096  cd public_html
+ 1097  ls
+ 1098  cd webapps/
+ 1099  cd pt-amp
+ 1100  git add .
+ 1101  git commit -m "update"
+ 1102  git push
+ 1103  exit
+ 1104  chmod -R 777 Windows\ Activator/
+ 1105  cd ..
+ 1106  cd telegram/
+ 1107  s
+ 1108  ls
+ 1109  cd tg
+ 1110  ls
+ 1111  exit
+ 1112  chmod -R 777 doc
+ 1113  reboot
+ 1114  sudo adduser telegramd
+ 1115  sudo mkdir /var/lib/telegram-daemon
+ 1116  cd telegram/
+ 1117  cd tg
+ 1118  sudo mkdir /usr/share/telegram-daemon
+ 1119  sudo mkdir /usr/share/telegram-daemon/bin
+ 1120  sudo cp bin/telegram-cli /usr/share/telegram-daemon/bin/
+ 1121  sudo cp start-telegram-daemon /usr/share/telegram-daemon/bin
+ 1122  cd  /usr/share/telegram-daemon/bin
+ 1123  ls
+ 1124  cd telegram-cli 
+ 1125  ls
+ 1126  cd /home/roemly
+ 1127  cd telegram/
+ 1128  ls
+ 1129  cd tg
+ 1130  ls
+ 1131  sudo mkdir /etc/telegram-daemon
+ 1132  sudo nano /etc/telegram-daemon/telegram-daemon.achat.conf
+ 1133  sudo mkdir /var/log/telegram-daemon
+ 1134  sudo mkdir /etc/telegram-cli
+ 1135  sudo cp server.pub /etc/telegram-cli/server.pub
+ 1136  /etc/init.d/telegram-daemon status
+ 1137  /etc/init.d/telegram-daemon
+ 1138  exit
+ 1139  mkdir webpushkey
+ 1140  cd webpushkey/
+ 1141  ls
+ 1142  openssl ecparam -genkey -name prime256v1 -out private_key.pem
+ 1143  ls
+ 1144  openssl ec -in private_key.pem -pubout -outform DER|tail -c 65|base64|tr -d '=' |tr '/+' '_-' >> public_key.txt
+ 1145  openssl ec -in private_key.pem -outform DER|tail -c +8|head -c 32|base64|tr -d '=' |tr '/+' '_-' >> private_key.txt
+ 1146  ls
+ 1147  cat public_key.txt 
+ 1148  nano public_key.txt 
+ 1149  wc public_key.txt 
+ 1150  cat private_key.
+ 1151  cat private_key.txt 
+ 1152  wc public_key.txt 
+ 1153  rm public_key.txt
+ 1154  openssl ec -in private_key.pem -pubout -outform DER|tail -c 65|base64|tr -d '=' |tr '/+' '_-' >> public_key.txt
+ 1155  cat public_key.txt 
+ 1156  cat private_key.
+ 1157  cat private_key.txt 
+ 1158  cd ..
+ 1159  cd public_html
+ 1160  cd webapps/
+ 1161  ls
+ 1162  cd pt-amp
+ 1163  ls
+ 1164  cd dist/
+ 1165  gmp extension
+ 1166  apt-get install php5-gmp
+ 1167  apt-get install php7.0-gmp
+ 1168  /etc/init.d/apache2 restart
+ 1169  cd public_html
+ 1170  ls
+ 1171  cd webapps/
+ 1172  ls
+ 1173  cd pt-amp
+ 1174  ls
+ 1175  exit
+ 1176  cd /etc/php/7.0/apache2/
+ 1177  ls
+ 1178  cp php.ini php.ini.2017
+ 1179  ls
+ 1180  git pull
+ 1181  ng serve
+ 1182  chmod -R 777 *
+ 1183  ng serve
+ 1184  git add .
+ 1185  git commit -m "merapikan detail order"
+ 1186  git push
+ 1187  ng serve
+ 1188  halt
+ 1189  kill 4428
+ 1190  ps
+ 1191  exit
+ 1192  npm install -g gulp-cli
+ 1193  npm uninstall gulp --save-dev
+ 1194  npm install 'gulpjs/gulp.git#4.0' --save-dev
+ 1195  gulp -v
+ 1196  npm install --global gulp
+ 1197  npm install
+ 1198  npm run build:dev
+ 1199  node -v
+ 1200  npm -v
+ 1201  npm run build:dev
+ 1202  chmod -R 777 *
+ 1203  apt-get install k3b
+ 1204  apt-get update --fix-missing
+ 1205  apt-get install k3b
+ 1206  df -h
+ 1207  lmc
+ 1208  chmod -R 777 file
+ 1209  ping google.com
+ 1210  history>suhistory.txt
+ 1211  ls
+ 1212  find . -type d -exec chmod 0755 {} \;
+ 1213  find . -type f -exec chmod 0644 {} \;
+ 1214  ls -la
+ 1215  chown roemly:www-data -R web-push-php-example
+ 1216  ls -la
+ 1217  halt
+ 1218  cd ..
+ 1219  ls
+ 1220  chmod -R 777 backup
+ 1221  cd /var/www/html/quiz/userfiles/backend/modul/quiz_upload_wordx/
+ 1222  ls
+ 1223  ls -la
+ 1224  /etc/init.d/apache2 restart
+ 1225  chmod -R file
+ 1226  chmod -R 777 file
+ 1227  cd ..
+ 1228  ls
+ 1229  cd panel
+ 1230  cd images/
+ 1231  ls
+ 1232  ls -la
+ 1233  ls -a
+ 1234  ls -l
+ 1235  ln -s Downloads /media/roemly/5E7E1CFA7E1CCCA11/Downloads
+ 1236  ls
+ 1237  ls -la
+ 1238  ln --help
+ 1239  ln
+ 1240  ln --help
+ 1241  ln -s /media/roemly/5E7E1CFA7E1CCCA11/Downloads Downloads
+ 1242  df -h
+ 1243  npm i -g cordova
+ 1244  exit
+ 1245  ionic serve
+ 1246  npm rebuild node-sass --force`
+ 1247  npm rebuild node-sass --force
+ 1248  ionic serve
+ 1249  sudo npm rebuild node-sass --force
+ 1250  ionic serve
+ 1251  sudo ionic serve
+ 1252  rm *
+ 1253  chmod -R 777 *
+ 1254  ls
+ 1255  rm server_quizroom1.6.zip 
+ 1256  rm server_quizroom1.6.zip
+ 1257  chmod 777 V*
+ 1258  ls -l
+ 1259  chmod 777 V*
+ 1260  chmod 777 Visual\ Studio\ Keygen\ By\ Nikhil.7z 
+ 1261  chmod 777 VS2012_ULT_enu.iso 
+ 1262  find -type d -exec chmod -v 0755 '{}' \;
+ 1263  ls -la
+ 1264  find /media/roemly/New Volume/RELEASE QUIZROOM/quizroom_online -type d -exec chmod -v 0755 '{}' \;
+ 1265  find quiz -type d -exec chmod -v 0755 '{}' \;
+ 1266  ls -a quiz
+ 1267  ls -la
+ 1268  ls
+ 1269  ls -la
+ 1270  find quiz -type d 
+ 1271  find quiz -type d -exec chmod  0755 '{}' \;
+ 1272  ls -la
+ 1273  find quiz -type d -exec chmod -R  0755 '{}' \;
+ 1274  ls -la
+ 1275  ls -la quiz
+ 1276  find . -type f -perm 755 -exec chmod 644 {} \;
+ 1277  ls -la
+ 1278  cd quiz
+ 1279  ls
+ 1280  ls -la
+ 1281  ls 
+ 1282  ls -la
+ 1283  cd ..
+ 1284  ls
+ 1285  chmod -R 755 quiz
+ 1286  ls -la
+ 1287  find . -type f -perm 755 -exec chmod 644 {} \;
+ 1288  ls -la
+ 1289  find . -type d -perm 777 -exec chmod 755 {} \;
+ 1290  ls -la
+ 1291  ls quiz
+ 1292  ls -la
+ 1293  find . -type d  -exec chmod 755 {} \;
+ 1294  ls -la
+ 1295  find . -type f  -exec chmod 644 {} \;
+ 1296  ls
+ 1297  ls -la
+ 1298  cd quiz
+ 1299  ls
+ 1300  cd panel
+ 1301  ls
+ 1302  cd ..
+ 1303  chmod 775 panel
+ 1304  ls -la
+ 1305  cd userfiles/
+ 1306  ls front/
+ 1307  ls
+ 1308  ls -la
+ 1309  chmod -R 775 front
+ 1310  chmod -R 755 front
+ 1311  ls
+ 1312  cd ..
+ 1313  ls
+ 1314  cd quizroom_online
+ 1315  ls
+ 1316  ls -la
+ 1317  cd quiz
+ 1318  ls
+ 1319  chmod 755 panel
+ 1320  ls -la
+ 1321  ls
+ 1322  git init
+ 1323  git clone https://github.com/darenju/react-flip-page.git
+ 1324  ls
+ 1325  cd react-flip-page/
+ 1326  npm start
+ 1327  cd ..
+ 1328  npm install --save react-flip-page
+ 1329  ls
+ 1330  cd react-flip-page/
+ 1331  npm start
+ 1332  cd ,,
+ 1333  cd ..
+ 1334  ls
+ 1335  cd ..
+ 1336  ls
+ 1337  cd react
+ 1338  ls
+ 1339  cd reactjs
+ 1340  ls
+ 1341  cd ..
+ 1342  cd react_project/
+ 1343  ls
+ 1344  cd testing/
+ 1345  ls
+ 1346  cd my-app/
+ 1347  ls
+ 1348  npm install --save react-flip-page
+ 1349  ls
+ 1350  cd src
+ 1351  ls
+ 1352  npm start
+ 1353  cd ..
+ 1354  npm start
+ 1355  composer create-project --prefer-dist laravel/laravel Laravel55
+ 1356  ls
+ 1357  cd /opt/
+ 1358  ls
+ 1359  cd android-studio
+ 1360  ls
+ 1361  cd bin/
+ 1362  ls
+ 1363  sh studio.sh
+ 1364  ls
+ 1365  cd ..
+ 1366  ls
+ 1367  cd android-studio2.2/
+ 1368  ls
+ 1369  cd bin/
+ 1370  sh studio.sh
+ 1371  cd public_html
+ 1372  cd react_native/
+ 1373  ls
+ 1374  ls -la
+ 1375  chown -R roemly:roemly my-project
+ 1376  npm i -g create-react-native-app
+ 1377  create-react-native-app my-project
+ 1378  ls
+ 1379  rm -r my-project/
+ 1380  create-react-native-app my-project
+ 1381  rm -r my-project/
+ 1382  create-react-native-app my-project
+ 1383  ls
+ 1384  nano doc.txt
+ 1385  cd my-project/
+ 1386  ls
+ 1387  npm start
+ 1388  cd bin/
+ 1389  ls
+ 1390  sh studio.sh
+ 1391  export ANDROID_HOME= /opt/android-studio2.2/
+ 1392  mv  /opt/android-studio2.2 /opt/android-studio31
+ 1393  export ANDROID_HOME= /opt/android-studio31/
+ 1394  export ANDROID_HOME= /opt/android-studio31
+ 1395  export ANDROID_HOME= /opt/android-studio31/
+ 1396  ~
+ 1397  nano /home/roemly/.bash_profile
+ 1398  nano /home/roemly/.profile 
+ 1399  nano /home/roemly/.bashrc 
+ 1400  export ANDROID_HOME= /opt/android-studio31/
+ 1401  export ANDROID_HOME=/opt/android-studio31/
+ 1402  exit
+ 1403  mromli
+ 1404  exit
+ 1405  export ANDROID_HOME=/home/roemly/Android/Sdk/
+ 1406  export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+ 1407  exit
+ 1408  /opt/android-studio31/bin/studio.sh 
+ 1409  /opt/android-studio31/
+ 1410  cd /opt/android-studio31/
+ 1411  ls
+ 1412  cd bin
+ 1413  ls
+ 1414  cd ..
+ 1415  cd /
+ 1416  locate jdk
+ 1417  /opt/android-studio31/bin/studio.sh 
+ 1418  export PATH=$ANDROID_HOME/build-tools/25.0.2:$PATH
+ 1419  react-native run-android
+ 1420  ls
+ 1421  nano local.properties
+ 1422  ls
+ 1423  ls -la
+ 1424  chown roemly:www-data local.properties 
+ 1425  ls
+ 1426  ls -la
+ 1427  react-native run-android
+ 1428  ls
+ 1429  cp local.properties android/
+ 1430  react-native run-android
+ 1431  clear
+ 1432  react-native run-android
+ 1433  react-native run-android --stacktrace
+ 1434  react-native run-android 
+ 1435  /opt/android-studio31/bin/studio.sh
+ 1436  react-native run-android 
+ 1437  /opt/android-studio31/bin/studio.sh
+ 1438  react-native run-android 
+ 1439  android list targets
+ 1440  react-native run-android 
+ 1441  adb shell am start -n com.hackernews/.MainActivity
+ 1442  apt install adb
+ 1443  adb shell am start -n com.hackernews/.MainActivity
+ 1444  react-native run-android 
+ 1445  cd ..
+ 1446  ls
+ 1447  cd ..
+ 1448  ls
+ 1449  cd my-project/
+ 1450  ls
+ 1451  react-native run-android
+ 1452  ls
+ 1453  cd ..
+ 1454  ls
+ 1455  cd android-studio31/
+ 1456  ls
+ 1457  cd bin
+ 1458  ls
+ 1459  ch studio.sh
+ 1460  sh studio
+ 1461  sh studio.sh 
+ 1462  adb devices
+ 1463  free -m
+ 1464  adb devices
+ 1465  free -m
+ 1466  adb devices
+ 1467  free -m
+ 1468  freem -m
+ 1469  free -m
+ 1470  freem -m
+ 1471  free -m
+ 1472  react-native run-android
+ 1473  adb
+ 1474  cd /opt/
+ 1475  ls
+ 1476  cd android-studio
+ 1477  cd ..
+ 1478  cd android-studio31/
+ 1479  ls
+ 1480  cd bin
+ 1481  ls
+ 1482  sh studio.sh
+ 1483  /opt/android-studio31/bin/studio.sh
+ 1484  adb 
+ 1485  adb devices
+ 1486  adb devices;
+ 1487  adb devices
+ 1488  adb
+ 1489  adb kill-server
+ 1490  adb devices
+ 1491  adb kill-server
+ 1492  react-native run-android
+ 1493  ls
+ 1494  cd react-native-starter-kit/
+ 1495  ls
+ 1496  react-native run-android
+ 1497  adb
+ 1498  adb server
+ 1499  adb kill-server
+ 1500  adb server
+ 1501  adb devices
+ 1502  react-native run-android
+ 1503  sh studio.sh 
+ 1504  cd bin
+ 1505  sh studio.sh 
+ 1506  free -
+ 1507  free -m
+ 1508  adb devices
+ 1509  /opt/android-studio31/bin/studio.sh 
+ 1510  exit
+ 1511  apt-get install gparted ntfs-3g
+ 1512  sudo add-apt-repository ppa:gezakovacs/ppa
+ 1513  sudo apt-get update
+ 1514  apt-get install unetbootin
+ 1515  sudo add-apt-repository ppa:nilarimogard/webupd8
+ 1516  apt update
+ 1517  apt install woeusb
+ 1518  ls
+ 1519  /opt/android-studio31/bin/studio.sh 
+ 1520  cd Android
+ 1521  ls
+ 1522  cd Sdk/
+ 1523  s
+ 1524  ls
+ 1525  cd build-tools/
+ 1526  ls
+ 1527  cd ..
+ 1528  /opt/android-studio31/bin/studio.sh 
+ 1529  adb devices
+ 1530  adb shell
+ 1531  adb shell am
+ 1532  adb shell am start
+ 1533  adb devices
+ 1534  cd /root/Android
+ 1535  ls
+ 1536  cd Sdk/
+ 1537  ls
+ 1538  cd build-tools/
+ 1539  ls
+ 1540  adb devices
+ 1541  ls
+ 1542  cd /root
+ 1543  ls
+ 1544  cd Android
+ 1545  ls
+ 1546  cd Sdk/
+ 1547  ls
+ 1548  cd emulator/
+ 1549  ls
+ 1550  cd bin64/
+ 1551  ls
+ 1552  cd ..
+ 1553  ls
+ 1554  /opt/android-studio31/bin/studio.sh 
+ 1555  /opt/android-studio31/bin/studio.sh
+ 1556  react-native run-android
+ 1557  ls
+ 1558  react-native run-android
+ 1559  cd ..
+ 1560  ls
+ 1561  cd alma/
+ 1562  ls
+ 1563  exit
+ 1564  /opt/android-studio31/bin/studio.sh 
+ 1565  adb devices
+ 1566  ping google.com
+ 1567  npm start
+ 1568  npm install
+ 1569  npm start
+ 1570  npm install
+ 1571  npm start
+ 1572  npm install
+ 1573  npm start
+ 1574  react-native start --resert cache
+ 1575  react-native start --reset-cache
+ 1576  cd /root/Android
+ 1577  ls
+ 1578  cd Sdk/
+ 1579  ls
+ 1580  cd build-tools/
+ 1581  ls
+ 1582  cd /opt/android-studio31/
+ 1583  ls
+ 1584  cd bin/
+ 1585  sh studio.sh
+ 1586  free -
+ 1587  free -m
+ 1588  npm install
+ 1589  npm start
+ 1590  npm install react-navigation
+ 1591  npm install react-native
+ 1592  npm start
+ 1593  npm -v
+ 1594  nodejs -v
+ 1595  exit
+ 1596  df -h
+ 1597  exit
+ 1598  npm i -g npm 
+ 1599  npm -v
+ 1600  nodejs -v
+ 1601  npm start
+ 1602  npm install react-native
+ 1603  npm install react-navigation
+ 1604  cat /root/.npm/_logs/2018-04-17T12_18_28_968Z-debug.log
+ 1605  nvm -v
+ 1606  nvm
+ 1607  nmv -version
+ 1608  nvm version
+ 1609  cat /root/.npm/_logs/2018-04-17T12_18_28_968Z-debug.log
+ 1610  git
+ 1611  cat /root/.npm/_logs/2018-04-17T12_18_28_968Z-debug.log
+ 1612  npm -v
+ 1613  nvm use 4.6.1
+ 1614  npm use 4.6.1
+ 1615  npm -v
+ 1616  npm install -g npm@4.6.1
+ 1617  npm start
+ 1618  npm install react-native
+ 1619  npm install react-navigation
+ 1620  npm start
+ 1621  npm start
+ 1622  cd ..
+ 1623  ls
+ 1624  rm -r almav1
+ 1625  npm install -g create-react-native-app
+ 1626  create-react-native-app almav1
+ 1627  exit
+ 1628  cd /root
+ 1629  ls
+ 1630  cd /
+ 1631  ls
+ 1632  du sh root
+ 1633  du -sh root
+ 1634  cd /root
+ 1635  ls
+ 1636  cd AndroidStudioProjects/
+ 1637  ls
+ 1638  cd MyApplication/
+ 1639  ls
+ 1640  cd ..
+ 1641  ls
+ 1642  cd ..
+ 1643  ls
+ 1644  cd Android
+ 1645  ls -la
+ 1646  cd Sdk/
+ 1647  ls -la
+ 1648  cd ..
+ 1649  ls
+ 1650  cd Desktop/
+ 1651  ls
+ 1652  ls -la
+ 1653  ls
+ 1654  pwd
+ 1655  ls
+ 1656  mv studio-emulator-overview_2-2.mp4 /home/roemly/Desktop/
+ 1657  cd /home/roemly/Desktop/
+ 1658  chmod -R 777 studio-emulator-overview_2-2.mp4 
+ 1659  ls
+ 1660  cd /root
+ 1661  ls
+ 1662  cd Downloads/
+ 1663  ls
+ 1664  rm -r *
+ 1665  ls
+ 1666  cd ..
+ 1667  cd pinsuka/
+ 1668  ls
+ 1669  cd app/
+ 1670  ls
+ 1671  cd ..
+ 1672  ls
+ 1673  cd ..
+ 1674  ls
+ 1675  du -sh Android
+ 1676  du -sh AndroidStudioProjects/
+ 1677  du -sh Desktop
+ 1678  ls
+ 1679  du -sh Downloads/
+ 1680  du -sh pinsuka
+ 1681  ls -la
+ 1682  du -sh .AndroidStudio1.5
+ 1683  du -sh .AndroidStudio2.2/
+ 1684  du -sh .AndroidStudio2.3
+ 1685  du -sh .AndroidStudio3.1
+ 1686  rm -r .AndroidStudio1.5
+ 1687  rm -r .AndroidStudio2.2
+ 1688  rm -r .AndroidStudio2.3
+ 1689  ls -l
+ 1690  ls -la
+ 1691  cd .subversion
+ 1692  ls
+ 1693  cd ..
+ 1694  ls
+ 1695  ls -la
+ 1696  ls
+ 1697  cd ..
+ 1698  exit
+ 1699  cd /opt
+ 1700  ls
+ 1701  cd /root
+ 1702  ls
+ 1703  mv Android /home/roemly/
+ 1704  ls
+ 1705  cd /home/roemly
+ 1706  s
+ 1707  ls
+ 1708  ls Android*
+ 1709  ls -la
+ 1710  cd Android1
+ 1711  ls
+ 1712  ls -la
+ 1713  cd ..
+ 1714  chown -r roemly:roemly Android
+ 1715  chown -R roemly:roemly Android
+ 1716  chmod -R 777 Android
+ 1717  cd /opt
+ 1718  ls
+ 1719  exit
+ 1720  cd /root
+ 1721  s
+ 1722  ls
+ 1723  cd /home/roemly
+ 1724  cd /home/roemly/.an
+ 1725  cd /home/roemly/.android/
+ 1726  ls
+ 1727  cd avd
+ 1728  ls
+ 1729  cd /
+ 1730  locate .android
+ 1731  cd /root
+ 1732  ls -la
+ 1733  mv .android /home/roemly/
+ 1734  cd /home/roemly
+ 1735  ls -la
+ 1736  chmod -R 777 .android
+ 1737  chown -R roemly:roemly .android
+ 1738  ls
+ 1739  rm -r .android1
+ 1740  rm -r Android1
+ 1741  echo $ANDROID_AVD_HOME
+ 1742  nano ~/.bashrc
+ 1743  echo $ANDROID_AVD_HOME
+ 1744  nano ~/.bashrc
+ 1745  reboot
+ 1746  echo $ANDROID_HOME_AVD
+ 1747  echo $ANDROID_AVD_HOME
+ 1748  nano ~/.bashrc
+ 1749  echo $ANDROID_AVD_HOME
+ 1750  nano ~/.bashrc
+ 1751  export ANDROID_SDK_HOME=/home/roemly
+ 1752  export ANDROID_HOME=/home/roemly/Android/Sdk
+ 1753  export PATH=$PATH:$ANDROID_HOME/tools
+ 1754  export ANDROID_EMULATOR_HOME=$ANDROID_SDK_HOME/.android
+ 1755  export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd/.
+ 1756  nano ~/.bashrc
+ 1757  export ANDROID_SDK_HOME=/home/roemly
+ 1758  export ANDROID_HOME=/home/roemly/Android/Sdk
+ 1759  export PATH=$PATH:$ANDROID_HOME/tools
+ 1760  export ANDROID_EMULATOR_HOME=$ANDROID_SDK_HOME/.android
+ 1761  export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd
+ 1762  echo $ANDROID_AVD_HOME
+ 1763  nano /root/.AndroidStudio3.1/config/
+ 1764  exit
+ 1765  which android
+ 1766  cd /
+ 1767  which android
+ 1768  nano ~/.bashrc
+ 1769  ln --help
+ 1770  cd /root
+ 1771  ls
+ 1772  ls .android/
+ 1773  rm -r .android
+ 1774  ln -r .android /home/roemly/.android
+ 1775  ln -s .android /home/roemly/.android
+ 1776  ls
+ 1777  pwd
+ 1778  ls -la
+ 1779  l
+ 1780  ln
+ 1781  ln --help
+ 1782  ln -s -r .android /home/roemly/.android
+ 1783  cd /home/roemly/.android/
+ 1784  ls
+ 1785  ls -la
+ 1786  cd .android
+ 1787  rm -r .android
+ 1788  ls -a
+ 1789  ls -la
+ 1790  cd /usr/local
+ 1791  ls -la
+ 1792  cd bin
+ 1793  ls
+ 1794  ls -la
+ 1795  cd ..
+ 1796  exit
+ 1797  ls -la
+ 1798  cd media
+ 1799  ls -la
+ 1800  cd source
+ 1801  ls
+ 1802  ls -la
+ 1803  rm -r guru
+ 1804  rm -r roemly\@gmail.com
+ 1805  ls
+ 1806  rm -r guru
+ 1807  rm -r roemly\@gmail.com
+ 1808  rm -r guru
+ 1809  rm -r roemly\@gmail.com
+ 1810  rm -r guru
+ 1811  rm -r roemly\@gmail.com
+ 1812  rm -r guru
+ 1813  chmod -R 777 *
+ 1814  rm -r
+ 1815  rm -r *
+ 1816  tail -f /var/log/apache2/error.log
+ 1817  cd /var/log/
+ 1818  ls
+ 1819  cat php_errors.log 
+ 1820  locate php
+ 1821  ls
+ 1822  rm -r *
+ 1823  halt
+ 1824  cd public_html
+ 1825  cd quiz
+ 1826  cd userfiles/
+ 1827  chmod -R 777 *
+ 1828  ls
+ 1829  cd file
+ 1830  ls -la
+ 1831  cd quiz
+ 1832  ls -la
+ 1833  cd media
+ 1834  ls -la
+ 1835  cd source/
+ 1836  ls -la
+ 1837  ls
+ 1838  df -h
+ 1839  nano /etc/apache2/apache2.conf 
+ 1840  nano /etc/php/7.0/apache2/php.ini
+ 1841  /etc/init.d/apache2 restart
+ 1842  shutdown
+ 1843  shutdown --power-off
+ 1844  shutdown --poweroff
+ 1845  apt show php -a
+ 1846  apt install php
+ 1847  sudo apt install python-software-properties
+ 1848  add-apt-repository ppa:ondrej/php
+ 1849  apt-get update
+ 1850  apt install php5.6
+ 1851  apt install php5.6-cli php5.6-xml php5.6-mysql
+ 1852  php -v
+ 1853  update-alternatives --set php /usr/bin/php5.6
+ 1854  update-alternatives --set php /usr/bin/php7.0
+ 1855  php -v
+ 1856  a2dismod php7.0
+ 1857  a2enmod php5.6
+ 1858  service apache2 restart
+ 1859  php -v
+ 1860  a2dismod mpm_prefork
+ 1861  a2dismod php5.6
+ 1862  a2dismod mpm_prefork
+ 1863  a2dismod mpm_worker
+ 1864  a2dismod mpm_event
+ 1865  a2enmod php5.6
+ 1866  cd /
+ 1867  php -v
+ 1868  cd /rot
+ 1869  cd root
+ 1870  ls
+ 1871  ls -la
+ 1872  nano .bash_history
+ 1873  nano .bash_alias
+ 1874  php -i
+ 1875  php -a
+ 1876  php -v
+ 1877  /etc/init.d/apache2 restart
+ 1878  sudo a2dismod php7.0
+ 1879  sudo a2enmod php5.6
+ 1880  sudo update-alternatives --set php /usr/bin/php5.6
+ 1881  sudo service apache2 restart
+ 1882  php -v
+ 1883  nano /etc/php/7.0/apache2/php.ini
+ 1884  /etc/init.d/apache2 restart
+ 1885  apt-get install subversion
+ 1886  exit
+ 1887  ls
+ 1888  rm -r ptamp/
+ 1889  svn checkout svn://192.168.111.1/iwd/ptamp
+ 1890  nano ~/.subversion/auth/
+ 1891  nano ~/.subversion/auth/svn.username/
+ 1892  exit
+ 1893  apt-get remove teamviewer
+ 1894  cd public_html
+ 1895  cd iwd
+ 1896  ls
+ 1897  cd ptamp/
+ 1898  ls
+ 1899  cd ..
+ 1900  rm -r ptamp/
+ 1901  svn checkout svn://192.168.111.1/iwd/ptamp
+ 1902  cd ptamp/
+ 1903  svn update
+ 1904  svn cleanup
+ 1905  svn update
+ 1906  cd /
+ 1907  cd ~/.subversion/
+ 1908  ls
+ 1909  cd auth/
+ 1910  ls
+ 1911  cd svn.username/
+ 1912  ls
+ 1913  nano /etc/apache2/apache2.conf 
+ 1914  /etc/init.d/apache2 restart
+ 1915  cd /var/www/html/iwd/
+ 1916  ls
+ 1917  nano /etc/apache2/apache2.conf 
+ 1918  /etc/init.d/apache2 restart
+ 1919  cd ptamp/
+ 1920  svn udate
+ 1921  svn update
+ 1922  npm start
+ 1923  react-native run-android
+ 1924  exit
+ 1925  svn --version
+ 1926  ls
+ 1927  rm -r *
+ 1928  composer require phpxmlrpc/phpxmlrpc:4.0
+ 1929  cd ..
+ 1930  ls
+ 1931  mkdir new
+ 1932  cdnew
+ 1933  cd new
+ 1934  composer require phpxmlrpc/phpxmlrpc:4.0
+ 1935  cd ..
+ 1936  ls
+ 1937  chmod -R 777 new
+ 1938  tail -f /var/log/
+ 1939  tail -f /var/log/apache2/access.log
+ 1940  ===============
+ 1941  tail -f /var/log/
+ 1942  tail -f /var/log/apache2/access.log
+ 1943  ===============
+ 1944  chmod -R 777 phpass-0.5
+ 1945  ping google.com
+ 1946  chmod -R 777 *
+ 1947  cd ..
+ 1948  chmod -R 777 *
+ 1949  cd /root/
+ 1950  cd Android/
+ 1951  ping google.com
+ 1952  free -m
+ 1953  ping google.com
+ 1954  free -m
+ 1955  top
+ 1956  free -m
+ 1957  top
+ 1958  free -m
+ 1959  cd /root/
+ 1960  ls
+ 1961  free -m
+ 1962  cd /home/roemly/
+ 1963  cd .android/
+ 1964  ls
+ 1965  cd avd
+ 1966  ls
+ 1967  cd /root
+ 1968  cd .android/
+ 1969  ls
+ 1970  cd avd
+ 1971  ls
+ 1972  cd ..
+ 1973  cd avd
+ 1974  ls
+ 1975  cp N* /home/roemly/.android/avd
+ 1976  cp N* /home/roemly/.android/avd/
+ 1977  cp -r -p N* /home/roemly/.android/avd/
+ 1978  cd /home/roemly/.android/avd/
+ 1979  ls
+ 1980  ls -la
+ 1981  chown -R roemly:roemly *
+ 1982  ls -la
+ 1983  chmod -R 777 *
+ 1984  avd list
+ 1985  adb list
+ 1986  adb devices
+ 1987  exit
+ 1988  cd /opt/android-studio31/
+ 1989  ls
+ 1990  cd bin
+ 1991  ls
+ 1992  \.studios.sh
+ 1993  .\studios.sh
+ 1994  ls
+ 1995  sh studio.sh
+ 1996  history>history1.txt

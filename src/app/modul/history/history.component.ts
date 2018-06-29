@@ -25,7 +25,7 @@ export class HistoryComponent implements OnInit{
    // }
   }
   constructor(
-      private orderDetail: OrderService,
+      public orderDetail: OrderService,
       private router: Router,
       private login: LoginService
   ){

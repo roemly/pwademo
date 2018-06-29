@@ -9,7 +9,8 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./detail-history.component.css']
 })
 export class DetailHistoryComponent implements OnInit {
-  current_order: Order;
+ public current_order: Order;
+
   constructor(public route: ActivatedRoute,
               public orders: OrderService) {
     this.route.params.subscribe(params => {

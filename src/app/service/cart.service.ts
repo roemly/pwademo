@@ -16,7 +16,7 @@ export class CartService implements OnInit {
   private _isPajak = false;
   private _isAgree = false;
   public title = '';
-  private url = 'https://ptamp.aindo.com/api/api-post-order.php';
+  private url = 'https://ptamp.co.id/shop/api/api-post-order.php';
   // private thisObject: CartService = null;
 
   constructor(public login: LoginService,
@@ -25,9 +25,9 @@ export class CartService implements OnInit {
     this._cart = new Cart();
 
 
-    if (localStorage.alamatTujuan !== undefined) {
+    if (localStorage.alamatTujuan !== undefined && localStorage.alamatTujuan!=='' ) {
         // console.log('address kepanggil?');
-      this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
+      //this._alamatTujuan = (JSON.parse(localStorage.alamatTujuan) as string);
     }
     if (localStorage.pajak !== undefined) {
         // console.log('pajak kepanggil?');

@@ -12,18 +12,20 @@
 				<div class="row">
 					<div class="col s12">	
 					  <ul class="list-history-thumbnail">
-					  	<li *ngFor="let order of orderDetail.getByStatus('PROSES')" class="zero-payment">
+					  	<li *ngFor="let order of orderDetail.getByStatus('PROSES')">
 						<!--<li *ngFor="let order of orderDetail.getorderlist()" class="zero-payment">-->
-						  <span class="icon-history"></span>
+							<span routerLink="/detail-history/{{order.id}}">
+						  <span class="icon-history {{order.class}}"></span>
 						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
-								Order ID : <a routerLink="/detail-history/{{order.id}}">{{order.id}}</a>
+								Order ID : {{order.id}}
 							</div>
 							<div class="summary-history-thumbnail">
-							  Rp. {{order.total_price | number}}
+								Rp{{order.total_price | number | pointReplacer}}
 							</div>
-						  </div>
+							</div>
+							</span>
 						</li>
 						<!--<li class="full-payment">-->
 						  <!--<span class="icon-history"></span>-->
@@ -71,18 +73,20 @@
 				<div class="row">
 					<div class="col s12">
 						<ul class="list-history-thumbnail">
-						  <li *ngFor="let order of orderDetail.getByStatus('TERKIRIM')" class="half-payment">
+						  <li *ngFor="let order of orderDetail.getByStatus('TERKIRIM')" class="">
 							<!--<li *ngFor="let order of orderDetail.getorderlist()" class="half-payment">-->
-							  <span class="icon-history"></span>
+							<span routerLink="/detail-history/{{order.id}}">
+							  <span class="icon-history {{order.class}}"></span>
 							<div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 							<div class="data-history-thumbnail">
 							  <div class="title-history-thumbnail">
 								Order ID : {{order.id}}
 							  </div>
 							  <div class="summary-history-thumbnail">
-								Rp. {{order.total_price | number}}
+								Rp{{order.total_price | number | pointReplacer}}
 							  </div>
 							</div>
+							</span>
 						  </li>
 						</ul>
 					</div>
@@ -94,18 +98,20 @@
 				<div class="row">
 					<div class="col s12">
 					  <ul class="list-history-thumbnail">
-						<li *ngFor="let order of orderDetail.getByStatus('LUNAS')" class="{{order.class}}">
+						<li *ngFor="let order of orderDetail.getByStatus('LUNAS')" class="">
 					  	<!--<li *ngFor="let order of orderDetail.getorderlist()" class="full-payment">-->
-							<span class="icon-history"></span>
+							<span routerLink="/detail-history/{{order.id}}">
+							<span class="icon-history {{order.class}}"></span>
 						  <div class="date-history-thumbnail">{{order.created_at.substr(8,2)}} <span>{{order.created_at.substr(5,2)}}</span></div>
 						  <div class="data-history-thumbnail">
 							<div class="title-history-thumbnail">
 							  Order ID : {{order.id}}
 							</div>
 							<div class="summary-history-thumbnail">
-							  Rp. {{order.total_price | number}}
+								Rp{{order.total_price | number | pointReplacer}}
 							</div>
-						  </div>
+							</div>
+						</span>
 						</li>
 					  </ul>
 					</div>

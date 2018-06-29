@@ -8,13 +8,19 @@ export class SubscriptionService {
   isSubscribed: Boolean = false;
   swRegistration: any = null;
   private applicationServerPublicKey = 'BBISJmDmHI4Yr0hTw90F-C2VpohCfqrhImrQExeGUBvHIz0GYOSllTEJi3RxuiKotIWRmbLrmgMj7D0b-k7kL-U';
-  private apiUrl = 'https://ptamp.aindo.com/api/api-subscription-register.php';
-  private apiUrlDel = 'https://ptamp.aindo.com/api/api-subscription-remove.php';
+  private apiUrl = 'https://ptamp.co.id/shop/api/api-subscription-register.php';
+  private apiUrlDel = 'https://ptamp.co.id/shop/api/api-subscription-remove.php';
   constructor(private http: Http) {
-      let tis = this;
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/shop/service-worker.js');
+    }
+  }
+
+  isServiceWorkerRunning(member_id: number): any {
+    let tis = this;
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       console.log('Service Worker and Pusher Supported');
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('/shop/service-worker.js')
           .then(swReg => {
             console.log('Service Worker registered', swReg);
             this.swRegistration = swReg;
@@ -30,7 +36,7 @@ export class SubscriptionService {
                 });
 
             if (!tis.isSubscribed) {
-              this.subscribeUser();
+              this.subscribeUser(member_id);
             }
           })
           .catch(error => {
@@ -56,7 +62,7 @@ export class SubscriptionService {
     return outputArray;
   }
 
-  subscribeUser(): any {
+  subscribeUser(member_id: number): any {
     let tis = this;
     const applicationServerKey = this.urlB64ToUint8Array(this.applicationServerPublicKey);
     this.swRegistration.pushManager.subscribe({
@@ -64,9 +70,18 @@ export class SubscriptionService {
       applicationServerKey: applicationServerKey
     })
         .then(function (subscription) {
+          const key = subscription.getKey('p256dh');
+          const token = subscription.getKey('auth');
+          
           console.log('User is subscribed.');
           console.log(tis)
-          tis.http.post(tis.apiUrl, {data: JSON.stringify(subscription)}).toPromise()
+          tis.http.post(tis.apiUrl, {data: JSON.stringify({
+              endpoint: subscription.endpoint,
+              key: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('p256dh')))) : null,
+              token: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('auth')))) : null,
+              member: member_id
+            })
+          }).toPromise()
               .then(response => {console.log(response)})
               .catch(response =>{console.log(response)});
           tis.isSubscribed = true;

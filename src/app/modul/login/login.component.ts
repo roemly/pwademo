@@ -26,6 +26,9 @@ export class LoginComponent {
             this.message = 'username atau password salah!';
         }else {
           //console.log('berhasil');
+          localStorage.alamatTujuan = '';
+          localStorage.pajak = false;
+          localStorage.items = [];
           localStorage.user = t._body;
           this.users.refreshData();
           this.router.navigate(['dashboard']);

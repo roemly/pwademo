@@ -59,10 +59,12 @@ import { SuccessComponent } from './modul/success/success.component';
 import { FailComponent } from './modul/fail/fail.component';
 import {SubscriptionService} from "./service/subcription.service";
 import { DetailHistoryComponent } from './modul/detail-history/detail-history.component';
+import { PointReplacerPipe } from './class/PointReplacerPipe';
 
 
 @NgModule({
   declarations: [
+    PointReplacerPipe,
     AppComponent,
     DashboardComponent,
     FormOrderItemComponent,
@@ -181,6 +183,7 @@ import { DetailHistoryComponent } from './modul/detail-history/detail-history.co
     ])
   ],
   providers: [
+    PointReplacerPipe,
     ProductService,
     LoginService,
     CartService,

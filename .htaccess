@@ -1,0 +1,11 @@
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^ptamp\.co\.id [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://ptamp.co.id/shop/$1 [R,L]
+
+RewriteBase /shop
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ index.html [L]
+
+

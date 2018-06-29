@@ -40,11 +40,7 @@ html {
   font-weight: normal;
   color:#fff;
 }
-.first-home-menu mat-grid-tile.mat-grid-tile:nth-child(2) {width:30% !important}
-.first-home-menu mat-grid-tile.mat-grid-tile:nth-child(3) {
-	left: calc(((27% - 0.75px) + 1px) * 2) !important;
-    width: 30% !important;
-}
+
 .first-home-menu mat-grid-tile.mat-grid-tile:last-child {
   width: 10% !important;
   float: right !important;
@@ -190,10 +186,10 @@ ul.list-news-thumbnail li{
     margin-bottom: 6px;
     padding-bottom: 13px;
 }
-ul.list-history-thumbnail li.zero-payment .icon-history {
+ul.list-history-thumbnail li .icon-history.zero-payment {
 	background:#4766a7;
 }
-ul.list-history-thumbnail li.half-payment  .icon-history:before {
+ul.list-history-thumbnail li .icon-history.half-payment:before {
 	content:"";
 	display:block;
 	border-radius:50px 0 0 50px;

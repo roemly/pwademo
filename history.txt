@@ -1,1000 +1,1000 @@
- 1009  sudo su
+  998  ng build --prod
+  999  ng build
+ 1000  npm run precache
+ 1001  ng build --aot
+ 1002  ng build --prod
+ 1003  ng serve
+ 1004  ng serve --port 4201
+ 1005  ng build --prod
+ 1006  npm run precache
+ 1007  ng build --prod --aot
+ 1008  npm run precache
+ 1009  ping google.com -t
  1010  ping google.com
- 1011  ping youtube.com
+ 1011  ng serve
  1012  ping google.com
- 1013  ifconfig
- 1014  ping google.com
- 1015  ping facebook.com
- 1016  ping google.com
- 1017  ping google.com
- 1018  sudo su
- 1019  ping google.com
+ 1013  ls
+ 1014  cd public_html
+ 1015  ls
+ 1016  mkdir laravel
+ 1017  cd laravel/
+ 1018  ls
+ 1019  composer create-project --prefer-dist laravel/laravel Laravel55
  1020  sudo su
- 1021  sudo su
- 1022  sudo su
- 1023  ping localhost
- 1024  ping youtube.com
- 1025  sudo su
- 1026  sudo su
- 1027  sudo su
- 1028  ifconfig
- 1029  sudo su
- 1030  sudo su
- 1031  recovery
- 1032  sudo su
- 1033  ping google.com
- 1034  sudo su
- 1035  ping viharamahasampatti.or.id
- 1036  ping ns1.fiesto.co.id
- 1037  ping ns2.fiesto.co.id
- 1038  sudo su
- 1039  ping google.com
- 1040  ping 192.168.111.1
- 1041  ping viharamahasampatti.or.id
- 1042  sudo su
- 1043  ping youtube.com
- 1044  ping google.com
+ 1021  ifconfig
+ 1022  ping google.com
+ 1023  '
+ 1024  ng build --prod --aot
+ 1025  npm run precache
+ 1026  sudo halt
+ 1027  cd 
+ 1028  cd /var/www/html/react_project/testing/my-app/
+ 1029  npm install --save react-autocomplete
+ 1030  git pull
+ 1031  npm start
+ 1032  ls
+ 1033  cd /
+ 1034  ls
+ 1035  cd opt/
+ 1036  ls
+ 1037  cd android-studio2.2/
+ 1038  ls
+ 1039  cd bin
+ 1040  ls
+ 1041  sh studio.sh 
+ 1042  cat /proc/cpuinfo
+ 1043  npm start
+ 1044  cat /proc/cpuinfo
  1045  sudo su
- 1046  ping google.com
- 1047  ping facebook.com
- 1048  ping google.com
- 1049  ping facebook.com
- 1050  sudo su
- 1051  sudo su
- 1052  exit
- 1053  ssh 139.59.109.218
- 1054  ssh root@139.59.109.218
- 1055  sudo su
+ 1046  meminfo
+ 1047  cat meminfo
+ 1048  sudo s
+ 1049  sudo su
+ 1050  cd public_html
+ 1051  cd react_native/
+ 1052  ls
+ 1053  react-native init PropertyFinder
+ 1054  sudo su
+ 1055  facebook.com
  1056  ping facebook.com
- 1057  sudo su
- 1058  ifconfig
- 1059  ping google.com
- 1060  sudo su
- 1061  vim testing
- 1062  sudo su
- 1063  ping google.com
- 1064  ifconfig
- 1065  sudo su
- 1066  ping google.com
- 1067  sudo su
- 1068  ping google.com
- 1069  ws
+ 1057  ping google.com
+ 1058  ls
+ 1059  cd public_html
+ 1060  ls
+ 1061  mkdir react_native
+ 1062  cd react_native/
+ 1063  ls
+ 1064  ping google.com
+ 1065  cd public_html
+ 1066  ls
+ 1067  cd /opt/
+ 1068  cd android-studio2.2/
+ 1069  ls
  1070  sudo su
- 1071  ping google.com
- 1072  ping google.com
- 1073  ifconfig
- 1074  pin google.com
- 1075  ping google.com
- 1076  sudo su
- 1077  ping google.com
- 1078  ipconfig
- 1079  ifconfig
- 1080  ping 192.168.111.50
- 1081  sudo su
- 1082  ab -n 7000 -c 1000 -k -H "Accept-Encoding: gzip, deflate" http://suksescbt.com/nurul-fikri/tes.php
- 1083  ab -n 7000 -c 100 -k -H "Accept-Encoding: gzip, deflate" http://suksescbt.com/nurul-fikri/tes.php
- 1084  ab -n 7000 -c 1000 -k -H "Accept-Encoding: gzip, deflate" http://suksescbt.com/nurul-fikri/tes.php
- 1085  ab -n 7000 -c 100 -k -H "Accept-Encoding: gzip, deflate" http://suksescbt.com/nurul-fikri/tes.php
- 1086  sudo su
- 1087  ping google.com
- 1088  sudo su
- 1089  ping fiesto.off
- 1090  sudo su
- 1091  ping learning.spemma.sch.id
- 1092  sudo su
- 1093  ping google.com
- 1094  sudo su
- 1095  ping google.com
- 1096  sudo su
- 1097  ping google.com
- 1098  sudo su
- 1099  ping google.com
- 1100  sudo su
- 1101  ping babykidsnpink.com
- 1102  ping babykidsandpink.com
- 1103  ping babykidspink.com
- 1104  ping babykidsadpink.com
- 1105  ping babykidspink.com
- 1106  ~~
- 1107  ping babyandkidpink.com
- 1108  ping fiesto.com
- 1109  ping yanasurya.com
- 1110  sudo su
- 1111  pwd
- 1112  ping google.com
- 1113  sudo su
- 1114  sudo su
- 1115  node -v
- 1116  npm -v
- 1117  git clone https://github.com/angular/quickstart.git quickstart
- 1118  ls
- 1119  cd quickstart/
- 1120  npm install
- 1121  npm start
- 1122  ping google.com
- 1123  sudo su
- 1124  cd quickstart/
- 1125  npm start
- 1126  ls
- 1127  npm start
- 1128  cd ..
- 1129  ls
- 1130  rm -r quickstart
+ 1071  npm start
+ 1072  npm i -g npm@4.6.1
+ 1073  ls
+ 1074  npm start
+ 1075  git pull
+ 1076  npm start
+ 1077  ls
+ 1078  cd Android
+ 1079  ls
+ 1080  cd sdk
+ 1081  ls
+ 1082  cd Sdk/
+ 1083  ls
+ 1084  sudo su
+ 1085  cd ..
+ 1086  cd react_native/
+ 1087  ls
+ 1088  mkdir location_saver
+ 1089  cd location_saver/
+ 1090  git clone https://github.com/vaskort/react-native.git
+ 1091  cd ..
+ 1092  ls
+ 1093  cd location_saver
+ 1094  ls
+ 1095  cd ..
+ 1096  mkdir hackernews
+ 1097  cd hackernews/
+ 1098  ls
+ 1099  git clone https://github.com/iSimar/HackerNews-React-Native.git
+ 1100  cd ..
+ 1101  mkdir pet
+ 1102  ls
+ 1103  mv -r hackernews react_native/
+ 1104  sudo mv -r hackernews react_native/
+ 1105  sudo mv  hackernews react_native/
+ 1106  ls
+ 1107  cd react_native/
+ 1108  mkdir pet
+ 1109  cd pet
+ 1110  git clone https://github.com/byn9826/Thousanday-Mobile.git
+ 1111  cd ..
+ 1112  ls
+ 1113  cd hackernews
+ 1114  ls
+ 1115  cd HackerNews-React-Native/
+ 1116  ls
+ 1117  npm install
+ 1118  npm start
+ 1119  npm install -g react-native-cli
+ 1120  npm start
+ 1121  npm uninstall -g react-native
+ 1122  npm install -g react-native-cli
+ 1123  npm start
+ 1124  cd ..
+ 1125  cd .
+ 1126  cd ..
+ 1127  ls
+ 1128  cd location_saver/
+ 1129  npm install -g react-native-cli
+ 1130  npm install
  1131  ls
- 1132  git clone https://github.com/angular/quickstart.git quickstart
- 1133  cd quickstart
- 1134  ls
+ 1132  cd react-native/
+ 1133  ls
+ 1134  npm install -g react-native-cli
  1135  npm install
- 1136  npm start
- 1137  npm run serve
- 1138  ping quizroom.id
- 1139  npm runs serve
- 1140  npm run serve
- 1141  node -v
- 1142  npm -v
- 1143  sudo su
- 1144  ping alhudawonogiri.sch.id
- 1145  ping google.com
- 1146  npm start
- 1147  npm run serve
- 1148  npm start
- 1149  npm run serve
- 1150  npm stop
- 1151  ng serve
- 1152  npm start
- 1153  ping google.com
- 1154  npm run serve
- 1155  npm start
- 1156  npm ls
- 1157  npm start
- 1158  lite-server --baseDir ./src --port 3333
- 1159  ng serve
- 1160  npm install --save-dev @angular/cli@latest
- 1161  ng serve
- 1162  npm start
- 1163  ipconfig
- 1164  ifconfig
- 1165  uk
- 1166  uk\~j   
- 1167  ;[v[\.omtygll[of=
- 1168  gpg-g-g-f0fujci  l l /'[u p0b0k-ifm0gbuvb'-f[g;
- 1169  'g
- 1170  g/n.n//;vb
- 1171  npm start
- 1172  npm run serve
- 1173  np --version
- 1174  ng --version
- 1175  npm run serve
- 1176  npm start
- 1177  npm run serve
- 1178  npm start
- 1179  npm run serve
- 1180  npm start
- 1181  npm run serve
- 1182  npm start
- 1183  cd ..
- 1184  mkdir pt-amp
- 1185  cd pt-amp
- 1186  npm install -g firebase-tools
- 1187  sudo su
- 1188  cd ..
- 1189  ls
- 1190  cd ..
- 1191  cd /var/www/html/webapps/
- 1192  ng new pt-amp
- 1193  cd pt-amp
- 1194  ng serve --open
- 1195  cd ..
- 1196  cd pt-amp/
- 1197  np serve --open
- 1198  ng serve --open
- 1199  cd ..
- 1200  ng run --serve
- 1201  ng serve --run
- 1202  ng serve --open
+ 1136  react-native run-android
+ 1137  sudo su
+ 1138  react-native run-android
+ 1139  react-native run-android --debug
+ 1140  react-native run-android
+ 1141  sudo su
+ 1142  react-native run-android
+ 1143  ls
+ 1144  cd android/
+ 1145  ls
+ 1146  nano local.properties
+ 1147  sudo su
+ 1148  react-native run-android
+ 1149  cd ..
+ 1150  react-native run-android
+ 1151  history>history.txt
+ 1152  nano history.txt 
+ 1153  sudo su
+ 1154  react-native run-androi
+ 1155  sudo su
+ 1156  cd /home/roemly/public_html/react_native/location_saver/
+ 1157  ls
+ 1158  cd react-native/
+ 1159  react-native run-android
+ 1160  npm start
+ 1161  react-native run-android
+ 1162  sudo su
+ 1163  sudo su
+ 1164  /opt/android-studio31/bin/studio.sh 
+ 1165  sudo su
+ 1166  ls
+ 1167  cd android/
+ 1168  ls
+ 1169  cd app/
+ 1170  s
+ 1171  ls
+ 1172  cat build.gradle 
+ 1173  nano build.gradle 
+ 1174  nano build.gradle
+ 1175  nano build.gradle 
+ 1176  ls
+ 1177  cd ..
+ 1178  ls
+ 1179  nano gradle.properties 
+ 1180  nano settings.gradle 
+ 1181  nano local.properties 
+ 1182  cd app/l
+ 1183  cd app/
+ 1184  ls
+ 1185  nano build.gradle 
+ 1186  cd ..
+ 1187  nano build.gradle 
+ 1188  cat meminfo
+ 1189  cat /proc/meminfo 
+ 1190  sudo su
+ 1191  ifconfig
+ 1192  cd /opt/android-studio31/
+ 1193  ifconfig
+ 1194  sudo su
+ 1195  free -m
+ 1196  sudo su
+ 1197  free -m
+ 1198  sudo su
+ 1199  free -m
+ 1200  ls
+ 1201  sudo su
+ 1202  react-native run-android
  1203  cd ..
- 1204  ng serve --open
- 1205  ng serve --open --port 3500
- 1206  npm start
- 1207  ng serve --open
- 1208  ng serve --open --port 3501
- 1209  ng serve
- 1210  np serve --open 
- 1211  ng serve --open 
- 1212  np serve --open --port 3502
- 1213  ng serve --open --port 3502
- 1214  np serve --open --port 3503
- 1215  ng serve --open --port 3503
- 1216  np serve --open
- 1217  ng serve --open
- 1218  cd ..
- 1219  npm install --save @angular/material @angular/cdk
- 1220  npm install --save @angular/animations
- 1221  ng serve --open
- 1222  cd ..
- 1223  ls
- 1224  cd webapps/
+ 1204  ls
+ 1205  cd ..
+ 1206  ls
+ 1207  cd ..
+ 1208  ls
+ 1209  cd my-project/
+ 1210  ls
+ 1211  android list avds
+ 1212  cd /home/roemly/Android/Sdk/tools/bin64/
+ 1213  ls
+ 1214  cd ..
+ 1215  ls
+ 1216  emulator
+ 1217  /home/roemly/Android/Sdk/tools/emulator list avd
+ 1218  /home/roemly/Android/Sdk/tools/android list avds
+ 1219  /home/roemly/Android/Sdk/tools/emulator -list-avds
+ 1220  emulator -list-avds | cat -n
+ 1221  /home/roemly/Android/Sdk/tools/emulator -list-avds | cat -n
+ 1222  free -m
+ 1223  /home/roemly/Android/Sdk/tools/emulator -avd Nexus_5_API_22
+ 1224  /home/roemly/Android/Sdk/tools/bin64/cd ..
  1225  ls
- 1226  cd master2-master
- 1227  cd material2-master/
- 1228  ls
- 1229  npm start
- 1230  ng serve --open
- 1231  npm install
- 1232  ng serve --open
- 1233  npm install --save-dev @angular/cli@latest
- 1234  ng serve --open
- 1235  ls
- 1236  cd crt
- 1237  ls
- 1238  cd src
- 1239  ls
- 1240  cd demo-app
- 1241  ls
- 1242  ng serve --open
- 1243  cd ..
- 1244  ls
- 1245  cd demo-app/
- 1246  ls
- 1247  npm install
- 1248  ng serve --open
- 1249  cd ..
- 1250  ls
- 1251  cd pt-amp
- 1252  ls
- 1253  ng serve --open
- 1254  sudo su
- 1255  ng serve --open
- 1256  sudo su
- 1257  ping google.com
- 1258  ping google.com
- 1259  cd /var/log/cups/
- 1260  ls
- 1261  ls -la
- 1262  cat access_log
- 1263  ls -la
- 1264  rm access_log
- 1265  sudo rm access_log
- 1266  ls
- 1267  ls -la
- 1268  cat page_log
- 1269  ls
- 1270  ls -la
- 1271  rm -r *.*
- 1272  ls -la
- 1273  sudo rm -r *.*
- 1274  ls
- 1275  ls -la
- 1276  cat error_log
- 1277  ipconfig
- 1278  ifconfig
- 1279  sudo su
- 1280  ng serve --open
- 1281  sudo su
- 1282  ng serve --open
- 1283  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
- 1284  npm install --save hammerjs
- 1285  ng serve --open
- 1286  npm install --save @angular/material @angular/animations @angular/cdk
- 1287  npm install --save hammerjs
- 1288  ping google.com
- 1289  sudo su
- 1290  npm install --save @angular/material @angular/animations @angular/cdk
- 1291  ng --version
- 1292  npm install @angular/{common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations}@latest typescript@latest --save
- 1293  ng --version
- 1294  ng server --open
- 1295  ng serve --open
- 1296  npm install typescript@'>=2.1.0 <2.4.0'
- 1297  ng serve --open
- 1298  ifconfig
- 1299  cd ..
- 1300  npm start
- 1301  ng serve --host 192.168.111.170
- 1302  ping google.com
- 1303  ng serve open
- 1304  ng serve --open
- 1305  ng serve --host 192.168.111.170 --open
- 1306  ng serve --open
+ 1226  /home/roemly/Android/Sdk/tools/emulator avd 
+ 1227  Name: Nexus_6P_API_22
+ 1228  CPU/ABI: Google APIs Intel Atom (x86)
+ 1229  Path: /root/.android/avd/Nexus_6P_API_22.avd
+ 1230  Target: google_apis [Google APIs] (API level 22)
+ 1231  Skin: nexus_6p
+ 1232  SD Card: 100M
+ 1233  hw.dPad: no
+ 1234  hw.lcd.height: 2560
+ 1235  runtime.network.speed: full
+ 1236  hw.accelerometer: yes
+ 1237  hw.device.name: Nexus 6P
+ 1238  vm.heapSize: 64
+ 1239  skin.dynamic: yes
+ 1240  hw.device.manufacturer: Google
+ 1241  hw.lcd.width: 1440
+ 1242  hw.gps: yes
+ 1243  hw.initialOrientation: Portrait
+ 1244  image.androidVersion.api: 22
+ 1245  hw.audioInput: yes
+ 1246  image.sysdir.1: system-images/android-22/google_apis/x86/
+ 1247  tag.id: google_apis
+ 1248  showDeviceFrame: yes
+ 1249  hw.camera.back: emulated
+ 1250  hw.mainKeys: no
+ 1251  AvdId: Nexus_6P_API_22
+ 1252  hw.camera.front: emulated
+ 1253  hw.lcd.density: 560
+ 1254  avd.ini.displayname: Nexus 6P API 22
+ 1255  hw.gpu.mode: auto
+ 1256  hw.device.hash2: MD5:984dbf66b1aaafcdb7e89573ffb74b46
+ 1257  hw.ramSize: 1536
+ 1258  hw.trackBall: no
+ 1259  hw.battery: yes
+ 1260  hw.cpu.ncore: 2
+ 1261  hw.sdCard: yes
+ 1262  tag.display: Google APIs
+ 1263  runtime.network.latency: none
+ 1264  hw.keyboard: yes
+ 1265  hw.sensors.proximity: yes
+ 1266  disk.dataPartition.size: 800M
+ 1267  hw.sensors.orientation: yes
+ 1268  avd.ini.encoding: UTF-8
+ 1269  hw.gpu.enabled: yes
+ 1270  Name: Nexus_6P_API_22
+ 1271  CPU/ABI: Google APIs Intel Atom (x86)
+ 1272  Path: /root/.android/avd/Nexus_6P_API_22.avd
+ 1273  Target: google_apis [Google APIs] (API level 22)
+ 1274  Skin: nexus_6p
+ 1275  SD Card: 100M
+ 1276  hw.dPad: no
+ 1277  runtime.network.speed: full
+ 1278  hw.accelerometer: yes
+ 1279  hw.device.name: Nexus 6P
+ 1280  /home/roemly/Android/Sdk/tools/emulator -avd Nexus_5_API_22
+ 1281  nano /home/roemly/.bash_profile 
+ 1282  echo PATH
+ 1283  echo $PATH
+ 1284  nano /home/roemly/.bash_profile 
+ 1285  cd ..
+ 1286  nano doc.txt
+ 1287  npm install react-native-easy-grid --save
+ 1288  react-native run-android
+ 1289  npm run android
+ 1290  npm start
+ 1291  /opt/android-studio31/bin/studio.sh 
+ 1292  sudo su
+ 1293  free -m
+ 1294  ls -l
+ 1295  ls -la
+ 1296  cd ..
+ 1297  ls
+ 1298  git clone https://github.com/mcnamee/react-native-starter-kit.git
+ 1299  ls
+ 1300  cd react-native-starter-kit/
+ 1301  npm install
+ 1302  ls
+ 1303  npm start
+ 1304  free -m
+ 1305  npm start
+ 1306  free -m
  1307  ping google.com
- 1308  npm run build
- 1309  npm serve --open
- 1310  ng serve --open
- 1311  sudo halt
- 1312  cat /proc/meminfo
- 1313  cat /proc/cpuinfo
- 1314  sudo su
- 1315  ng server --host 192.168.111.170 --open
- 1316  ng serve --host 192.168.111.170 --open
- 1317  ng serve --open
- 1318  ng serve --host 192.168.111.170 --open
- 1319  ng serve --host 192.168.111.170
- 1320  ls
- 1321  ng serve --host 192.168.111.170
- 1322  ping google.com
- 1323  ping 192.168.111.170:4200
- 1324  ping 192.168.111.170
- 1325  pwd
- 1326  cd public_html
- 1327  cd web
- 1328  cd webapps/
- 1329  ls
- 1330  cd pt-amp
+ 1308  free -m
+ 1309  ping google.com
+ 1310  sudo su
+ 1311  sudo su
+ 1312  free -m
+ 1313  free -m~
+ 1314  free -m
+ 1315  df -h
+ 1316  free -m
+ 1317  npm start
+ 1318  git pull
+ 1319  npm start
+ 1320  npm run build
+ 1321  npm start
+ 1322  npm run build
+ 1323  npm start
+ 1324  npm run build
+ 1325  npm start
+ 1326  free -m
+ 1327  cd /opt/android-studio31/
+ 1328  ls
+ 1329  sudo su
+ 1330  cd ..
  1331  ls
- 1332  git remote add origin https://github.com/roemly/amp.git
- 1333  git push -u origin master
- 1334  git
- 1335  git status
- 1336  git init
- 1337  git add
- 1338  git add .
- 1339  git commit -m "First commit"
- 1340  git config --global user.email "roemly@gmail.com"
- 1341  git config --global user.name "roemly"
- 1342  git commit -m "First commit"
- 1343  git remote add origin https://github.com/roemly/amp.git
- 1344  git remote -v
- 1345  git push origin master
- 1346  git add .
- 1347  git commit -m "tambah mockup"
- 1348  git push origin master
- 1349  ping google.com
+ 1332  cd alma
+ 1333  npm install -g create-react-native-app
+ 1334  ls
+ 1335  ls -la
+ 1336  cd ..
+ 1337  create-react-native-app alma
+ 1338  cd alma/
+ 1339  npm start
+ 1340  npm install native-base --save
+ 1341  react-native link
+ 1342  npm start
+ 1343  npm install @expo/vector-icons --save
+ 1344  npm start
+ 1345  npm install @expo/vector-icons --save
+ 1346  ifconfig
+ 1347  ping google.com
+ 1348  npm start
+ 1349  ls
  1350  sudo su
- 1351  ng serve --open
- 1352  sudo su
- 1353  ping google.com
- 1354  sudo su
- 1355  ng serve --open
- 1356  cd ..
- 1357  ls
- 1358  \.webserver.sh
- 1359  /.webserver.sh
- 1360  ./webserver.sh
- 1361  ./webserver.sh~
- 1362  ./webserver.sh
- 1363  s
- 1364  ls
- 1365  ./webserver.sh 
- 1366  nano webserver.sh 
- 1367  sudo ./webserver.sh 
- 1368  sudo su
- 1369  ./webserver.sh
- 1370  sudo su
+ 1351  pwd
+ 1352  cd public_html
+ 1353  cd react_native/
+ 1354  ls
+ 1355  cd lelapar/
+ 1356  LS
+ 1357  git clone https://github.com/GeekyAnts/NativeBase-KitchenSink.git
+ 1358  ls
+ 1359  free -m
+ 1360  apt-get install gparted ntfs-3g
+ 1361  sudo su
+ 1362  sudo su
+ 1363  ping google.com
+ 1364  free -m
+ 1365  sudo su
+ 1366  cd ..
+ 1367  cd NativeBase-KitchenSink/
+ 1368  npm install
+ 1369  npm start
+ 1370  react-native run-android
  1371  ls
- 1372  cd ..
+ 1372  cd android/
  1373  ls
- 1374  cd pwa-training-labs/
- 1375  ls
- 1376  cd pwa-training-labs/
- 1377  ls
- 1378  pwd
- 1379  ping google.com
- 1380  ../../../webserver.sh
- 1381  \.../../../webserver.sh
- 1382  \../../../webser
- 1383  http-server -p 8080 -a localhost -c 0
- 1384  sudo http-server -p 8080 -a localhost -c 0
- 1385  sudo su
- 1386  node
- 1387  cd ..
- 1388  sudo http-server -p 8080 -a localhost -c 0
- 1389  sudo su
- 1390  sudo su
- 1391  ping google.com
- 1392  ping google.com
- 1393  sudo su
- 1394  node
- 1395  ping google.com
- 1396  ls
- 1397  gulp minify
- 1398  sudo su
- 1399  sudo su
- 1400  ping google.com
- 1401  sudo su
- 1402  ping google.com
- 1403  ping quizroom.id
- 1404  sudo su
- 1405  sudo su
- 1406  sudo su
- 1407  ls
- 1408  cd typescript/
+ 1374  ls -la
+ 1375  cat gradle.properties 
+ 1376  ls
+ 1377  nano build.gradle 
+ 1378  ls
+ 1379  nano local.properties
+ 1380  react-native run-android
+ 1381  cd ..
+ 1382  sudo react-native run-android
+ 1383  ls
+ 1384  cd android/
+ 1385  ls
+ 1386  cat build.gradle 
+ 1387  nano build.gradle 
+ 1388  ls
+ 1389  nano gradle.properties 
+ 1390  nano settings.gradle 
+ 1391  ls
+ 1392  cd app/
+ 1393  ls
+ 1394  nano build.gradle 
+ 1395  cd ..
+ 1396  sudo react-native run-android
+ 1397  cd app/
+ 1398  cd android/
+ 1399  ls
+ 1400  cd app/
+ 1401  ls
+ 1402  nano build.gradle 
+ 1403  cd ..
+ 1404  ls
+ 1405  sudo react-native run-android
+ 1406  ls /home/roemly/Android/Sdk/
+ 1407  ls /home/roemly/Android/Sdk/build-tools/
+ 1408  ls 
  1409  ls
- 1410  nano a1.ts
- 1411  sudo su
- 1412  node
+ 1410  sudo su
+ 1411  adb devices
+ 1412  sudo /opt/android-studio31/bin/studio.sh 
  1413  sudo su
- 1414  ping google.com
- 1415  sudo su
- 1416  ifconfig
- 1417  ipconfig
- 1418  ifconfig
- 1419  cd public_html
- 1420  cd webapps/
- 1421  ls
- 1422  cd pt-amp
- 1423  sudo su
- 1424  cd public_html
- 1425  cd webapps/
- 1426  ls
- 1427  cd pt-amp
- 1428  ls
- 1429  ls -la
- 1430  chown roemly:www-data *
- 1431  sudo su
- 1432  cd ls
- 1433  ls
- 1434  sudo su
- 1435  cd src/
- 1436  cd app/
- 1437  cd modul/
- 1438  ls
- 1439  ng generate component testing
- 1440  sudo su
- 1441  ping google.com
- 1442  cd public_html
- 1443  ls
- 1444  cd webapps/
- 1445  ls
- 1446  ls -a
- 1447  ls -l
- 1448  cd pt-amp
- 1449  ls
- 1450  ls -l
- 1451  chown -R roemly:www-data *.
- 1452  chown -R roemly:www-data *.*
- 1453  sudo chown -R roemly:www-data *.*
- 1454  ls -la
- 1455  ls 0l
- 1456  chmod -r 777 *
- 1457  chmod -R 777 *
- 1458  sudo chmod -R 777
- 1459  sudo chmod -R 777 *
- 1460  ls -la
- 1461  git pull
- 1462  ls -l
- 1463  ng serve
- 1464  npm run precache
- 1465  ng serve
- 1466  npm run precache
- 1467  ng serve
- 1468  ls -la
- 1469  ng serve
- 1470  ls
- 1471  cd src
+ 1414  cd ..
+ 1415  cd alma/
+ 1416  ls
+ 1417  npm install react-navigation
+ 1418  npm start
+ 1419  sudo su
+ 1420  ping google.com
+ 1421  ping learning.spemma.sch.id
+ 1422  ping tiera.fiesto.net
+ 1423  ping google.com
+ 1424  ping learning.spemma.sch.id
+ 1425  ping tryout.spemma.sch.id
+ 1426  ping learning.spemma.sch.id
+ 1427  ping google.com
+ 1428  ping learning.spemma.sch.id
+ 1429  ping google.com
+ 1430  ping solusisika.com
+ 1431  ping google.com
+ 1432  sudo su
+ 1433  sudo su
+ 1434  npm -v
+ 1435  sudo su
+ 1436  nodejs -v
+ 1437  ping google.com
+ 1438  nodejs -v
+ 1439  ping google.com
+ 1440  df -h
+ 1441  sudo su
+ 1442  npm 
+ 1443  ping google.com
+ 1444  sudo su
+ 1445  ls -la
+ 1446  ls
+ 1447  cd ..
+ 1448  create-react-native-app almav1
+ 1449  npm start
+ 1450  cat /home/roemly/.npm/_logs/2018-04-17T13_09_23_642Z-debug.log
+ 1451  npm install -g react-native-cli
+ 1452  npm start
+ 1453  ls
+ 1454  cd almav1/
+ 1455  npm start
+ 1456  sudo rm almav1
+ 1457  sudo rm -r almav1
+ 1458  ls
+ 1459  ls -la
+ 1460  du -sh almav1
+ 1461  cd ..
+ 1462  ls
+ 1463  sudo su
+ 1464  ls
+ 1465  cd /opt/
+ 1466  ls
+ 1467  rm -r android-studio
+ 1468  sudo rm -r android-studio
+ 1469  ls
+ 1470  cd lampp
+ 1471  ;s
  1472  ls
- 1473  npm run precache
+ 1473  cd ..
  1474  ls
- 1475  cd ..
- 1476  lls
- 1477  ls
- 1478  ls -la
- 1479  cat service-worker.js 
- 1480  ng serve
- 1481  ifconfig
- 1482  ng serve
- 1483  ng serve --host 192.168.43.57
- 1484  ifconfig
- 1485  ng serve --host 192.168.43.57
- 1486  ng serve --host 192.168.43.57 --port 4300
- 1487  ng build
- 1488  ls
- 1489  cd dist
- 1490  ls -la
- 1491  cd ..
+ 1475  rm -r lampp
+ 1476  sudo rm -r lampp
+ 1477  sudo rm -r lampp2
+ 1478  sudo rm -r lampp1.8.3
+ 1479  du -sh teamviewer
+ 1480  ls
+ 1481  du -sh cinelerra
+ 1482  du -sh google
+ 1483  ls
+ 1484  cd /
+ 1485  df -h
+ 1486  df -h --total
+ 1487  sudo apt-get install cpu-checker
+ 1488  egrep -c '(vmx|svm)' /proc/cpuinfo
+ 1489  kvm-ok
+ 1490  ls
+ 1491  cd /opt
  1492  ls
- 1493  npm run precache
- 1494  cd public_html
- 1495  cd web
+ 1493  cd /root
+ 1494  ls
+ 1495  cd /root
  1496  ls
- 1497  cd webapps/
- 1498  cd pt-amp
- 1499  ng serve
- 1500  ping google.com
- 1501  sudo su
- 1502  ping google.com
- 1503  sudo su
- 1504  ping demo.desainlogosurabaya.com
- 1505  ping desainlogosurabaya.com
- 1506  ping new.desainsurabaya.com
- 1507  ping new.desainlogosurabaya.com
- 1508  ping demo.desainlogosurabaya.com
- 1509  ping satuinspirasi.com
- 1510  ping demo.desainlogosurabaya.com
- 1511  ping new.desainlogosurabaya.com
- 1512  ping demo.desainlogosurabaya.com
- 1513  ping new.desainlogosurabaya.com
- 1514  ping demo.desainlogosurabaya.com
- 1515  ping new.desainlogosurabaya.com
- 1516  ping desainlogosurabaya.com
- 1517  ping satuinspirasi.com
- 1518  ping demo.desainlogosurabaya.com
- 1519  ping new.desainlogosurabaya.com
- 1520  ping demo.desainlogosurabaya.com
- 1521  ping demo.desainlogosurabaya.com
- 1522  ping satuinspirasi.com
- 1523  ping cumadisini.com
- 1524  ping new.desainlogosurabaya.com
- 1525  cd /etc/apache2/
- 1526  ls
- 1527  cd ..
- 1528  cd php
- 1529  ls
- 1530  ping google.com
- 1531  lmc
- 1532  ping google.com
- 1533  ping learning.spemma.sch.id
- 1534  ping learning.spemma.sch.id
- 1535  sudo su
- 1536  ping viharamahasampatti.or.id
- 1537  ping google.com
- 1538  cd /home/roemly/public_html/webapps/
- 1539  ls
- 1540  cd pt-amp
- 1541  ls
- 1542  ls -la
- 1543  git pull
- 1544  sudo su
- 1545  sudo su
- 1546  ping google.com
- 1547  sudo su
- 1548  sudo su
- 1549  ifconfig
- 1550  sudo suif
- 1551  sudo su
- 1552  ping google.com
- 1553  ifconfig
- 1554  ping google.com
- 1555  ifconfig
- 1556  ping 192.168.0.180
- 1557  ping google.com
- 1558  sudo su
- 1559  cat /proc/cpuinfo
- 1560  cat /proc/meminfo
- 1561  cat /proc/cpuinfo
- 1562  sudo su
- 1563  ping google.com
- 1564  ifconfig
- 1565  ping google.com
- 1566  sudo su
- 1567  sudo su
- 1568  ping google.com
- 1569  ifconfig
- 1570  sudo su
- 1571  ping google.com
- 1572  sudo su
- 1573  ping google.com
- 1574  ping fiesto.off
- 1575  ping learning.spemma.sch.id
- 1576  sudo su
- 1577  ng -b
- 1578  ng -v
- 1579  sudo su
- 1580  ping google.com
- 1581  curl
- 1582  curl --help
- 1583  sudo su
- 1584  ./install.sch
- 1585  ls
- 1586  ./install.sh
- 1587  gloud component install app-engine-php
- 1588  gcloud component install app-engine-php
- 1589  gcloud
- 1590  sudo su
- 1591  ifconfig
- 1592  cd public_html
- 1593  cd webapps/
- 1594  cd pt-amp
- 1595  sudo su
- 1596  ping google.com
- 1597  ping google.com -t
- 1598  ifconfig
- 1599  ping mangakalot.com
- 1600  ping mangakalot.com
- 1601  ping google.com
+ 1497  sudo su
+ 1498  cd Android
+ 1499  ls
+ 1500  cd .
+ 1501  cd ..
+ 1502  ls
+ 1503  mv Android Android1
+ 1504  npm start
+ 1505  cd /
+ 1506  cd /opt/
+ 1507  ls
+ 1508  cd android-studio31/
+ 1509  ls
+ 1510  cd bin
+ 1511  sudo /opt/android-studio31/bin/studio.sh
+ 1512  /opt/android-studio31/bin/studio.sh
+ 1513  sudo su
+ 1514  ls
+ 1515  sh studio.sh 
+ 1516  cd /home/roemly
+ 1517  mv .android .android1
+ 1518  /opt/android-studio31/bin/studio.sh 
+ 1519  ping google.com
+ 1520  ls
+ 1521  cd /opt/android-studio31/
+ 1522  ls
+ 1523  ls -la
+ 1524  chmod -R 777 *
+ 1525  sudo chmod -R 777 *
+ 1526  sudo chown -r roemly:roemly * 
+ 1527  sudo chown -R roemly:roemly * 
+ 1528  ls -la
+ 1529  ping google.com
+ 1530  free -m
+ 1531  sudo /opt/android-studio31/bin/studio.sh 
+ 1532  sudo echo $ANDROID_HOME
+ 1533  export ANDROID_HOME=$HOME/Android/Sdk
+ 1534  export PATH=$PATH:$ANDROID_HOME/tools
+ 1535  export PATH=$PATH:$ANDROID_HOME/platform-tools
+ 1536  sudo echo $ANDROID_HOME
+ 1537  sudo /opt/android-studio31/bin/studio.sh 
+ 1538  sudo echo $ANDROID_HOME
+ 1539  cat $ANDROID_EMULATOR_HOME
+ 1540  echo $ANDROID_EMULATOR_HOME
+ 1541  set ANDROID_SDK_ROOT=/home/roemly/Android/Sdk
+ 1542  emulator -avd 
+ 1543  set ANDROID_EMULATOR_HOME=/home/roemly/.android
+ 1544  set ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd/
+ 1545  echo $ANDROID_EMULATOR_HOME
+ 1546  sudo export ANDROID_EMULATOR_HOME=/home/roemly/.android
+ 1547  mromli
+ 1548  sudo export ANDROID_EMULATOR_HOME=/home/roemly/.android
+ 1549  export ANDROID_EMULATOR_HOME=/home/roemly/.android
+ 1550  export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd/
+ 1551  sudo echo $ANDROID_AVD_HOME
+ 1552  sudo /opt/android-studio31/bin/studio.sh
+ 1553  nano ~/.bashrc
+ 1554  cd /opt/android-studio31/
+ 1555  ls
+ 1556  /opt/android-studio31/bin/studio.sh 
+ 1557  sudo echo $HOME
+ 1558  export ANDROID_HOME=$HOME/Android/Sdk
+ 1559  export PATH=$PATH:$ANDROID_HOME/tools
+ 1560  sudo echo ANDROID_HOME
+ 1561  sudo su
+ 1562  echo $ANDROID_AVD_HOME
+ 1563  sudo /opt/android-studio31/bin/studio.sh
+ 1564  nano ~/.bashrc
+ 1565  sudo su
+ 1566  ls
+ 1567  /opt/android-studio31/bin/studio.
+ 1568  /opt/android-studio31/bin/studio.sh
+ 1569  avdmanager list avd
+ 1570  echo $ANDROID_HOME
+ 1571  avd
+ 1572  adv
+ 1573  adb
+ 1574  adv list
+ 1575  adb list
+ 1576  adb devices
+ 1577  adb list
+ 1578  adb
+ 1579  adb list
+ 1580  avdmanager
+ 1581  which android
+ 1582  which Android
+ 1583  which Android3.1
+ 1584  sudo su
+ 1585  sudo /opt/android-studio31/bin/studio.sh
+ 1586  ls -la /home/roemly/
+ 1587  ln
+ 1588  sudo su
+ 1589  ping facebook.com
+ 1590  ls
+ 1591  cd Projects/
+ 1592  dir
+ 1593  cd Proj1/
+ 1594  ls
+ 1595  rm hello.go
+ 1596  nano packages.go
+ 1597  go build
+ 1598  go version
+ 1599  tar -C /usr/local -xzf go1.10.1.linux-amd64.tar.gz
+ 1600  sudo tar -C /usr/local -xzf go1.10.1.linux-amd64.tar.gz 
+ 1601  sudo export PATH=$PATH:/usr/local/go/bin
  1602  sudo su
- 1603  ping learning.spemma.sch.id
- 1604  sudo su
- 1605  telnet learning.spemma.sch.id
- 1606  ping learning.spemma.sch.id
- 1607  gcloud
- 1608  gcloud init
- 1609  gloud topic -h
- 1610  gcloud topic -h
- 1611  gloud
- 1612  gcloud
- 1613  gcloud compute instances list
- 1614  gcloud compute instances start lamp-1-vm
- 1615  crontab -e
- 1616  sudo su
- 1617  gcloud compute instances list
- 1618  crontab 0e
- 1619  crontab -e
- 1620  gcloud compute instances stop lamp-1-vm
- 1621  top
- 1622  ping learning.spemma.sch.id
- 1623  sudo su
- 1624  crontab -e
- 1625  sudo su
- 1626  ls
- 1627  ls -la
- 1628  cd ..
- 1629  ls
- 1630  cd ..
+ 1603  export GOROOT=/usr/local/go
+ 1604  export GOPATH=$HOME/Projects/Proj1
+ 1605  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+ 1606  go version
+ 1607  go env
+ 1608  cd Po
+ 1609  cd ..
+ 1610  mkdir Projects
+ 1611  ls
+ 1612  cd Projects/
+ 1613  mkdir Proj1
+ 1614  dir
+ 1615  cd Proj1/
+ 1616  nano hello.go
+ 1617  go build
+ 1618  dir
+ 1619  cat Proj1 
+ 1620  ./hello
+ 1621  dir
+ 1622  ./Proj1 
+ 1623  ls
+ 1624  go tool tour
+ 1625  nano /home/roemly/.bash_profile 
+ 1626  nano /home/roemly/.profile 
+ 1627  export GOROOT=/usr/local/go
+ 1628  export GOPATH=$HOME/Projects/Proj1
+ 1629  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+ 1630  go build
  1631  ls
- 1632  cd ..
- 1633  ls
- 1634  chown roemly:roemly telegram
- 1635  sudo chown roemly:roemly telegram
- 1636  ls -la 
- 1637  cd telegram/
- 1638  ls -la
- 1639  sudo chown roemly:roemly tg -R
- 1640  ls -la
- 1641  cd tg/
- 1642  ls -la
- 1643  ls
- 1644  cd debian/
- 1645  ls
- 1646  ./configure
- 1647  cd ..
- 1648  ./configure
- 1649  make
- 1650  ls
- 1651  cd debian/s
- 1652  cd debian
- 1653  cd bin
- 1654  ls
- 1655  telegram-cli
- 1656  cd ..
- 1657  ls
- 1658  cd bin
- 1659  ls
- 1660  telegram-cli
- 1661  cd ..
- 1662  ls
- 1663  bin/telegram-cli -k
- 1664  bin/telegram-cli -k tg-server.pub
- 1665  ls
- 1666  mkdir message
- 1667  telegram-cli --json -P 9009 >message/history.txt
- 1668  bin/telegram-cli --json -P 9009 >message/history.txt
- 1669  bin/telegram-cli -k 
- 1670  bin/telegram-cli -k tg-server.pub
- 1671  bin/telegram-cli -k tg-server.pub --json -P 9009 > message/history2.txt
- 1672  telegram-cli -D -s save_chat_history.lua
- 1673  bin/telegram-cli -D -s save_chat_history.lua
- 1674  bin/telegram-cli -s 
- 1675  sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev libpython-dev make
+ 1632  ./Proj1 
+ 1633  go tool tour
+ 1634  cd Projects/Proj1/
+ 1635  go build
+ 1636  ./Proj1 
+ 1637  go build
+ 1638  ./Proj1 
+ 1639  go build
+ 1640  ./Proj1 
+ 1641  go build
+ 1642  ./Proj1 
+ 1643  go build
+ 1644  ./Proj1 
+ 1645  go build
+ 1646  ./Proj1 
+ 1647  go build
+ 1648  ./Proj1 
+ 1649  go build
+ 1650  ./Proj1 
+ 1651  go build
+ 1652  ./Proj1 
+ 1653  go build
+ 1654  ./Proj1 
+ 1655  go build
+ 1656  ./Proj1 
+ 1657  go version
+ 1658  cd Projects/
+ 1659  cd Proj1/
+ 1660  go build
+ 1661  nano packages.go 
+ 1662  go build
+ 1663  nano packages.go 
+ 1664  go build
+ 1665  nano packages.go 
+ 1666  go build
+ 1667  nano packages.go 
+ 1668  go build
+ 1669  ./Proj1 
+ 1670  nano packages.go 
+ 1671  ./Proj1 
+ 1672  go build
+ 1673  ./Proj1 
+ 1674  nano packages.go 
+ 1675  cd Projects/Proj1/
  1676  ls
- 1677  bin/telegram-cli -k tg-server.pub -s scripts/mysql.lua
- 1678  apt-get install lua-sql-mysql
- 1679  sudo apt-get install lua-sql-mysql
- 1680  bin/telegram-cli -k tg-server.pub -s scripts/mysql.lua
- 1681  cd telegram/tg/
- 1682  ls
- 1683  ./configure
- 1684  make
- 1685  bin/telegram-cli -k tg-server.pub
- 1686  bin/telegram -k tg-server.pub
- 1687  ls
- 1688  telegram -k tg-server.pub
- 1689  ls -la
- 1690  ls
- 1691  cd Software/
+ 1677  nano packages.go 
+ 1678  nano packages.go
+ 1679  ./ Proj1 
+ 1680  ./Proj1 
+ 1681  nano packages.go
+ 1682  go build
+ 1683  ./Proj1 
+ 1684  nano packages.go
+ 1685  ls
+ 1686  ./Proj1 
+ 1687  cat Proj1 
+ 1688  ls
+ 1689  ./Proj1 
+ 1690  cd ..
+ 1691  cd webapps/
  1692  ls
- 1693  cd ..
+ 1693  cd pt-amp
  1694  ls
- 1695  cd telegram/
+ 1695  cd src
  1696  ls
- 1697  cd t
- 1698  cd tg
- 1699  ls
- 1700  bin/telegram-cli -k tg-server.pub -s scripts/mysql.lua
- 1701  df -h
- 1702  ifconfig
- 1703  sudo su
- 1704  df -h
- 1705  ping google.com
- 1706  ipconfig
- 1707  ifconfig
- 1708  ping google.com
- 1709  df -h
- 1710  cd /
- 1711  df -h
- 1712  ifconfig
- 1713  mysql -u telegram -ptelegram -h 192.168.111.170
- 1714  mysql -u telegram -p -h 192.168.111.170
- 1715  mysql -u telegram -p -h 192.168.111.170 telegram
- 1716  mysql -u telegram -ptelegram -h 192.168.111.170 telegram
- 1717  ls
- 1718  cd /etc/mysql/mysql.conf.d/
+ 1697  ng start
+ 1698  ng help
+ 1699  ng serve
+ 1700  cd Projects/
+ 1701  cd Proj1/
+ 1702  ls
+ 1703  nano packages.go 
+ 1704  go build
+ 1705  ./Proj1 
+ 1706  nano packages.go 
+ 1707  ./Proj1 
+ 1708  ls
+ 1709  go run packages.go 
+ 1710  nano packages.go 
+ 1711  go run packages.go 
+ 1712  nano packages.go 
+ 1713  go run packages.go 
+ 1714  nano packages.go 
+ 1715  go run packages.go 
+ 1716  nano packages.go 
+ 1717  cd Projects/
+ 1718  cd Proj1/
  1719  ls
- 1720  cd ..
- 1721  ls
- 1722  nano my.cnf
- 1723  sudo nano my.cnf
- 1724  ls
- 1725  cd conf.d/
- 1726  ls
- 1727  cat mysql.cnf 
- 1728  ls
- 1729  cd ..
- 1730  ls
- 1731  cd mysql.conf.d/
- 1732  ls
- 1733  cat mysqld.cnf 
- 1734  ls
- 1735  nano mysqld.cnf 
- 1736  ls
- 1737  cd ..
- 1738  ls
- 1739  clear
- 1740  mysql -u telegram -p'telegram' -h 192.168.111.170 telegram
- 1741  mysql -u generik -p'generik' -h 192.168.111.170
- 1742  mysql -u generik -pgenerik -h 192.168.111.170
- 1743  telnet 3306
- 1744  netstat -an
- 1745  mysql -u root
- 1746  mysql -u root -pmromli
- 1747  mysql -utelegram -ptelegram
- 1748  mysql -u root
- 1749  mysql -u root -p
- 1750  mysql -u telegram -ptelegram -h 192.168.111.170
- 1751  mysql -u telegram -ptelegram -h '192.168.111.170'
- 1752  mysql -u telegram -ptelegram -h '192.168.111.170' telegram
- 1753  mysql -u telegram -p -h '192.168.111.170' telegram
- 1754  mysql -u root -p
- 1755  mysql -u jania -p -h '192.168.111.170'
- 1756  mysql -u root -p
- 1757  mysql -uroot -pmromli
- 1758  mysql -uindah -pindah
- 1759  mysql -uindah -pindah -h 192.168.111.170
- 1760  ls
- 1761  cat my.cnf
- 1762  cd mysql.conf.d/
- 1763  cat mysqld.cnf 
- 1764  sudo nano mysqld.cnf 
- 1765  sudo service mysql restart
- 1766  sudo /etc/init.d/mysql restart
- 1767  mysql -uindah -pindah -h 192.168.111.170
- 1768  ls
- 1769  ping google.com
- 1770  sudo su
- 1771  google.com
- 1772  ping google.com
- 1773  ping learning.spemma.sch.id
- 1774  ls
- 1775  cd tg
- 1776  ls
- 1777  bin/telegram-cli -k tg-server.pub -s scripts/mysql_gammu.lua
- 1778  bin/telegram-cli help
- 1779  bin/telegram-cli -k tg-server.pub -s scripts/mysql_gammu.lua
- 1780  telegram-cli -h
- 1781  bin/telegram-cli -h
- 1782  bin/telegram-cli -k tg-server.pub -WR -e "msg #196152829 halo"
- 1783  bin/telegram-cli -k tg-server.pub -WR -e "msg 01000000fd0db10b7f000000000000009aaf437f8a5cb7ac halo"
- 1784  bin/telegram-cli -k tg-server.pub -WR -e "msg #01000000fd0db10b7f000000000000009aaf437f8a5cb7ac halo"
- 1785  bin/telegram-cli -k tg-server.pub 
- 1786  bin/telegram-cli -h
- 1787  bin/telegram-cli -k tg-server.pub --sync-from-start -s scripts/mysql_gammu.lua
- 1788  bin/telegram-cli -k tg-server.pub -WR -e "msg #01000000fd0db10b7f000000000000009aaf437f8a5cb7ac halo"
- 1789  bin/telegram-cli -k tg-server.pub -W -e "msg #01000000fd0db10b7f000000000000009aaf437f8a5cb7ac halo"
- 1790  bin/telegram-cli -k tg-server.pub
- 1791  bin/telegram-cli -k tg-server.pub -s scripts/mysql_gammu.lua
- 1792  bin/telegram-cli -k tg-server.pub -W -e "msg Aly_Shodiqin halo"
- 1793  bin/telegram-cli -k tg-server.pub -W -e "msg Aly_Shodiqin cuman coba aja broooo"
- 1794  bin/telegram-cli -k tg-server.pub -W -e "msg Aly_Shodiqin TESTING TULIS BEEBRAPA SPASI"
- 1795  nc localhost 2391
- 1796  dialog_list
- 1797  bin/telegram-cli -k tg-server.pub 
- 1798  /etc/init.d/telegram-daemon restart z5
- 1799  cd /usr/share/telegram-daemon/bin
- 1800  ls
- 1801  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1802  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub -s scripts/mysql_gammu.lua
- 1803  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1804  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua 
- 1805  cd ..
- 1806  cd /home/roemly
- 1807  ls
- 1808  cd telegram
- 1809  ls
- 1810  run-telegram.sh
- 1811  nano runtel.sh
- 1812  chmod -R 777 runtel.sh
- 1813  sh runtel.sh 
- 1814  sh /home/roemly/telegram/runtel.sh
- 1815  start on startup
- 1816  crontab -e
- 1817  ls
- 1818  crontab -e
- 1819  sudo su
- 1820  ls
- 1821  cd tg
- 1822  cd telegram
- 1823  ls
- 1824  cd tg
- 1825  ls
- 1826  sudo cp telegram-daemon /etc/init.d/
- 1827  sudo mkdir /var/lib/telegram-daemon
- 1828  rm -r /var/lib/telegram-daemon
- 1829  sudo rm -r /var/lib/telegram-daemon
- 1830  sudo mkdir /var/lib/telegram-daemon
- 1831  sudo mkdir /usr/share/telegram-daemon
- 1832  sudo rm -r /usr/share/telegram-daemon
- 1833  sudo mkdir /usr/share/telegram-daemon
- 1834  sudo rm -r /usr/share/telegram-daemon/bin
- 1835  sudo mkdir /usr/share/telegram-daemon/bin
- 1836  sudo cp bin/telegram-cli /usr/share/telegram-daemon/bin/
- 1837  sudo cp start-telegram-daemon /usr/share/telegram-daemon/bin
- 1838  sudo rm -r /etc/telegram-daemon
- 1839  sudo mkdir /etc/telegram-daemon
- 1840  sudo nano /etc/telegram-daemon/telegram-daemon.achat.conf
- 1841  sudo mkdir /var/log/telegram-daemon
- 1842  sudo rm -r /var/log/telegram-daemon
- 1843  sudo mkdir /var/log/telegram-daemon
- 1844  sudo mkdir /etc/telegram-cli
- 1845  sudo rm -r /etc/telegram-cli
- 1846  sudo mkdir /etc/telegram-cli
- 1847  sudo cp server.pub /etc/telegram-cli/server.pub
- 1848  /etc/init.d/telegram-daemon status
- 1849  /etc/init.d/telegram-daemon start
- 1850  /etc/init.d/telegram-daemon status
- 1851  /etc/init.d/telegram-daemon start
- 1852  crontab -e
- 1853  sudo halt
- 1854  crontab -e
+ 1720  nano packages.go
+ 1721  go run packages.go 
+ 1722  cd Projects/
+ 1723  cd Proj1/
+ 1724  dir
+ 1725  rm packages.go.save
+ 1726  mv packages.go main.go
+ 1727  nano main.go
+ 1728  cd Projects/Proj1/
+ 1729  go run main.go 
+ 1730  go run form.go
+ 1731  cd Projects/
+ 1732  cd Proj1/
+ 1733  ls
+ 1734  ls -la
+ 1735  go run main.go 
+ 1736  go run form.go
+ 1737  ls -la
+ 1738  ping google.com
+ 1739  ng serve
+ 1740  ng help
+ 1741  ping tierra.co.id
+ 1742  ping detik.com
+ 1743  ping detik.com
+ 1744  ping viharamahasampatti.or.id
+ 1745  ssh romli@113.52.148.78
+ 1746  ng serve
+ 1747  ng build --prod
+ 1748  npm run precache
+ 1749  ng serve
+ 1750  ng build --prod
+ 1751  npm run precache
+ 1752  ng build --prod
+ 1753  npm run precache
+ 1754  ng build --prod
+ 1755  npm run precache
+ 1756  ng build --prod
+ 1757  npm run precache
+ 1758  ng serve
+ 1759  ng build
+ 1760  ng build --prod
+ 1761  npm run precache
+ 1762  ng build --prod
+ 1763  npm run precache
+ 1764  ng server
+ 1765  ng serve
+ 1766  dir
+ 1767  ng build --prod
+ 1768  npm run precache
+ 1769  cd dist
+ 1770  http-server
+ 1771  dir
+ 1772  http-server
+ 1773  cd ..
+ 1774  ng serve
+ 1775  ng build --prod
+ 1776  npm run precache
+ 1777  wget https://shop.ptamp.co.id/api/api-get-catalog.php?cat_id=&member_id=1
+ 1778  wget https://shop.ptamp.co.id/api/api-get-catalog.php?cat_id=1&member_id=1
+ 1779  sudo su
+ 1780  ping google.com
+ 1781  ping viharamahasampatti.or.id
+ 1782  lsusb
+ 1783  ping viharamahasampatti.or.id
+ 1784  sudo su
+ 1785  ping google.com
+ 1786  sudo su
+ 1787  ifconfig
+ 1788  sudo su
+ 1789  ping google.com
+ 1790  ping google.com 
+ 1791  sudo su
+ 1792  sudo halt
+ 1793  top
+ 1794  tasklist
+ 1795  ps -e
+ 1796  sudo su
+ 1797  ls iwd
+ 1798  ls -la
+ 1799  ls -la *i*
+ 1800  ls -l
+ 1801  nano sanbox.go
+ 1802  go sanbox.go 
+ 1803  go run sanbox.go 
+ 1804  nano sanbox.go
+ 1805  go
+ 1806  clear
+ 1807  go tool tour
+ 1808  GOROOT
+ 1809  PATH
+ 1810  GOPATH
+ 1811  sudo GOPATH
+ 1812  $GOPATH
+ 1813  cd /home/roemly/Projects/Proj1/
+ 1814  ls
+ 1815  go main.go
+ 1816  nano > history
+ 1817  sudo a2dismod php5.6
+ 1818  sudo a2enmod php7.0
+ 1819  sudo update-alternatives --set php /usr/bin/php7.0
+ 1820  sudo service apache2 restart
+ 1821  sudo su
+ 1822  subversion
+ 1823  cd public_html
+ 1824  ls
+ 1825  cd iwd
+ 1826  ls
+ 1827  sudo apt-get install subversion
+ 1828  ls
+ 1829  rm -r ptamp
+ 1830  ls
+ 1831  rmdir -R ptamp
+ 1832  rmdir -r ptamp
+ 1833  sudo su
+ 1834  ls
+ 1835  sudo su
+ 1836  nano ~/.subversion/auth/svn.username/
+ 1837  cat ~/.subversion/auth/svn.username/
+ 1838  cd ~/.subversion/auth/svn.username/
+ 1839  ls
+ 1840  cd ..
+ 1841  ls
+ 1842  ls -la
+ 1843  exit
+ 1844  sudo su
+ 1845  svn
+ 1846  svn co
+ 1847  sudo su
+ 1848  ping google.com
+ 1849  sudo npm start
+ 1850  ls
+ 1851  sudo su
+ 1852  react-native run-android
+ 1853  sudo react-native run-android
+ 1854  react-native start
  1855  ls
- 1856  cd telegram/
+ 1856  cd android/
  1857  ls
- 1858  chmod -R 777 telup.sh
- 1859  ls
- 1860  sh telup.sh
- 1861  crontab -e
- 1862  sudo su
- 1863  cd telegram/
+ 1858  cd ..
+ 1859  npm start
+ 1860  sudo npm start
+ 1861  cd public_html
+ 1862  cd quiz_prima
+ 1863  cd userfiles/
  1864  ls
- 1865  chmod -R 777 telinit.sh
+ 1865  cd file
  1866  ls
- 1867  sh telinit.sh
- 1868  top
- 1869  su daemonuser -c '/home/roemly/telegram/tg/bin/telegram-cli -vvvvRC -k tg-server.pub -W -dL tg.log -P 1234 &'
- 1870  su roemly -c '/home/roemly/telegram/tg/bin/telegram-cli -vvvvRC -k tg-server.pub -W -dL tg.log -P mromli &'
- 1871  top
- 1872  ls
- 1873  cd tg
- 1874  ls
- 1875  D/home/roemly/telegram/tg/bin/telegram-cli -vvvvRC -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua 
- 1876  /home/roemly/telegram/tg/bin/telegram-cli -vvvvRC -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua 
- 1877  /home/roemly/telegram/tg/bin/telegram-cli  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua 
- 1878  /home/roemly/telegram/tg/bin/telegram-cli  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1879  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2391 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1880  ls
- 1881  cd telegram/
- 1882  ls
- 1883  telup.sh
- 1884  sh telup.sh
- 1885  ./telup.sh 
- 1886  sh telup.sh
- 1887  ./telup.sh 
- 1888  top
- 1889  ./telup.sh 
- 1890  setsid /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2392 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua >/dev/null 2>&1 < /dev/null &
- 1891  setsid /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2392 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua >/dev/null 2>&1 < /dev/null 
- 1892  setsid
- 1893  ls
- 1894  chmod -R 777 run.sh
- 1895  ./run.sh
- 1896  toop
- 1897  top
- 1898  run.sh
- 1899  ./run.sh
- 1900  sh run.sh
- 1901  daemon
- 1902  ls
- 1903  ./telup.sh &
- 1904  top
- 1905  ps -ef | grep bob
- 1906  ps -ef | grep teleg
- 1907  ps -ef | grep teleggram
- 1908  ps -ef | grep telegram
- 1909  kill
- 1910  kill 4297
- 1911  kill 4569
- 1912  ps -ef | grep telegram
- 1913  kill 4297
- 1914  ls
- 1915  ps -ef | grep telegram
- 1916  kill 4569
- 1917  ps -ef | grep telegram
- 1918  kill 4780
- 1919  ps -ef | grep telegram
- 1920  kill 6396
- 1921  ps -ef | grep telegram
- 1922  kill 6398
- 1923  ps -ef | grep telegram
- 1924  kill 5166
- 1925  ps -ef | grep telegram
- 1926  kill 5166
- 1927  ps -ef | grep telegram
- 1928  ls
- 1929  ps
- 1930  top
- 1931  ls
- 1932  ps -ef | grep telegram
- 1933  kill 6429
- 1934  ps -ef | grep telegram
- 1935  ./telup.sh &
- 1936  top
- 1937  ps -ef | grep telegram
- 1938  kill 6479
- 1939  kill telegram
- 1940  pkill telegram
- 1941  ps -ef | grep telegram
- 1942  ./telup.sh &
- 1943  ./telup.sh
- 1944  ps -ef | grep telegram
- 1945  kill all telegram
- 1946  killall telegram
- 1947  ls
- 1948  ps -ef | grep telegram
- 1949  pkill telegram
- 1950  ps -ef | grep telegram
- 1951  kill 6661
- 1952  kill 6853
- 1953  ls
- 1954  ps -ef | grep telegram
- 1955  ps
- 1956  ps -aux
- 1957  ps -aux | grep telegram
- 1958  ls
- 1959  cd telegram
- 1960  ls
- 1961  ./telup.sh
- 1962  ps -aux | grep telegram
- 1963  cat telup.sh
- 1964  ./telup.sh
- 1965  ps -aux | grep telegram
- 1966  kill 6902
- 1967  ./telup.sh
- 1968  ps -aux | grep telegram
- 1969  ./telup.sh
- 1970  ps -aux | grep telegram
- 1971  ./runsh
- 1972  ./run.sh
- 1973  ps -aux | grep telegram
- 1974  clear
- 1975  ps -aux | grep telegram
- 1976  ./telup.sh &
- 1977  ps -aux | grep telegram
- 1978  ./telup.sh 
- 1979  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2392 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1980  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2390 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1981  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1982  /home/roemly/telegram/tg/bin/telegram-cli -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua 
- 1983  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1984  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv -E -R -D -C -P 2390 -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1985  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1986  /home/roemly/telegram/tg/bin/telegram-cli  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1987  /home/roemly/telegram/tg/bin/telegram-cli  -k tg-server.pub  -s scripts/mysql_gammu.lua
- 1988  ls
- 1989  /home/roemly/telegram/tg/bin/telegram-cli  -k tg-server.pub  -s tg/scripts/mysql_gammu.lua
- 1990  cd tg
- 1991  ls
- 1992  bin/telegram-cli  -k tg-server.pub  -s scripts/mysql_gammu.lua
- 1993  home/roemly/telegram -k tg-server.pub  -s scripts/mysql_gammu.lua
- 1994  /home/roemly/telegram/tg/bin/telegram-cli -d -vvvv  -k tg-server.pub  -s /home/roemly/telegram/tg/scripts/mysql_gammu.lua
- 1995  cd ..
- 1996  ls
- 1997  sh /home/roemly/telegram/tg/telup.sh
- 1998  cd public_html/
- 1999  cd webapps/
- 2000  ls
- 2001  cd pt-amp
- 2002  ls
- 2003  sudo chmod -R 777 *
- 2004  ls
- 2005  ng help
- 2006  ng --help
- 2007  ng build
- 2008  history > history.txt
+ 1867  cd quiz/
+ 1868  ls
+ 1869  cd media
+ 1870  ls
+ 1871  cd source/
+ 1872  ls -la
+ 1873  sudo rm -r *
+ 1874  svn update
+ 1875  svn 0v
+ 1876  svn -v
+ 1877  subversion -v
+ 1878  svn -h
+ 1879  svn
+ 1880  svn help
+ 1881  svn --version
+ 1882  sudo su
+ 1883  cd ..
+ 1884  sudo su
+ 1885  ping google.com
+ 1886  sudo su
+ 1887  ping google.com
+ 1888  free -m
+ 1889  ps
+ 1890  top
+ 1891  free -m
+ 1892  ng build --prod
+ 1893  npm run precache
+ 1894  ng build --prod --base-href /shop
+ 1895  ng build --deploy-url=shop/
+ 1896  npm run precache
+ 1897  ng build --deploy-url=/shop/
+ 1898  npm run precache
+ 1899  ng build --deploy-url=/shop/
+ 1900  npm run precache
+ 1901  ng build --deploy-url=/shop/
+ 1902  npm run precache
+ 1903  ng build --deploy-url=/shop/
+ 1904  npm run precache
+ 1905  ng build --deploy-url=/shop/
+ 1906  npm run precache
+ 1907  df -h
+ 1908  ng build --deploy-url=/shop/
+ 1909  npm run precache
+ 1910  ng build --deploy-url=/shop/
+ 1911  npm run precache
+ 1912  ng build --deploy-url=/shop/
+ 1913  npm run precache
+ 1914  ng build --prod --deploy-url=shop/
+ 1915  npm run precache
+ 1916  ng build --prod
+ 1917  npm run precache
+ 1918  ng build --prod
+ 1919  npm run precache
+ 1920  ping google.com
+ 1921  sudo usermod -aG vboxusers roemly
+ 1922  apt-get install playonlinux
+ 1923  sudo apt-get install playonlinux
+ 1924  ping google.com
+ 1925  cd public_html
+ 1926  cd riset/
+ 1927  ls
+ 1928  mkdir phpxmlrpc
+ 1929  cd phpxmlrpc/
+ 1930  composer require phpxmlrpc/phpxmlrpc:4.0
+ 1931  sudo composer require phpxmlrpc/phpxmlrpc:4.0
+ 1932  ls
+ 1933  cd ..
+ 1934  ls -la
+ 1935  cd phpxmlrpc/
+ 1936  ls
+ 1937  sudo chmod -R 777 phpxmlrpc
+ 1938  sudo su
+ 1939  ping google.com
+ 1940  cd /var/log
+ 1941  ls
+ 1942  cd apache2
+ 1943  ls
+ 1944  ping google.com
+ 1945  ifconfig
+ 1946  ping google.com -t
+ 1947  ping google.com
+ 1948  sudo su
+ 1949  cd /opt
+ 1950  ls
+ 1951  cd android-studio31/
+ 1952  ls
+ 1953  cd bin
+ 1954  ls
+ 1955  sudo ./studio.sh
+ 1956  df -h
+ 1957  ping google.com
+ 1958  cd /home
+ 1959  cd roemly/
+ 1960  cd Android
+ 1961  cd Sdk
+ 1962  ls
+ 1963  sudo cd /root/
+ 1964  ls
+ 1965  cd /
+ 1966  sudo su
+ 1967  free -m
+ 1968  cd /root/
+ 1969  sudo su
+ 1970  ping google.com
+ 1971  cd /opt
+ 1972  ls
+ 1973  cd android-studio31/
+ 1974  ls
+ 1975  cd bin
+ 1976  ls
+ 1977  sudo ./studio.sh
+ 1978  ls
+ 1979  sudo ./studio.sh
+ 1980  adb list
+ 1981  adb devices
+ 1982  adb start-server
+ 1983  ls
+ 1984  top
+ 1985  sudo react-native run-android
+ 1986  adb devices
+ 1987  cd /root
+ 1988  sudo su
+ 1989  ping google.com
+ 1990  ping fiesto.off
+ 1991  ping pap.fiesto.off
+ 1992  ping google.com
+ 1993  sudo shutdown 
+ 1994  git svn clone svn://192.168.111.1iwd/theheart -T trunk -b branches -t tags
+ 1995  sudo 
+ 1996  sudo apt-get install git
+ 1997  history>history.txt

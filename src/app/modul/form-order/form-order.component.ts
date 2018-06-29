@@ -3,10 +3,10 @@ import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import {CartService} from '../../service/cart.service';
 import {ProductService} from '../../service/product.service';
-import {LoginService} from "../../service/login.service";
-import {MatSnackBar} from "@angular/material";
-import {Cart} from "../../class/Cart";
-import {ItemCart} from "../../class/ItemCart";
+import {LoginService} from '../../service/login.service';
+import {MatSnackBar} from '@angular/material';
+import {Cart} from '../../class/Cart';
+import {ItemCart} from '../../class/ItemCart';
 @Component({
   templateUrl: './form-order.component.html',
   styleUrls:  ['./form-order.component.css'],
@@ -20,13 +20,15 @@ export class FormOrderComponent implements OnInit {
               public product: ProductService,
               public  current_user: LoginService,
               public snackBar: MatSnackBar) {}
-
+    
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.id_order = Number(params['id']); // (+) converts string 'id' to a number
     });
     if(this.id_order == 1) this.title = 'SIKA';
     else if(this.id_order == 2) this.title = 'MAKITA';
+    else if(this.id_order == 3) this.title = 'LAKONI';
+    else if(this.id_order == 4) this.title = 'WD 40';
     this.cart.title = this.title.toLowerCase();
     // this.cart.refreshdata();
     console.log('now',this.cart.title);

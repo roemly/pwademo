@@ -1,7 +1,7 @@
 <div class="cst-nav-toolbar" style="z-index: 10000">
     <mat-toolbar class="cst-btn-toolbar">
        <span><a class="cst-navigation-color" clickGoBack ><mat-icon>keyboard_backspace</mat-icon></a></span>
-      <span class="cst-title-form">ORDER {{id_order}}</span>
+      <span class="cst-title-form">ORDER</span>
     </mat-toolbar>
 </div>
 <div class="cst-display-content form-product-checkout">
@@ -15,8 +15,8 @@
       </mat-card-title>
       <mat-card-content>
         <!--<span class="truncate">{{product.getProductById(item.id).description}}</span>-->
-        <p style="float:left;color:#00c5ae;margin:0">Qty : {{item.qty}}</p>
-        <p style="float:right;margin:0">Price : {{item.price}}</p>
+        <p style="float:left;color:#00c5ae;margin:0">{{item.qty}} x @Rp{{item.price | number | pointReplacer}}</p>
+        <p style="float:right;margin:0">Subtotal : Rp{{(item.price * item.qty) | number | pointReplacer }}</p>
       </mat-card-content>
     </mat-card>
  <div class="detail-order-block">
@@ -27,14 +27,14 @@
 <div class="align-left"><mat-checkbox [(ngModel)]="isPajak" [disabled]="true">Butuh faktur pajak</mat-checkbox></div>
 </div>
  <div class="label-total-harga align-center">TOTAL</div>
-<div class="align-center total-harga">{{cart.getTotal() | currency:'IDR':true}}</div>
-<div class="align-left"><mat-checkbox [(ngModel)]="isAgree" (change)="changeAgree()">Saya telah memeriksa dan menyetujui order ini, dan memahami bahwa order yang sudah dibuat tidak bisa dibatalkan dengan alasan apapun.</mat-checkbox></div>
+<div class="align-center total-harga">Rp{{cart.getTotal() | number | pointReplacer}}</div>
+<div id="box-agree" class="align-left"><mat-checkbox [(ngModel)]="isAgree" (change)="changeAgree()">Saya telah memeriksa dan menyetujui order ini, dan memahami bahwa order yang sudah dibuat tidak bisa dibatalkan dengan alasan apapun.</mat-checkbox></div>
 </div>
   </div>
   </div>
 <!-- <div  class="block-bottom"> -->
 <div  class="button-row">
-  <button (click)="bayar()" mat-raised-button color="warn">Bayar</button>
+  <button id="btn-bayar" (click)="bayar()" mat-raised-button color="warn">Bayar</button>
 </div>
 <!-- </div> -->
 </div>
