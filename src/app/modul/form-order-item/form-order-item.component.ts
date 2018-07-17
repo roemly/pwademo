@@ -73,10 +73,10 @@ export class FormOrderItemComponent implements OnInit {
             this.id_order = +params['id']; // (+) converts string 'id' to a number
         });
         
-        if (this.id_order == 1) { this.title = 'SIKA'; }
-        else if ( this.id_order == 2 ) { this.title = 'MAKITA'; }
-        else if ( this.id_order == 3 ) { this.title = 'LAKONI'; }
-        else if ( this.id_order == 4 ) { this.title = 'WD 40'; }
+        if (this.id_order == 1) { this.title = 'CAT 1'; }
+        else if ( this.id_order == 2 ) { this.title = 'CAT 2'; }
+        else if ( this.id_order == 3 ) { this.title = 'CAT 3'; }
+        else if ( this.id_order == 4 ) { this.title = 'CAT 4'; }
     }
     stepUp(): void {
         this.qty += Number(this.kelipatan);

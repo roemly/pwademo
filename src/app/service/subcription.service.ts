@@ -8,8 +8,8 @@ export class SubscriptionService {
   isSubscribed: Boolean = false;
   swRegistration: any = null;
   private applicationServerPublicKey = 'BBISJmDmHI4Yr0hTw90F-C2VpohCfqrhImrQExeGUBvHIz0GYOSllTEJi3RxuiKotIWRmbLrmgMj7D0b-k7kL-U';
-  private apiUrl = 'https://ptamp.co.id/shop/api/api-subscription-register.php';
-  private apiUrlDel = 'https://ptamp.co.id/shop/api/api-subscription-remove.php';
+  private apiUrl = 'https://pwa.aindo.com/shop/api/api-subscription-register.php';
+  private apiUrlDel = 'https://pwa.aindo.com/shop/api/api-subscription-remove.php';
   constructor(private http: Http) {
     if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/shop/service-worker.js');

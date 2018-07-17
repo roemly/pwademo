@@ -42,7 +42,7 @@ export class OrderService {
         return this.getorderlist().find(item => item.id === id);
     }
     fetchdata(): Observable<Order[]> {
-        return this.http.get('https://ptamp.co.id/shop/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
+        return this.http.get('https://pwa.aindo.com/shop/api/api-order-history.php?member_id='+this.login.getUserCurrent().id)
             .map((res: Response) => <Order[]>res.json());
     }
 }

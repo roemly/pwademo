@@ -25,10 +25,10 @@ export class FormOrderComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id_order = Number(params['id']); // (+) converts string 'id' to a number
     });
-    if(this.id_order == 1) this.title = 'SIKA';
-    else if(this.id_order == 2) this.title = 'MAKITA';
-    else if(this.id_order == 3) this.title = 'LAKONI';
-    else if(this.id_order == 4) this.title = 'WD 40';
+    if(this.id_order == 1) this.title = 'CAT 1';
+    else if(this.id_order == 2) this.title = 'CAT 2';
+    else if(this.id_order == 3) this.title = 'CAT 3';
+    else if(this.id_order == 4) this.title = 'CAT 4';
     this.cart.title = this.title.toLowerCase();
     // this.cart.refreshdata();
     console.log('now',this.cart.title);

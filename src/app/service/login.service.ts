@@ -7,9 +7,9 @@ import {Http} from '@angular/http';
 @Injectable()
 export class LoginService {
   private user: User = null;
-  public mainurl = 'ptamp.co.id';
-  private url = 'https://ptamp.co.id/shop/api/api-login.php';
-  private urlChangePassword = 'https://ptamp.co.id/shop/api/api-change-password.php';
+  public mainurl = 'pwa.aindo.com';
+  private url = 'https://pwa.aindo.com/shop/api/api-login.php';
+  private urlChangePassword = 'https://pwa.aindo.com/shop/api/api-change-password.php';
   private message = '';
   constructor(private http: Http) {
     if (localStorage.user !== undefined){
