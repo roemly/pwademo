@@ -14,7 +14,7 @@ button{margin-bottom:40px !important}
     background: transparent;
     border-bottom: 1px solid #00c5ae;
     box-shadow: none !important;
-    color: #fff !important;
+    color: #000 !important;
     padding: 12px 2px;
 }
 mat-card-title.mat-card-title {
@@ -41,7 +41,7 @@ mat-card-content.mat-card-content:after {
     background: transparent;
     border-bottom: 1px solid #00c5ae;
     box-shadow: none !important;
-    color: #fff !important;
+    color: #000 !important;
     padding: 12px 2px;
 }
 mat-card-title.mat-card-title{
@@ -76,13 +76,13 @@ mat-card-content.mat-card-content:after {
 }
 .total-harga{
     font-size: 20pt;
-    color: #fff;
+    color: #000;
     margin-bottom: 19px;
 }
 .form-product-checkout {
-    color: #fff;
+    color: #000;
 }
 .content-detail-order {
     margin-bottom: 20px;
-    color: #fff;
+    color: #000;
 }

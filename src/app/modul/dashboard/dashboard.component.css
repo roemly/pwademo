@@ -1,6 +1,7 @@
 .first-home-menu a {
     padding: 0 10px;
 }
+.mat-icon{color:#fff}
 mat-grid-list{
     display: block;
 }

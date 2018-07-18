@@ -95,6 +95,11 @@ h1{
     border-bottom: 1px solid #fff;
 	color:#fff
 }
+.mat-option[_ngcontent-c1] {
+    height: 40px;
+    line-height: 40px;
+    background: #999;
+}
 .mat-option-text {
     display: block;
 }
