@@ -1,12 +1,13 @@
+
 .gambar-atas{
     overflow-x: hidden;
-    height:250px;
+    height:50vh;
     display:block;
     width:100%;
 }
 
 h1{
-    display: block;
+    display: none;
     background-color: #f8b713;
     padding-top:15px;
     padding-bottom:15px;
@@ -14,10 +15,10 @@ h1{
     font-size:14pt;
     text-align: center;
     color:white;
-}
+} 
 .login-form {
     width: 100%;
-    padding-top:30px;
+    padding-top:0px;
 }
   
 .login-full-width {
@@ -30,23 +31,33 @@ h1 {
     font-weight: 500;
     font-size: 15pt !important;
 }
-input {
-    margin: 0 !important;
-    border: 0 !important;
-    height: 1.5rem !important;
-    color: #fff !important;
+
+.mat-form-field-placeholder-wrapper {
+    position: absolute;
+    left: 0;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    padding-top: 0;
 }
-.gambar-atas img:last-child{
-    height: 80px;
+.gambar-atas[_ngcontent-c1] img[_ngcontent-c1]:last-child {
+    height: 150px;
     width: auto;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     left: 50%;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px;
+    padding: 0;
     border-radius: 4px;
 }
 button {
     margin-bottom: 40px !important;
+}
+.gambar-atas.login-page img:first-child {
+    position: fixed;
+    bottom: 0;
+    top: auto;
 }
